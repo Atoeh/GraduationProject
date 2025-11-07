@@ -14,29 +14,11 @@ public class MainTriggerScript : MonoBehaviour
     [SerializeField]
     private GameObject fightButton;
     private Button fight;
-    private GameObject interactableObject;
-
-    [SerializeField]
-    private GameObject interactScreen;
-
-    [SerializeField]
-    private GameObject fightScreen;
 
     private void Start()
     {
         interact = interactButton.GetComponent<Button>();
         fight = fightButton.GetComponent<Button>();
-    }
-
-
-    private InteractableDataScript dataScript;
-
-    public void OnInteract(GameObject gameObject)
-    {
-        if (gameObject.GetComponent<InteractableDataScript>() != null)
-        {
-            dataScript = gameObject.GetComponent<InteractableDataScript>();
-        }
     }
 
     private void OnTriggerEnter(Collider other)
