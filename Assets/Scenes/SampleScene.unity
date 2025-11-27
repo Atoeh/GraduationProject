@@ -471,7 +471,7 @@ GameObject:
   - component: {fileID: 43685896}
   - component: {fileID: 43685898}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: InteractCube
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -622,7 +622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractableDataScript
   recTitle: 
-  recContent: 
+  recContent: jasld;fkj;asdf
   recButton1: 0
   recButton1Text: 
   recButton2: 0
@@ -2574,6 +2574,56 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4250845954542789874, guid: d157978297aa03d40bfe76f9decb9828, type: 3}
   m_PrefabInstance: {fileID: 1628303898}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &554768303
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 554768304}
+  - component: {fileID: 554768305}
+  m_Layer: 5
+  m_Name: UIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &554768304
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554768303}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1590721229}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &554768305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554768303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 041f0b36a4a4b7847a8046224b438b0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DataRecieverScript
+  titleContainer: {fileID: 2078171540}
+  contentContainer: {fileID: 1368753400}
 --- !u!1001 &566774077
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3049,18 +3099,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 0
---- !u!1 &677416974 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6861285702637373479, guid: d8fff9a350dc15b4cb10435beee86ed1, type: 3}
+--- !u!114 &677416979 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1093694734479042026, guid: d8fff9a350dc15b4cb10435beee86ed1, type: 3}
   m_PrefabInstance: {fileID: 5608263433099689946}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &677416979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 677416974}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4bbccfaa999d6e644be5b95640a23a2a, type: 3}
@@ -4027,11 +4071,23 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 677416979}
         m_TargetAssemblyTypeName: OnInteractScript, Assembly-CSharp
-        m_MethodName: OnInteract
-        m_Mode: 2
+        m_MethodName: RequestRetrieveData
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1926645902}
+        m_TargetAssemblyTypeName: DataRecieverScript, Assembly-CSharp
+        m_MethodName: WriteInteractPanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -9345,6 +9401,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d157978297aa03d40bfe76f9decb9828, type: 3}
+--- !u!1 &1036784558
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1036784559}
+  m_Layer: 0
+  m_Name: Environment ---
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1036784559
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036784558}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.17297, y: 1.30266, z: -1.78778}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1059627579
 GameObject:
   m_ObjectHideFlags: 0
@@ -10194,7 +10281,7 @@ GameObject:
   - component: {fileID: 1368753403}
   - component: {fileID: 1368753402}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Content
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10997,6 +11084,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 554768304}
   - {fileID: 1340710820}
   - {fileID: 1244234442}
   - {fileID: 1916030885}
@@ -11189,6 +11277,10 @@ PrefabInstance:
     - target: {fileID: 7447022692854842267, guid: 6b07ab31d47036645833e234477aa56f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7447022692855013306, guid: 6b07ab31d47036645833e234477aa56f, type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7447022692855013307, guid: 6b07ab31d47036645833e234477aa56f, type: 3}
       propertyPath: m_Name
@@ -11983,9 +12075,9 @@ GameObject:
   - component: {fileID: 1926645898}
   - component: {fileID: 1926645900}
   - component: {fileID: 1926645899}
-  - component: {fileID: 1926645901}
+  - component: {fileID: 1926645902}
   m_Layer: 5
-  m_Name: Interactpanel
+  m_Name: InteractPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12050,7 +12142,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1926645897}
   m_CullTransparentMesh: 1
---- !u!114 &1926645901
+--- !u!114 &1926645902
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12059,11 +12151,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1926645897}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e7b4b4c7a3912a44abd2ef2784d690e, type: 3}
+  m_Script: {fileID: 11500000, guid: 041f0b36a4a4b7847a8046224b438b0b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
-  titleContainer: {fileID: 0}
-  contentContainer: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::DataRetrieverScript
+  titleContainer: {fileID: 2078171540}
+  contentContainer: {fileID: 1368753400}
 --- !u!1 &1941522660
 GameObject:
   m_ObjectHideFlags: 0
@@ -12351,7 +12443,7 @@ GameObject:
   - component: {fileID: 2078171543}
   - component: {fileID: 2078171542}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12642,6 +12734,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1093694734479042026, guid: d8fff9a350dc15b4cb10435beee86ed1, type: 3}
+      propertyPath: dataLocation
+      value: 
+      objectReference: {fileID: 1926645897}
     - target: {fileID: 2151096105330285254, guid: d8fff9a350dc15b4cb10435beee86ed1, type: 3}
       propertyPath: movementButton
       value: 
@@ -12654,6 +12750,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4039251912788051867, guid: d8fff9a350dc15b4cb10435beee86ed1, type: 3}
+      propertyPath: fight
+      value: 
+      objectReference: {fileID: 1916030884}
+    - target: {fileID: 4039251912788051867, guid: d8fff9a350dc15b4cb10435beee86ed1, type: 3}
+      propertyPath: interact
+      value: 
+      objectReference: {fileID: 875843841}
     - target: {fileID: 4039251912788051867, guid: d8fff9a350dc15b4cb10435beee86ed1, type: 3}
       propertyPath: fightButton
       value: 
@@ -12713,21 +12817,19 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6861285702637373479, guid: d8fff9a350dc15b4cb10435beee86ed1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 677416979}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8fff9a350dc15b4cb10435beee86ed1, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 330585546}
-  - {fileID: 5608263433099689946}
   - {fileID: 410087041}
   - {fileID: 832575519}
   - {fileID: 1590721229}
   - {fileID: 1498137506}
-  - {fileID: 169918679}
+  - {fileID: 1036784559}
   - {fileID: 43685895}
+  - {fileID: 169918679}
   - {fileID: 315795075}
+  - {fileID: 5608263433099689946}

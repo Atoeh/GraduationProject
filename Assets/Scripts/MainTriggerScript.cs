@@ -5,32 +5,27 @@ using UnityEngine.UI;
 public class MainTriggerScript : MonoBehaviour
 {
     /// <summary>
-    /// MainTriggerScript should be named to DetectionScript
+    /// MainTriggerScript should be named to DetectInteractableScript
     /// </summary>
 
     [SerializeField]
-    private GameObject interactButton;
-    private Button interact;
-    [SerializeField]
-    private GameObject fightButton;
-    private Button fight;
+    private GameObject interact;
+    private Button interactButton;
+    //[SerializeField]
+    //private GameObject fight;
+    //private Button fightButton;
 
     private void Start()
     {
-        interact = interactButton.GetComponent<Button>();
-        fight = fightButton.GetComponent<Button>();
+        interactButton = interact.GetComponent<Button>();
     }
 
+    //toggles the interactButton if interactable is in trigger
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Interactable")
         {
-            interact.interactable = true;
-        }
-
-        if (other.tag == "Enemy")
-        {
-            fight.interactable = true;
+            interactButton.interactable = true;
         }
     }
 
@@ -38,12 +33,7 @@ public class MainTriggerScript : MonoBehaviour
     {
         if (other.tag == "Interactable")
         {
-            interact.interactable = false;
-        }
-
-        if (other.tag == "Enemy")
-        {
-            fight.interactable = false;
+            interactButton.interactable = false;
         }
     }
 }

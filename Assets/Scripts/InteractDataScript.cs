@@ -24,13 +24,5 @@ public class InteractableDataScript : MonoBehaviour
         { 
             recContent = string.Empty;
         }
-        if (recButton1Text == null)
-        {
-            recButton1 = true;
-            recButton1Text = "Continue";
-            recButton2 = false;
-        }
-        if (recButton2 == false)
-            recButton2Text = string.Empty;
     }
 }
