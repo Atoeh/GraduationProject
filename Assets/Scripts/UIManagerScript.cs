@@ -2,20 +2,24 @@ using UnityEngine;
 
 public class UIManagerScript : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject interactUI;
+    [SerializeField]
+    private GameObject fightUI;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        CleanScreen();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
-    public void UiPlayState()
+    /// <summary>
+    /// Removes all the UI, exploration state UI
+    /// </summary>
+    public void CleanScreen()
     { 
-        //Alle Ui dingen worden op dont show gezet ofzo, ervoor zorgen dat niks zichtbaar is
+        interactUI.SetActive(false);
+        fightUI.SetActive(false);
     }
 }

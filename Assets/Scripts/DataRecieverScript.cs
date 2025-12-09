@@ -34,8 +34,6 @@ public class DataRecieverScript : MonoBehaviour
         dataScript = dataObject.GetComponent<InteractableDataScript>();
         titleText = dataScript.recTitle;
         contentText = dataScript.recContent;
-
-        Debug.Log("RetrieveData executed");
     }
 
     public void WriteInteractPanel()

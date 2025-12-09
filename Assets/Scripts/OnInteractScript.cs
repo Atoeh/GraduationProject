@@ -10,14 +10,15 @@ using UnityEngine.UIElements;
 ///     1. Object in MainTrigger wordt vastgelegd als dit een interactable is 
 ///     2. OnInteract function that performs
 ///     3. 
+/// Kijken of dit later in een UIManager kan worden gerolled
 /// </summary>
 
 public class OnInteractScript : MonoBehaviour
 {
-    DataRecieverScript dataReciever;
+    DataRecieverScript recieverScript;
     GameObject dataObject; // interactable
     [SerializeField]
-    GameObject dataLocation; // InteractPanel
+    GameObject dataDisplayer; // InteractPanel
 
     private void OnTriggerEnter(Collider other)
     {
@@ -27,24 +28,24 @@ public class OnInteractScript : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Functie die datareciever de RetrieveData functie uit laat voeren
+    /// linked de interactable met de retrieveData functie in datareciever
+    /// </summary>
     public void RequestRetrieveData()
     {
         //check if interactable has data atached to it
         if (dataObject.GetComponent<InteractableDataScript>() != null)
         {
-            dataReciever = dataLocation.GetComponent<DataRecieverScript>();
-            dataReciever.RetrieveData(dataObject);
-
-            Debug.Log("OnInteractScript requested RetrieveData");
+            recieverScript = dataDisplayer.GetComponent<DataRecieverScript>();
+            recieverScript.RetrieveData(dataObject);
         }
         else Debug.Log("no Data on Interactable");
     }
 
+
     public void ToggleInteractPanel()
     { 
-        dataLocation.SetActive(true);
+        dataDisplayer.SetActive(true);
     }
-
-    public void ToggelFightPanel()
-    { }
 }

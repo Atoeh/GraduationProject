@@ -11,29 +11,36 @@ public class MainTriggerScript : MonoBehaviour
     [SerializeField]
     private GameObject interact;
     private Button interactButton;
-    //[SerializeField]
-    //private GameObject fight;
-    //private Button fightButton;
+    [SerializeField]
+    private GameObject fight;
+    private Button fightButton;
 
     private void Start()
     {
         interactButton = interact.GetComponent<Button>();
+        fightButton = fight.GetComponent<Button>();
     }
 
-    //toggles the interactButton if interactable is in trigger
+    /// <summary>
+    /// Detection that toggles the interactability of the interactButton and fightbutton
+    /// Deze moet later een functie in de UIManager laten executeren ipv dit zelf te doen...
+    /// </summary>
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Interactable")
-        {
             interactButton.interactable = true;
-        }
+         
+        if (other.tag == "Enemy")
+            fightButton.interactable = true;
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Interactable")
-        {
             interactButton.interactable = false;
-        }
+
+        if (other.tag == "Enemy")
+            fightButton.interactable = false;
     }
 }

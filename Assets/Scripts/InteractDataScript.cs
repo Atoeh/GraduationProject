@@ -16,6 +16,9 @@ public class InteractableDataScript : MonoBehaviour
 
     private void Start()
     {
+        if (gameObject.tag != "Interactable")
+            gameObject.tag = "Interactable";
+
         if (recTitle == null)
         { 
             recTitle = gameObject.name;
