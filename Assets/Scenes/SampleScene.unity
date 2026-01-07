@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jail_Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 800616031680425498, guid: cc9f980ee3a12ab49af49ee894ebd89a, type: 3}
+      propertyPath: m_TagString
+      value: Edge
+      objectReference: {fileID: 0}
     - target: {fileID: 800616031680524858, guid: cc9f980ee3a12ab49af49ee894ebd89a, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -1413,7 +1417,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!1 &169918678
 GameObject:
@@ -3214,7 +3218,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &677416979 stripped
 MonoBehaviour:
@@ -3374,7 +3378,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!1001 &761385564
 PrefabInstance:
@@ -9163,6 +9167,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jail_Gate
       objectReference: {fileID: 0}
+    - target: {fileID: 3949618021091473931, guid: 74306c807f3830a4a8f1c245e9549c6c, type: 3}
+      propertyPath: m_TagString
+      value: Edge
+      objectReference: {fileID: 0}
     - target: {fileID: 3949618021091567147, guid: 74306c807f3830a4a8f1c245e9549c6c, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -9357,7 +9365,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!4 &983174248 stripped
 Transform:
@@ -9737,7 +9745,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!1 &1066695581 stripped
 GameObject:
@@ -10816,7 +10824,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!1 &1470020364
 GameObject:
@@ -11091,7 +11099,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!1 &1498137503
 GameObject:
@@ -12112,7 +12120,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!4 &1841032327 stripped
 Transform:
@@ -12387,7 +12395,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!1 &1916030884
 GameObject:
@@ -13216,10 +13224,66 @@ PrefabInstance:
       propertyPath: interactButton
       value: 
       objectReference: {fileID: 875843841}
+    - target: {fileID: 5746161506053775871, guid: d8fff9a350dc15b4cb10435beee86ed1, type: 3}
+      propertyPath: m_Range
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5746161506053775871, guid: d8fff9a350dc15b4cb10435beee86ed1, type: 3}
+      propertyPath: m_Intensity
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 5746161506053775871, guid: d8fff9a350dc15b4cb10435beee86ed1, type: 3}
+      propertyPath: m_SpotAngle
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5746161506053775871, guid: d8fff9a350dc15b4cb10435beee86ed1, type: 3}
+      propertyPath: m_BounceIntensity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5756310342978212211, guid: d8fff9a350dc15b4cb10435beee86ed1, type: 3}
       propertyPath: movementButton
       value: 
       objectReference: {fileID: 866889203}
+    - target: {fileID: 7424948058170866210, guid: d8fff9a350dc15b4cb10435beee86ed1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.79400015
+      objectReference: {fileID: 0}
+    - target: {fileID: 7424948058170866210, guid: d8fff9a350dc15b4cb10435beee86ed1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.701
+      objectReference: {fileID: 0}
+    - target: {fileID: 7424948058170866210, guid: d8fff9a350dc15b4cb10435beee86ed1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.1639999
+      objectReference: {fileID: 0}
+    - target: {fileID: 7424948058170866210, guid: d8fff9a350dc15b4cb10435beee86ed1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9970243
+      objectReference: {fileID: 0}
+    - target: {fileID: 7424948058170866210, guid: d8fff9a350dc15b4cb10435beee86ed1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.073270716
+      objectReference: {fileID: 0}
+    - target: {fileID: 7424948058170866210, guid: d8fff9a350dc15b4cb10435beee86ed1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.012231989
+      objectReference: {fileID: 0}
+    - target: {fileID: 7424948058170866210, guid: d8fff9a350dc15b4cb10435beee86ed1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.020599427
+      objectReference: {fileID: 0}
+    - target: {fileID: 7424948058170866210, guid: d8fff9a350dc15b4cb10435beee86ed1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 8.372
+      objectReference: {fileID: 0}
+    - target: {fileID: 7424948058170866210, guid: d8fff9a350dc15b4cb10435beee86ed1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 1.588
+      objectReference: {fileID: 0}
+    - target: {fileID: 7424948058170866210, guid: d8fff9a350dc15b4cb10435beee86ed1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 2.483
+      objectReference: {fileID: 0}
     - target: {fileID: 8083531202931152220, guid: d8fff9a350dc15b4cb10435beee86ed1, type: 3}
       propertyPath: movementButton
       value: 

@@ -37,8 +37,11 @@ public class DataRecieverScript : MonoBehaviour
     }
 
     public void WriteInteractPanel()
-    { 
-        title.text = titleText;
-        content.text = contentText;
+    {
+        if (titleText != null && contentText != null)
+        {
+            title.text = titleText;
+            content.text = contentText;
+        }
     }
 }
