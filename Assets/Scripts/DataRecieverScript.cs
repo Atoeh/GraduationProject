@@ -22,12 +22,6 @@ public class DataRecieverScript : MonoBehaviour
     private GameObject contentContainer;
     private TMP_Text content; 
 
-    private void Start()
-    {
-        title = titleContainer.GetComponent<TMP_Text>();
-        content = contentContainer.GetComponent<TMP_Text>();
-    }
-
     //order of things that happen on button click OnInteractScript will send the gameobject reference if it contains
     public void RetrieveData(GameObject dataObject)
     {
@@ -40,6 +34,9 @@ public class DataRecieverScript : MonoBehaviour
     {
         if (titleText != null && contentText != null)
         {
+            //variables are assigned when funtion is called bcs beforehand these elements are disabled!
+            title = titleContainer.GetComponent<TMP_Text>();
+            content = contentContainer.GetComponent<TMP_Text>();
             title.text = titleText;
             content.text = contentText;
         }
