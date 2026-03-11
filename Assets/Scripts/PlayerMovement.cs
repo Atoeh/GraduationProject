@@ -10,40 +10,83 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
     private int moveDistance = 2;
-    private int rotaionDegree = 90;
+    private int rotationDegrees = 90;
 
-    void Start()
-    {
+    [SerializeField]
+    private float moveSpeed = 0.5f;
+    [SerializeField]
+    private float rotaionSpeed;
 
-    }
+    [SerializeField] // gotta change the names for these two rotate things, not intuitive at all
+    private GameObject rotationGoal;
+    [SerializeField]
+    private GameObject rotationHolder;
+
+    private Vector3 startPosition;
+    private Vector3 endPosition;
+
+    private Transform startAngle;
+    private Transform endAngle;
+
+    private float startTime;
+    private float endTime;
+
+    AnimationCurve animCurve;
 
     public void MoveForward()
     {
-        transform.position += transform.forward * moveDistance;
+        SetStartValues();
+        endPosition = startPosition + transform.forward * moveDistance;
     }
 
     public void MoveBack()
     {
-        transform.position += -transform.forward * moveDistance;
+        SetStartValues();
+        endPosition += -transform.forward * moveDistance;
     }
 
     public void MoveLeft()
     {
-        transform.position += -transform.right * moveDistance;
+        SetStartValues();
+        endPosition += -transform.right * moveDistance;
     }
 
     public void MoveRight() 
     {
-        transform.position += transform.right * moveDistance;
+        SetStartValues();
+        endPosition += transform.right * moveDistance;
     }
 
     public void TurnLeft()
     {
-        transform.Rotate(Vector3.down * rotaionDegree);
+        SetStartValues();
+        rotationHolder.transform.Rotate(Vector3.up * -rotationDegrees);
     }
 
     public void TurnRight() 
     {
-        transform.Rotate(Vector3.up * rotaionDegree);
+        SetStartValues();
+        rotationHolder.transform.Rotate(Vector3.up * rotationDegrees);
+        //transform.Rotate(Vector3.up * rotationDegrees);
+    }
+
+    private void SetStartValues()
+    {
+        startPosition = transform.position;
+        startTime = Time.time;
+    }
+
+    //perhaps this should become a coroutine idk
+    public void Update()
+    {
+        if (startPosition != endPosition)
+        {
+            transform.position = Vector3.Lerp(startPosition, endPosition, (Time.time - startTime) / moveSpeed);
+        }
+
+        if (rotationHolder.transform.rotation != transform.rotation)
+        {
+            transform.rotation = Quaternion.Lerp(transform.rotation, rotationGoal.transform.rotation, (Time.time - startTime / rotaionSpeed));
+        }
     }
 }
