@@ -8,85 +8,110 @@ using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
 {
+    //MOVEMENT STATS --------------------
     [SerializeField]
     private int moveDistance = 2;
+    [SerializeField]
+    private float moveDuration = .5f;
+
+    //ROTATION STATS --------------------
+    [SerializeField]
+    private float rotationDuration = .2f;
     private int rotationDegrees = 90;
-
-    [SerializeField]
-    private float moveSpeed = 0.5f;
-    [SerializeField]
-    private float rotaionSpeed;
-
-    [SerializeField] // gotta change the names for these two rotate things, not intuitive at all
-    private GameObject rotationGoal;
-    [SerializeField]
-    private GameObject rotationHolder;
-
-    private Vector3 startPosition;
-    private Vector3 endPosition;
-
-    private Transform startAngle;
-    private Transform endAngle;
-
-    private float startTime;
-    private float endTime;
-
-    AnimationCurve animCurve;
 
     public void MoveForward()
     {
-        SetStartValues();
-        endPosition = startPosition + transform.forward * moveDistance;
+        StartCoroutine(MovePlayer(transform.forward));
+        //endPosition = startPosition + transform.forward * moveDistance;
     }
 
     public void MoveBack()
     {
-        SetStartValues();
-        endPosition += -transform.forward * moveDistance;
+        StartCoroutine(MovePlayer(-transform.forward));
+        //endPosition += -transform.forward * moveDistance;
     }
 
     public void MoveLeft()
     {
-        SetStartValues();
-        endPosition += -transform.right * moveDistance;
+        StartCoroutine(MovePlayer(-transform.right));
+        //endPosition += -transform.right * moveDistance;
     }
 
     public void MoveRight() 
     {
-        SetStartValues();
-        endPosition += transform.right * moveDistance;
+        StartCoroutine(MovePlayer(transform.right));
+        //endPosition += transform.right * moveDistance;
     }
 
     public void TurnLeft()
     {
-        SetStartValues();
-        rotationHolder.transform.Rotate(Vector3.up * -rotationDegrees);
+        StartCoroutine(RotatePlayer(-rotationDegrees));
+        //rotationHolder.transform.Rotate(Vector3.up * -rotationDegrees);
     }
 
     public void TurnRight() 
     {
-        SetStartValues();
-        rotationHolder.transform.Rotate(Vector3.up * rotationDegrees);
+        StartCoroutine(RotatePlayer(rotationDegrees));
+        //rotationHolder.transform.Rotate(Vector3.up * rotationDegrees);
         //transform.Rotate(Vector3.up * rotationDegrees);
     }
+    //perhaps this should become a coroutine idk
 
-    private void SetStartValues()
+    IEnumerator RotatePlayer(float degrees)
     {
-        startPosition = transform.position;
-        startTime = Time.time;
+        //isRotating = true;
+        ToggleUI(false);
+
+        Quaternion startRotation = transform.rotation;
+        Quaternion targetRotation = startRotation * Quaternion.Euler(0,degrees,0);
+
+        //change the while function to work with a rotate duration like movement
+        //this is achieved by using the elapsed time like here below
+        float elapsed = 0f;
+
+        while (Quaternion.Angle(transform.rotation, targetRotation) > 0.1f)
+        {
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, 
+                targetRotation, elapsed / rotationDuration);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+        transform.rotation = targetRotation;
+
+        //isRotating = false;
+        ToggleUI(true);
     }
 
-    //perhaps this should become a coroutine idk
-    public void Update()
+    IEnumerator MovePlayer(Vector3 Direction)
     {
-        if (startPosition != endPosition)
-        {
-            transform.position = Vector3.Lerp(startPosition, endPosition, (Time.time - startTime) / moveSpeed);
-        }
+        //isMoving = true;
+        ToggleUI(false);
 
-        if (rotationHolder.transform.rotation != transform.rotation)
+        //check if startign position should not be put in the move function
+        Vector3 startPosition = transform.position;
+        Vector3 targetPosition = startPosition + Direction * moveDistance;
+
+        float elapsed = 0f;
+
+        while (transform.position != targetPosition)
         {
-            transform.rotation = Quaternion.Lerp(transform.rotation, rotationGoal.transform.rotation, (Time.time - startTime / rotaionSpeed));
+            Debug.Log("Movement should happen");
+            transform.position = Vector3.Lerp(startPosition, targetPosition, elapsed /
+                moveDuration);
+            elapsed += Time.deltaTime;
+            yield return null;
         }
+        transform.position = targetPosition;
+        ToggleUI(true);
+    }
+
+    /// <summary>
+    /// Connect with UI mananager in later stage, goal is to toggle UI in this use 
+    /// case so that it cant be used until movement in complete
+    /// Should perhaps be an event that can be triggerd through the script?
+    /// </summary>
+    public void ToggleUI(bool boolToglle)
+    { 
+        //Smth toggle ps
     }
 }
