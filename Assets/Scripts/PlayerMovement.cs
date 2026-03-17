@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private int moveDistance = 2;
     [SerializeField]
-    private float moveDuration = .5f;
+    private float moveDuration = .2f;
 
     //ROTATION STATS --------------------
     [SerializeField]
@@ -22,51 +22,41 @@ public class PlayerMovement : MonoBehaviour
     public void MoveForward()
     {
         StartCoroutine(MovePlayer(transform.forward));
-        //endPosition = startPosition + transform.forward * moveDistance;
     }
 
     public void MoveBack()
     {
         StartCoroutine(MovePlayer(-transform.forward));
-        //endPosition += -transform.forward * moveDistance;
     }
 
     public void MoveLeft()
     {
         StartCoroutine(MovePlayer(-transform.right));
-        //endPosition += -transform.right * moveDistance;
     }
 
     public void MoveRight() 
     {
         StartCoroutine(MovePlayer(transform.right));
-        //endPosition += transform.right * moveDistance;
     }
 
     public void TurnLeft()
     {
         StartCoroutine(RotatePlayer(-rotationDegrees));
-        //rotationHolder.transform.Rotate(Vector3.up * -rotationDegrees);
     }
 
     public void TurnRight() 
     {
         StartCoroutine(RotatePlayer(rotationDegrees));
-        //rotationHolder.transform.Rotate(Vector3.up * rotationDegrees);
-        //transform.Rotate(Vector3.up * rotationDegrees);
     }
     //perhaps this should become a coroutine idk
 
     IEnumerator RotatePlayer(float degrees)
     {
-        //isRotating = true;
         ToggleUI(false);
 
         Quaternion startRotation = transform.rotation;
         Quaternion targetRotation = startRotation * Quaternion.Euler(0,degrees,0);
 
-        //change the while function to work with a rotate duration like movement
-        //this is achieved by using the elapsed time like here below
         float elapsed = 0f;
 
         while (Quaternion.Angle(transform.rotation, targetRotation) > 0.1f)
@@ -78,16 +68,13 @@ public class PlayerMovement : MonoBehaviour
         }
         transform.rotation = targetRotation;
 
-        //isRotating = false;
         ToggleUI(true);
     }
 
     IEnumerator MovePlayer(Vector3 Direction)
     {
-        //isMoving = true;
         ToggleUI(false);
 
-        //check if startign position should not be put in the move function
         Vector3 startPosition = transform.position;
         Vector3 targetPosition = startPosition + Direction * moveDistance;
 
@@ -95,7 +82,6 @@ public class PlayerMovement : MonoBehaviour
 
         while (transform.position != targetPosition)
         {
-            Debug.Log("Movement should happen");
             transform.position = Vector3.Lerp(startPosition, targetPosition, elapsed /
                 moveDuration);
             elapsed += Time.deltaTime;
