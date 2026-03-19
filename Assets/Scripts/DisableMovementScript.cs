@@ -15,5 +15,4 @@ public class DisableMovementScript : MonoBehaviour
             trigger[i].GetComponent<MovementTriggerScript>().MovementLockToggle();
         }
     }
-
 }

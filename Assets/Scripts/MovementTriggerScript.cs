@@ -19,7 +19,7 @@ public class MovementTriggerScript : MonoBehaviour
         isLocked = false;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Edge")
         {

@@ -48,12 +48,10 @@ public class PlayerMovement : MonoBehaviour
     {
         StartCoroutine(RotatePlayer(rotationDegrees));
     }
-    //perhaps this should become a coroutine idk
 
     IEnumerator RotatePlayer(float degrees)
     {
-        ToggleUI(false);
-
+        GameEvents.ToggleMoveUI();
         Quaternion startRotation = transform.rotation;
         Quaternion targetRotation = startRotation * Quaternion.Euler(0,degrees,0);
 
@@ -67,13 +65,12 @@ public class PlayerMovement : MonoBehaviour
             yield return null;
         }
         transform.rotation = targetRotation;
-
-        ToggleUI(true);
+        GameEvents.ToggleMoveUI();
     }
 
     IEnumerator MovePlayer(Vector3 Direction)
     {
-        ToggleUI(false);
+        GameEvents.ToggleMoveUI();
 
         Vector3 startPosition = transform.position;
         Vector3 targetPosition = startPosition + Direction * moveDistance;
@@ -88,16 +85,7 @@ public class PlayerMovement : MonoBehaviour
             yield return null;
         }
         transform.position = targetPosition;
-        ToggleUI(true);
-    }
 
-    /// <summary>
-    /// Connect with UI mananager in later stage, goal is to toggle UI in this use 
-    /// case so that it cant be used until movement in complete
-    /// Should perhaps be an event that can be triggerd through the script?
-    /// </summary>
-    public void ToggleUI(bool boolToglle)
-    { 
-        //Smth toggle ps
+        GameEvents.ToggleMoveUI();
     }
 }
