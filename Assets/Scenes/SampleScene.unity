@@ -1374,11 +1374,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 139108044}
   m_CullTransparentMesh: 1
---- !u!1 &153811579 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2549677608986239758, guid: d8fff9a350dc15b4cb10435beee86ed1, type: 3}
-  m_PrefabInstance: {fileID: 5608263433099689946}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &159357852
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3028,11 +3023,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1650678182675352791, guid: 303434915ff72994f860f6202a4ef5f5, type: 3}
   m_PrefabInstance: {fileID: 576195132}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &611082777 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3834396719102461494, guid: d8fff9a350dc15b4cb10435beee86ed1, type: 3}
-  m_PrefabInstance: {fileID: 5608263433099689946}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &629621161
 GameObject:
   m_ObjectHideFlags: 0
@@ -3651,7 +3641,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1093694734479042026, guid: d8fff9a350dc15b4cb10435beee86ed1, type: 3}
   m_PrefabInstance: {fileID: 5608263433099689946}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1555962095}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4bbccfaa999d6e644be5b95640a23a2a, type: 3}
@@ -3818,11 +3808,6 @@ PrefabInstance:
       addedObject: {fileID: 58383471}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7a40adf978745f4cb0c2ce83ad8392b, type: 3}
---- !u!1 &734946005 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2533507575514792027, guid: d8fff9a350dc15b4cb10435beee86ed1, type: 3}
-  m_PrefabInstance: {fileID: 5608263433099689946}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &752121543
 GameObject:
   m_ObjectHideFlags: 0
@@ -4818,7 +4803,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 907603944}
         m_TargetAssemblyTypeName: DisableMovementScript, Assembly-CSharp
-        m_MethodName: LockTriggers
+        m_MethodName: DisableMovement
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4906,11 +4891,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3dc949ec27484c4a994c56875ebb1b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  trigger:
-  - {fileID: 1555962095}
-  - {fileID: 153811579}
-  - {fileID: 734946005}
-  - {fileID: 611082777}
 --- !u!1 &914878635
 GameObject:
   m_ObjectHideFlags: 0
@@ -12005,11 +11985,6 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7484352753837839539, guid: e8782814328328c44b5fd078c06fbe10, type: 3}
   m_PrefabInstance: {fileID: 1273113996}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1555962095 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6861285702637373479, guid: d8fff9a350dc15b4cb10435beee86ed1, type: 3}
-  m_PrefabInstance: {fileID: 5608263433099689946}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1557967143 stripped
 GameObject:
