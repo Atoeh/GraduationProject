@@ -26,8 +26,8 @@ public class DataRecieverScript : MonoBehaviour
     public void RetrieveData(GameObject dataObject)
     {
         dataScript = dataObject.GetComponent<InteractableDataScript>();
-        titleText = dataScript.recTitle;
-        contentText = dataScript.recContent;
+        titleText = dataScript.title;
+        contentText = dataScript.content;
     }
 
     public void WriteInteractPanel()

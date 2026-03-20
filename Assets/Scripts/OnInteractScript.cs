@@ -20,6 +20,9 @@ public class OnInteractScript : MonoBehaviour
     [SerializeField]
     GameObject dataDisplayer; // InteractPanel
 
+    public GameObject uiPrefab;
+    public Transform canvas;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Interactable")
@@ -48,4 +51,18 @@ public class OnInteractScript : MonoBehaviour
     { 
         dataDisplayer.SetActive(true);
     }
+
+    //Instantiate het paneel in plaats van het eerst lost te toggelen en datn over te schrijven
+    public void InstantiateInteractPanel()
+    {
+        if (dataObject.GetComponent<InteractableDataScript>() != null)
+        {
+            recieverScript = dataDisplayer.GetComponent<DataRecieverScript>();
+            recieverScript.RetrieveData(dataObject);
+        }
+        else Debug.Log("no Data on Interactable");
+        GameObject uiInstance = dataObject.GetComponent<Data>;
+    }
+
+    
 }

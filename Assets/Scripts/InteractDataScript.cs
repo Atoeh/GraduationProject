@@ -2,13 +2,13 @@ using UnityEngine;
 using UnityEngine.UIElements;
 public class InteractableDataScript : MonoBehaviour
 {
-    public string recTitle;
+    public string title;
     [TextAreaAttribute]
-    public string recContent;
-    public bool recButton1;
-    public string recButton1Text;
-    public bool recButton2;
-    public string recButton2Text;
+    public string content;
+    public bool button1;
+    public string button1Text;
+    public bool button2;
+    public string button2Text;
 
     /// <summary>
     /// Intentie, checken voor alle stats als iets niet is ingevuld dat het met een spatie vervangen kan worden bijv.
@@ -19,13 +19,13 @@ public class InteractableDataScript : MonoBehaviour
         if (gameObject.tag != "Interactable")
             gameObject.tag = "Interactable";
 
-        if (recTitle == null)
+        if (title == null)
         { 
-            recTitle = gameObject.name;
+            title = gameObject.name;
         }
-        if (recContent == null)
+        if (content == null)
         { 
-            recContent = string.Empty;
+            content = string.Empty;
         }
     }
 }

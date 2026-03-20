@@ -6,9 +6,6 @@ using UnityEngine.UI;
 
 public class UIManagerScript : MonoBehaviour
 {
-    //Events --------------------
-    public static event Action OnMovementToggle;
-
     //Objects -------------------
     [SerializeField]
     private GameObject interactUI;
