@@ -8,24 +8,12 @@ public class UIManagerScript : MonoBehaviour
 {
     //Objects -------------------
     [SerializeField]
-    private GameObject interactUI;
-    [SerializeField]
-    private GameObject fightUI;
-
-    [SerializeField]
     private GameObject movementUI;
     private bool movUIState;
 
     void Start()
     {
-        CleanScreen();
         movUIState = true;
-    }
-
-    public void CleanScreen()
-    { 
-        interactUI.SetActive(false);
-        fightUI.SetActive(false);
     }
 
     void OnEnable()
@@ -54,4 +42,5 @@ public class UIManagerScript : MonoBehaviour
         }
         movUIState = !movUIState;
     }
+
 }

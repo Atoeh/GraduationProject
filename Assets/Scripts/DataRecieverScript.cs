@@ -25,9 +25,10 @@ public class DataRecieverScript : MonoBehaviour
     //order of things that happen on button click OnInteractScript will send the gameobject reference if it contains
     public void RetrieveData(GameObject dataObject)
     {
-        dataScript = dataObject.GetComponent<InteractableDataScript>();
-        titleText = dataScript.title;
-        contentText = dataScript.content;
+        //Change interactdatascript to make this work again
+        //dataScript = dataObject.GetComponent<InteractableDataScript>();
+        //titleText = dataScript.title;
+        //contentText = dataScript.content;
     }
 
     public void WriteInteractPanel()

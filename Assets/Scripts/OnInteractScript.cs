@@ -1,27 +1,20 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UIElements;
 
-/// <summary>
-/// OnInteract moet SendDataScript heten
-/// Doel van OnInteractScript: Data van interactable ophalen en displayen
-///     1. Object in MainTrigger wordt vastgelegd als dit een interactable is 
-///     2. OnInteract function that performs
-///     3. 
-/// Kijken of dit later in een UIManager kan worden gerolled
-/// </summary>
-
 public class OnInteractScript : MonoBehaviour
 {
-    DataRecieverScript recieverScript;
-    GameObject dataObject; // interactable
+    GameObject dataObject;
     [SerializeField]
-    GameObject dataDisplayer; // InteractPanel
 
-    public GameObject uiPrefab;
+    private GameObject uiPrefab;
+    private GameObject uiInstance;
     public Transform canvas;
+
+    private bool isInstantiated = false;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -31,38 +24,22 @@ public class OnInteractScript : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Functie die datareciever de RetrieveData functie uit laat voeren
-    /// linked de interactable met de retrieveData functie in datareciever
-    /// </summary>
-    public void RequestRetrieveData()
-    {
-        //check if interactable has data atached to it
-        if (dataObject.GetComponent<InteractableDataScript>() != null)
-        {
-            recieverScript = dataDisplayer.GetComponent<DataRecieverScript>();
-            recieverScript.RetrieveData(dataObject);
-        }
-        else Debug.Log("no Data on Interactable");
-    }
-
-
-    public void ToggleInteractPanel()
-    { 
-        dataDisplayer.SetActive(true);
-    }
-
-    //Instantiate het paneel in plaats van het eerst lost te toggelen en datn over te schrijven
     public void InstantiateInteractPanel()
     {
-        if (dataObject.GetComponent<InteractableDataScript>() != null)
+        if (!isInstantiated)
         {
-            recieverScript = dataDisplayer.GetComponent<DataRecieverScript>();
-            recieverScript.RetrieveData(dataObject);
+            if (dataObject.GetComponent<InteractableDataScript>() != null)
+            {
+                uiPrefab = dataObject.GetComponent<InteractableDataScript>().uiPrefab;
+                uiInstance = Instantiate(uiPrefab, canvas);
+            }
+            else Debug.Log("no Data on Interactable");
+            isInstantiated = true;
         }
-        else Debug.Log("no Data on Interactable");
-        GameObject uiInstance = dataObject.GetComponent<Data>;
+        else
+        { 
+            Destroy(uiInstance);
+            isInstantiated = false;
+        }
     }
-
-    
 }
