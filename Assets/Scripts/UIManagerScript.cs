@@ -9,6 +9,9 @@ public class UIManagerScript : MonoBehaviour
     //Objects -------------------
     [SerializeField]
     private GameObject movementUI;
+    [SerializeField]
+    private GameObject DarkPanel;
+
     private bool movUIState;
 
     void Start()
@@ -19,16 +22,24 @@ public class UIManagerScript : MonoBehaviour
     void OnEnable()
     {
         GameEvents.OnToggleMoveUI += ToggleMoveUI;
+        GameEvents.OnChangeDarkness += ChangeDarkness;
     }
 
     void OnDisable()
     {
         GameEvents.OnToggleMoveUI -= ToggleMoveUI;
+        GameEvents.OnChangeDarkness -= ChangeDarkness;
     }
 
     void ToggleMoveUI()
     {
         ToggleButtonsInChildren();
+    }
+
+    //
+    public void ChangeDarkness(float value)
+    {
+        DarkPanel.GetComponent<ChangeOpacityScript>().ChangeOpacity(value);
     }
     
     void ToggleButtonsInChildren()
