@@ -144,9 +144,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8429260734610085968}
   - component: {fileID: 2207158560457066360}
+  - component: {fileID: 5933498267482254140}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -183,6 +184,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   moveDistance: 2
+  moveDuration: 0.25
+  rotationDuration: 0.25
+--- !u!114 &5933498267482254140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2786790722360613410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3dc949ec27484c4a994c56875ebb1b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &3834396719102461494
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,8 +514,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908ccd51efedddd45983656712dac1a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  interactButton: {fileID: 0}
-  fightButton: {fileID: 0}
+  interact: {fileID: 0}
+  fight: {fileID: 0}
 --- !u!114 &2151096105330285254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -526,6 +541,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bbccfaa999d6e644be5b95640a23a2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  uiPrefab: {fileID: 0}
+  canvas: {fileID: 0}
 --- !u!1 &7396569807342482961
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,13 +706,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8685632215852075810}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.14267868, z: -0, w: 0.9897691}
-  m_LocalPosition: {x: -0.794, y: 0.34399998, z: 0.164}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.8, y: 0.7, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5992515127949134474}
-  m_LocalEulerAnglesHint: {x: 0, y: 16.406, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &5746161506053775871
 Light:
   m_ObjectHideFlags: 0
@@ -705,11 +722,11 @@ Light:
   m_GameObject: {fileID: 8685632215852075810}
   m_Enabled: 1
   serializedVersion: 11
-  m_Type: 0
+  m_Type: 2
   m_Color: {r: 1, g: 0.82083327, b: 0.5990566, a: 1}
-  m_Intensity: 48.94
-  m_Range: 6.61
-  m_SpotAngle: 84.392265
+  m_Intensity: 20
+  m_Range: 6
+  m_SpotAngle: 50
   m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
@@ -749,7 +766,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -774,7 +791,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
   m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
+  m_AdditionalLightsShadowResolutionTier: 0
   m_CustomShadowLayers: 0
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
