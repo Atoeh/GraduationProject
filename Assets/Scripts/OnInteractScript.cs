@@ -32,6 +32,8 @@ public class OnInteractScript : MonoBehaviour
             {
                 uiPrefab = dataObject.GetComponent<InteractableDataScript>().uiPrefab;
                 uiInstance = Instantiate(uiPrefab, canvas);
+                //send reference of the uiSpawner to the popup
+                uiInstance.GetComponent<DestroyUiSpawnerScript>().Setup(dataObject);
             }
             else Debug.Log("no Data on Interactable");
             isInstantiated = true;

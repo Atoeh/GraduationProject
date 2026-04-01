@@ -20,7 +20,12 @@ public class ChangeLightingScript : MonoBehaviour
     //Candle values
     [SerializeField]
     bool candleOn = true;
-    float candleAmmount; 
+    float candleAmmount;
+
+    private void OnEnable()
+    {
+        candleAmmount = this.GetComponent<Slider>().value;
+    }
 
     public void CheckCandleAmmount()
     {

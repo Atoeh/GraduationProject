@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 8883345504393353688}
   - component: {fileID: 8096554905343457883}
   - component: {fileID: 4156643223889309961}
+  - component: {fileID: 2648426216321545626}
+  - component: {fileID: 3739923641908291178}
+  - component: {fileID: 7067205408472079390}
   m_Layer: 5
   m_Name: CandlePickUP_UI
   m_TagString: Untagged
@@ -79,6 +82,44 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2648426216321545626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332221277814122992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e74825444ffa4534481762721e6e439c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  lightingScript: {fileID: 0}
+  value: 30
+--- !u!114 &3739923641908291178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332221277814122992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 865d3994d2fb99b458fd4ac08c79ccdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+--- !u!114 &7067205408472079390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332221277814122992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd9a276ea738178458290a540775986a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &1635126907883511405
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,13 +377,37 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 939389e1316f0dd47b865e4833af68b7, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 2648426216321545626}
+        m_TargetAssemblyTypeName: IncreaseCandleScript, Assembly-CSharp
+        m_MethodName: AddCandleTime
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7067205408472079390}
+        m_TargetAssemblyTypeName: DestroyUiSpawnerScript, Assembly-CSharp
+        m_MethodName: DestroySpawner
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3739923641908291178}
+        m_TargetAssemblyTypeName: ClosePopUpScript, Assembly-CSharp
+        m_MethodName: CloseUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -876,4 +941,16 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6689823703471376334}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3739923641908291178}
+        m_TargetAssemblyTypeName: ClosePopUpScript, Assembly-CSharp
+        m_MethodName: CloseUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
