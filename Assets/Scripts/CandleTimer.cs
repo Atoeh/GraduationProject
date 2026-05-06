@@ -8,7 +8,7 @@ public class CandleTimer : MonoBehaviour
     //Perhaps this should be linked to movement and not to actual time?
 
     [SerializeField]
-    private float timeLeft = 0f;
+    public static float timeLeft = 0f;
     public bool candleOn = true;
     private Slider slider;
 
@@ -56,7 +56,7 @@ public class CandleTimer : MonoBehaviour
         candleOn = true;
 
         //add time to timer but no more than the timeMax
-        if (timeLeft + timeAdded <= timeMax)
+        if ((timeLeft + timeAdded) <= timeMax)
         { 
             timeLeft += timeAdded; 
         }else timeLeft = timeMax;
@@ -66,6 +66,7 @@ public class CandleTimer : MonoBehaviour
 
     private void SetSlider()
     {
+        Debug.Log(timeLeft);
         //Debug.Log("slider.value start = " + slider.value);
         slider.value = timeLeft/timeMax;
         //Debug.Log("slider.value end = " + slider.value);

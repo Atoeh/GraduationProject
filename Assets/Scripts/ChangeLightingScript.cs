@@ -35,7 +35,7 @@ public class ChangeLightingScript : MonoBehaviour
     public void ChangeCandleAmmount(float value)
     { 
         CheckCandleAmmount();
-        this.GetComponent<Slider>().value = candleAmmount + value;
+        CandleTimer.timeLeft = CandleTimer.timeLeft + value;
         ChangeDarkness();
     }
 
