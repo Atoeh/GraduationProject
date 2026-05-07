@@ -66,10 +66,6 @@ public class CandleTimer : MonoBehaviour
 
     private void SetSlider()
     {
-        Debug.Log(timeLeft);
-        //Debug.Log("slider.value start = " + slider.value);
         slider.value = timeLeft/timeMax;
-        //Debug.Log("slider.value end = " + slider.value);
-
     }
 }
