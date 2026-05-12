@@ -36,7 +36,6 @@ public class UIManagerScript : MonoBehaviour
         ToggleButtonsInChildren();
     }
 
-    //
     public void ChangeDarkness(float value)
     {
         DarkPanel.GetComponent<ChangeOpacityScript>().ChangeOpacity(value);

@@ -16,7 +16,7 @@ public class OnInteractScript : MonoBehaviour
 
     private bool isInstantiated = false;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Interactable")
         {
@@ -34,14 +34,21 @@ public class OnInteractScript : MonoBehaviour
                 uiInstance = Instantiate(uiPrefab, canvas);
                 //send reference of the uiSpawner to the popup
                 uiInstance.GetComponent<DestroyUiSpawnerScript>().Setup(dataObject);
+                Debug.Log("Instatiate UIpopup");
             }
             else Debug.Log("no Data on Interactable");
             isInstantiated = true;
         }
         else
-        { 
-            Destroy(uiInstance);
-            isInstantiated = false;
+        {
+            DeInstantiate();
         }
+    }
+
+    public void DeInstantiate()
+    {
+        Debug.Log("Deinstantiate");
+        isInstantiated = false;
+        Destroy(uiInstance);
     }
 }

@@ -29,18 +29,28 @@ public class MainTriggerScript : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Interactable")
-            interactButton.interactable = true;
-         
-        if (other.tag == "Enemy")
-            fightButton.interactable = true;
+            Enter();
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Interactable")
-            interactButton.interactable = false;
+            Exit();
+    }
 
-        if (other.tag == "Enemy")
-            fightButton.interactable = false;
+    public void Enter()
+    {
+        interactButton.interactable = true;
+        //if (coll.tag == "Enemy")
+        //    fightButton.interactable = true;
+    }
+
+    public void Exit()
+    { 
+        //if (coll.tag == "Interactable")
+        interactButton.interactable = false;
+        //if (coll.tag == "Enemy")
+        //    fightButton.interactable=false;
+
     }
 }
