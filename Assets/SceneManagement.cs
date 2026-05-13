@@ -2,21 +2,33 @@ using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//Should call this game manager?
+
 public class SceneManagement : MonoBehaviour
 {
     private bool quotaIsTrue = false;
     [SerializeField]
-    private int quota;
-    public int lootAmmount = 0;
+    private float quota;
+    public float lootAmmount = 0;
     private bool quotaHit = false;
+
+    private void OnEnable()
+    {
+        GameEvents.OnQuotaHit += HitQuota;
+    }
+
+    private void OnDisable()
+    {
+        GameEvents.OnQuotaHit -= HitQuota;
+    }
 
     void Start()
     {
         if (quota > 0)
             quotaIsTrue = true;
 
-        //Function to set quota in UI?
-        //Check UI manager
+        GameEvents.QuotaSet(quota);
+        //GameEvents.LootPickUp(lootAmmount);
     }
 
     public void GoToNextLevel()
@@ -36,10 +48,10 @@ public class SceneManagement : MonoBehaviour
         }
     }
 
-    public void ToggleHitQuota()
+    public void HitQuota()
     { 
         if(quotaHit == false)
         quotaHit = true;
-        else quotaHit = false;
+        Debug.Log("quota has been hit");
     }
 }
