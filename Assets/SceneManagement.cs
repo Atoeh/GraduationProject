@@ -2,33 +2,26 @@ using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-//Should call this game manager?
+//Should call this game management?
+//1 maak apparte inventory manager om loot te tracken
+//Laat game manager alleen maar luisteren naar events en dan andere scripts aan slaan
 
 public class SceneManagement : MonoBehaviour
 {
-    private bool quotaIsTrue = false;
-    [SerializeField]
-    private float quota;
-    public float lootAmmount = 0;
-    private bool quotaHit = false;
-
     private void OnEnable()
     {
-        GameEvents.OnQuotaHit += HitQuota;
+        GameEvents.OnExitLevel += GoToNextLevel;
+        GameEvents.OnCandleDepleted += GameOver;
+        //Niet op reachen van de deur maar op klikken van next level na merchant
+        //GameEvents.OnOpenDoor += GoToNextLevel;
     }
 
     private void OnDisable()
     {
-        GameEvents.OnQuotaHit -= HitQuota;
-    }
-
-    void Start()
-    {
-        if (quota > 0)
-            quotaIsTrue = true;
-
-        GameEvents.QuotaSet(quota);
-        //GameEvents.LootPickUp(lootAmmount);
+        GameEvents.OnExitLevel += GoToNextLevel;
+        GameEvents.OnCandleDepleted -= GameOver;
+        //Niet op reachen van de deur maar op klikken van next level na merchant
+        //GameEvents.OnOpenDoor -= GoToNextLevel;
     }
 
     public void GoToNextLevel()
@@ -36,22 +29,13 @@ public class SceneManagement : MonoBehaviour
         //next scene met modulo (%) dat het terug warped naar de eerste scene uit de index...
         int currScene = SceneManager.GetActiveScene().buildIndex;
         int nextScene = (currScene + 1) % SceneManager.sceneCountInBuildSettings;
-
-        if (quotaIsTrue == false)
-            SceneManager.LoadScene(nextScene);
-        else 
-        {
-            if (lootAmmount >= quota || quotaHit == true)
-                SceneManager.LoadScene(nextScene);
-            else
-                Debug.Log("Quota has not been hit, back to the mines ye go");
-        }
+        SceneManager.LoadScene(nextScene);
     }
 
-    public void HitQuota()
+    public void GameOver()
     { 
-        if(quotaHit == false)
-        quotaHit = true;
-        Debug.Log("quota has been hit");
+        //Trigger the game over state, which is an event i suppose
+        //Why use an event to trigger a function to trigger an event?
+        //Well, there can be more events that trigger the game over state.
     }
 }

@@ -9,6 +9,10 @@ public static class GameEvents
     public static event Action<float> OnLootPickUp;
     public static event Action<float> OnQuotaSet;
     public static event Action OnQuotaHit;
+    public static event Action OnOpenDoor; //Exit door even, misschien andere naam?
+    public static event Action OnExitLevel;
+    public static event Action OnCandleDepleted;
+
 
     public static void ToggleMoveUI()
     {
@@ -33,5 +37,20 @@ public static class GameEvents
     public static void QuotaHit()
     {
         OnQuotaHit?.Invoke();
+    }
+
+    public static void OpenDoor()
+    { 
+        OnOpenDoor?.Invoke();
+    }
+
+    public static void Exitevel()
+    {
+        OnExitLevel?.Invoke();
+    }
+
+    public static void CandleDepleted()
+    {
+        OnCandleDepleted?.Invoke();
     }
 }
