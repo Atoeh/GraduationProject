@@ -4,6 +4,7 @@ using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
+//Mag later in de game manager worden geplaatst die allemaal events triggered voor de UIManager
 /// <summary>
 /// Code on the UICandle that makes environment darker based on the candle ammount left
 /// when slider value change, executes pp changes in the PP manager of the global volume

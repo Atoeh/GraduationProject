@@ -7,7 +7,7 @@ public class InventoryManagement : MonoBehaviour
     private float quota;
     public float lootAmmount = 0;
 
-    void OnStart()
+    void Start()
     {
         GameEvents.QuotaSet(quota);
         ResetLoot();
@@ -28,16 +28,18 @@ public class InventoryManagement : MonoBehaviour
         //verrander de waarde van curr loot in de quota dinges
         //Wacht moet dat hier of moet ik daar nog een ander script voor maken omdat dit een manager is?
         lootAmmount += value;
-        if (value >= quota)
-            GameEvents.QuotaHit();
+        GameEvents.InventoryUpdated(lootAmmount);
 
-        Debug.Log("LootPickUP activated, value = " + value);
+        if (lootAmmount >= quota)
+        {
+            GameEvents.QuotaHit();
+        }
     }
 
     private void ResetLoot()
     {
         lootAmmount = 0f;
-        Debug.Log("ResetLoot executed");
+        GameEvents.InventoryUpdated(lootAmmount);
     }
 
 }

@@ -33,7 +33,11 @@ public class ExitDoorScript : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player" && isOpen == true)
-            GameEvents.OpenDoor();
+        {
+            //voor nu met bool doorgeven omdat..
+            GameEvents.OpenDoor(isOpen);
+            Debug.Log("DoorOpened triggered");
+        }
     }
 
 }

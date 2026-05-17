@@ -21,14 +21,14 @@ public class LootUiScript : MonoBehaviour
 
     private void OnEnable()
     {
-        GameEvents.OnQuotaSet += SetQuotaUI;
-        GameEvents.OnLootPickUp += UpdateUI;    
+        //GameEvents.OnQuotaSet += SetQuotaUI;
+        //GameEvents.OnLootPickUp += UpdateUI;    
     }
 
     private void OnDisable()
     {
-        GameEvents.OnQuotaSet -= SetQuotaUI;
-        GameEvents.OnLootPickUp -= UpdateUI;
+    //    GameEvents.OnQuotaSet -= SetQuotaUI;
+    //    GameEvents.OnLootPickUp -= UpdateUI;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -42,7 +42,6 @@ public class LootUiScript : MonoBehaviour
     //Set Quota text
     public void SetQuotaUI(float value)
     {
-        Debug.Log("QuotaSet");
         quotaValue = value;
         quotaText.text = quotaValue.ToString();
     }
@@ -54,8 +53,6 @@ public class LootUiScript : MonoBehaviour
         //InventoryManagement Item op speler maken
         //LootCounterOnderdeel van deze manager maken
         //berekend nieuwe lootwaarde en INventoryUIUpdateEvent triggered
-
-        currLootValue += value;
-        currLootText.text = currLootValue.ToString();
+        currLootText.text = value.ToString();
     }
 }

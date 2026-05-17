@@ -5,18 +5,25 @@ public static class GameEvents
 {
     //should change the name of this dogwash to onMOve bcs that is the damm thing that happens
     public static event Action OnToggleMoveUI;
+    public static event Action<float> OnInventoryUpdated; //Misschien ook een array erbij voor uitbreiding met item list?
     public static event Action<float> OnChangeDarkness;
-    public static event Action<float> OnLootPickUp;
     public static event Action<float> OnQuotaSet;
-    public static event Action OnQuotaHit;
-    public static event Action OnOpenDoor; //Exit door even, misschien andere naam?
-    public static event Action OnExitLevel;
-    public static event Action OnCandleDepleted;
 
+    public static event Action<float> OnLootPickUp;
+    public static event Action OnQuotaHit;
+    public static event Action<bool> OnOpenDoor; //Exit door even, misschien andere naam?
+
+    public static event Action OnExitLevel;
+    public static event Action OnCandleDepleted; //change name to game over?
 
     public static void ToggleMoveUI()
     {
         OnToggleMoveUI?.Invoke();
+    }
+
+    public static void InventoryUpdated(float value)
+    {
+        OnInventoryUpdated?.Invoke(value);
     }
 
     public static void ChangeDarkness(float value)
@@ -39,9 +46,9 @@ public static class GameEvents
         OnQuotaHit?.Invoke();
     }
 
-    public static void OpenDoor()
+    public static void OpenDoor(bool isQuotaHit)
     { 
-        OnOpenDoor?.Invoke();
+        OnOpenDoor?.Invoke(isQuotaHit);
     }
 
     public static void Exitevel()
