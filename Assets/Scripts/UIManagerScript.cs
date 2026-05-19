@@ -15,8 +15,8 @@ public class UIManagerScript : MonoBehaviour
     private GameObject TavernPanel;
     [SerializeField]
     private GameObject MerchantPanel0;
-    [SerializeField]
-    private GameObject MerchantPanel1;
+    //[SerializeField]
+    //private GameObject MerchantPanel1;
     [SerializeField]
     private GameObject CandleDiedPanel;
     [SerializeField]
@@ -27,6 +27,10 @@ public class UIManagerScript : MonoBehaviour
     void Start()
     {
         movUIState = true;
+        TavernPanel.SetActive(true);
+        MerchantPanel0.SetActive(false);
+        //MerchantPanel1?.SetActive(false);
+        CandleDiedPanel.SetActive(false);
     }
 
     void OnEnable()
@@ -98,13 +102,15 @@ public class UIManagerScript : MonoBehaviour
     //Change this so that this executes the code within the merchant panel Thingy?
     void GoToMerchant(bool isQuotaHit)
     {
-        if (isQuotaHit == true)
-            MerchantPanel1.SetActive(true);
-        else MerchantPanel0.SetActive(true);
+        MerchantPanel0.SetActive(true);
+        //if (isQuotaHit == true)
+        //    MerchantPanel1.SetActive(true);
+        //else MerchantPanel0.SetActive(true);
     }
 
     void GameOverScreen()
-    { 
-        
+    {
+        CandleDiedPanel.SetActive(true);
+        Debug.Log("Game Over Screen activated");
     }
 }

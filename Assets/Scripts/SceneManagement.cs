@@ -12,6 +12,7 @@ public class SceneManagement : MonoBehaviour
     {
         GameEvents.OnExitLevel += GoToNextLevel;
         GameEvents.OnCandleDepleted += GameOver;
+        GameEvents.OnLeaveGame += OpenStartScreen;
         //Niet op reachen van de deur maar op klikken van next level na merchant
         //GameEvents.OnOpenDoor += GoToNextLevel;
     }
@@ -37,5 +38,11 @@ public class SceneManagement : MonoBehaviour
         //Trigger the game over state, which is an event i suppose
         //Why use an event to trigger a function to trigger an event?
         //Well, there can be more events that trigger the game over state.
+    }
+
+    public void OpenStartScreen()
+    {
+        //Scene 0 is the startScene i guess
+        SceneManager.LoadScene(0);
     }
 }

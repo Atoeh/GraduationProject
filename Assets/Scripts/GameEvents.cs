@@ -13,8 +13,10 @@ public static class GameEvents
     public static event Action OnQuotaHit;
     public static event Action<bool> OnOpenDoor; //Exit door even, misschien andere naam?
 
-    public static event Action OnExitLevel;
+    public static event Action OnTimerPause;
+    public static event Action OnExitLevel; // wat doel hier ook alweer van
     public static event Action OnCandleDepleted; //change name to game over?
+    public static event Action OnLeaveGame;
 
     public static void ToggleMoveUI()
     {
@@ -51,7 +53,12 @@ public static class GameEvents
         OnOpenDoor?.Invoke(isQuotaHit);
     }
 
-    public static void Exitevel()
+    public static void TimerPause()
+    { 
+        OnTimerPause?.Invoke();
+    }
+
+    public static void ExitLevel()
     {
         OnExitLevel?.Invoke();
     }
@@ -60,4 +67,10 @@ public static class GameEvents
     {
         OnCandleDepleted?.Invoke();
     }
+
+    public static void LeaveGame()
+    { 
+        OnLeaveGame?.Invoke();
+    }
+
 }

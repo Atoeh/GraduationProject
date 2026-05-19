@@ -35,6 +35,7 @@ public class ExitDoorScript : MonoBehaviour
         if (other.tag == "Player" && isOpen == true)
         {
             //voor nu met bool doorgeven omdat..
+            GameEvents.TimerPause();
             GameEvents.OpenDoor(isOpen);
             Debug.Log("DoorOpened triggered");
         }

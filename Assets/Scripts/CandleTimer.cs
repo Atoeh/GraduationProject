@@ -22,9 +22,19 @@ public class CandleTimer : MonoBehaviour
     private float timeStart = 50f;
     private float timeSinceLastStep = 0f;
 
+    private void OnEnable()
+    {
+        GameEvents.OnTimerPause += PauseTimer;
+    }
+
+    private void OnDisable()
+    {
+        GameEvents.OnTimerPause -= PauseTimer;
+    }
+
     void Start()
     {
-        candleOn = true;
+        candleOn = false;
         slider = GetComponent<Slider>();
         timeLeft = timeStart;
         SetSlider();
@@ -32,18 +42,24 @@ public class CandleTimer : MonoBehaviour
 
     void Update()
     {
-        if (timeLeft <= 0f)
+        if (candleOn == true)
         {
-            timeLeft = 0f;
-            candleOn = false;
-        }
+            //Is there still time left?
+            if (timeLeft <= 0f)
+            {
+                GameEvents.CandleDepleted();
+                timeLeft = 0f;
+                candleOn = false;
+            }
 
-        timeSinceLastStep += Time.deltaTime;
-        if (timeSinceLastStep >= updateTime)
-        {
-            timeLeft = timeLeft - updateTime;
-            SetSlider();
-            timeSinceLastStep = 0;
+            //if timeSincelastStep is larger then a second, subtract second from timer.
+            timeSinceLastStep += Time.deltaTime;
+            if (timeSinceLastStep >= updateTime)
+            {
+                timeLeft = timeLeft - updateTime;
+                SetSlider();
+                timeSinceLastStep = 0;
+            }
         }
     }
 
@@ -68,4 +84,18 @@ public class CandleTimer : MonoBehaviour
     {
         slider.value = timeLeft/timeMax;
     }
+
+    public void PauseTimer()
+    {
+        if (candleOn == true)
+        {
+            candleOn = false;
+        }
+        else
+        {
+            candleOn = true;
+            timeSinceLastStep = 0;
+        }
+    }
+
 }

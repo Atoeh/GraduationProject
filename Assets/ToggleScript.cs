@@ -1,16 +1,18 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ToggleScript : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private GameObject toggleObject;
 
-    // Update is called once per frame
-    void Update()
+    public void ToggleObject()
     {
-        
-    }
+        if (toggleObject == null)
+            toggleObject = gameObject;
+
+        if(toggleObject == false)
+            toggleObject.SetActive(true);
+        else toggleObject.SetActive(false);
+    }  
 }
