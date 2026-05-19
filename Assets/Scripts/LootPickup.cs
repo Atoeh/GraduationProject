@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class LootPickUp : MonoBehaviour
 {
-    [SerializeField]
-    private float lootValue;
+    public float lootValue;
     [SerializeField]
     private GameObject visual;
 

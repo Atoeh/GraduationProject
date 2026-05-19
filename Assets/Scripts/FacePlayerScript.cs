@@ -2,11 +2,9 @@ using UnityEngine;
 
 public class FacePlayerScript : MonoBehaviour
 {
-    [SerializeField]
-    private Transform playerTrans;
-
     void Update()
     {
+        Transform playerTrans = FindFirstObjectByType<PlayerMovement>().gameObject.transform;
         transform.LookAt(playerTrans);
     }
 }

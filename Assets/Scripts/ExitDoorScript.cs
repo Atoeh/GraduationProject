@@ -10,10 +10,15 @@ using UnityEngine;
 public class ExitDoorScript : MonoBehaviour
 {
     private bool isOpen = false;
+    [SerializeField]
+    private GameObject doorBorder;
+    [SerializeField]
+    private GameObject ExitText;
 
     private void Start()
     {
         isOpen = false;
+        ExitText.SetActive(false);
     }
 
     private void OnEnable()
@@ -28,6 +33,8 @@ public class ExitDoorScript : MonoBehaviour
     private void UnlockExit()
     {
         isOpen = true;
+        doorBorder.SetActive(false);
+        ExitText.SetActive(true);  
     }
 
     private void OnTriggerEnter(Collider other)
@@ -40,5 +47,4 @@ public class ExitDoorScript : MonoBehaviour
             Debug.Log("DoorOpened triggered");
         }
     }
-
 }

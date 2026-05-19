@@ -3,13 +3,19 @@ using UnityEngine;
 
 public class InventoryManagement : MonoBehaviour
 {
-    [SerializeField]
     private float quota;
     public float lootAmmount = 0;
 
     void Start()
     {
+        LootPickUp[] allLoot = FindObjectsByType<LootPickUp>(FindObjectsSortMode.None);
+        foreach (LootPickUp loot in allLoot)
+        {
+            quota += loot.lootValue;
+        }
         GameEvents.QuotaSet(quota);
+        Debug.Log("quota is " + quota);
+        Debug.Log("Length is " + allLoot.Length.ToString());
         ResetLoot();
     }
 
