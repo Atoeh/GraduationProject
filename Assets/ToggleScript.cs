@@ -11,7 +11,7 @@ public class ToggleScript : MonoBehaviour
         if (toggleObject == null)
             toggleObject = gameObject;
 
-        if(toggleObject == false)
+        if(toggleObject.activeSelf == false)
             toggleObject.SetActive(true);
         else toggleObject.SetActive(false);
     }  
