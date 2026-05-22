@@ -6,6 +6,15 @@ public class LootPickUp : MonoBehaviour
     [SerializeField]
     private GameObject visual;
 
+    private void OnEnable()
+    {
+        GameEvents.OnNoLoot += UnInteractable;
+    }
+    private void OnDisable()
+    {
+        GameEvents.OnNoLoot -= UnInteractable;
+    }
+
     private void Start()
     {
         InstantiateVisual();
@@ -31,5 +40,10 @@ public class LootPickUp : MonoBehaviour
     {
         if(visual != null)
             Instantiate(visual, transform.position, transform.rotation, transform);
+    }
+
+    private void UnInteractable()
+    {
+        Destroy(this);
     }
 }

@@ -40,6 +40,12 @@ public class InventoryManagement : MonoBehaviour
         {
             GameEvents.QuotaHit();
         }
+
+        if (lootAmmount <= 0)
+        { 
+            GameEvents.NoLoot();
+            Debug.Log("NoLoot called");
+        }
     }
 
     private void ResetLoot()

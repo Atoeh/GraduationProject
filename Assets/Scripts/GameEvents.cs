@@ -10,6 +10,7 @@ public static class GameEvents
     public static event Action<float> OnQuotaSet;
 
     public static event Action<float> OnLootPickUp;
+    public static event Action OnNoLoot;
     public static event Action OnQuotaHit;
     public static event Action<bool> OnOpenDoor; //Exit door even, misschien andere naam?
 
@@ -36,6 +37,11 @@ public static class GameEvents
     public static void LootPickUp(float value)
     {
         OnLootPickUp?.Invoke(value);
+    }
+
+    public static void NoLoot()
+    {
+        OnNoLoot?.Invoke();
     }
 
     public static void QuotaSet(float value)
