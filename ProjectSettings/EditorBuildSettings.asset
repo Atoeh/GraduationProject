@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/3. Loop 3.unity
     guid: 085e37e13b0551241bfb2f27a5fd8a74
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/4. EndScreen.unity
     guid: 143537caf282c4444bbeb95d164842a3
   m_configObjects:

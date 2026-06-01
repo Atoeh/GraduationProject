@@ -157,8 +157,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -271.97913, y: -70.52082}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 280, y: -167}
+  m_SizeDelta: {x: 160, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3932409
 MonoBehaviour:
@@ -1931,7 +1931,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &344243793
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4726,7 +4726,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -271.97913, y: -70.52081}
+  m_AnchoredPosition: {x: 288, y: -189}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &749052812
@@ -5042,7 +5042,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 179.29999, y: 59.1}
+  m_AnchoredPosition: {x: -136, y: 95}
   m_SizeDelta: {x: 391.18347, y: 97.79587}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &776498012
@@ -5065,11 +5065,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You stare in its Eye, so you wish for the armour of heroes do you now?
-
-    Take
-    this candle whilst it burns you will be able to navigate the treatureous dungeon,
-    collect as much as you can and get back in time'
+  m_text: "You stand in front of the Merchants\u2019 place, your backpack empty and
+    your spirit down.  You do not enter the building.\r\nSlowly you walk to the inn
+    and take place at your usual spot. Once more you see the adveturers together
+    as a group and your heart burns for company.  Whilst peering off into the crowd
+    one of the faces suddenly jumps out to you. It was the person you saved whilst
+    in the dungeon. You lock eyes, and you sense\u2026 kinship.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -5134,7 +5135,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: -105.98214}
+  m_margin: {x: 0, y: 0, z: -266.6197, w: -105.98214}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5272,7 +5273,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: To the tavern
+  m_text: Quit gamef
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7984,7 +7985,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1245511902
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11639,7 +11640,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The merchants den
+  m_text: The merchants den?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -11809,7 +11810,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 179.30002, y: -10.999993}
+  m_AnchoredPosition: {x: -124, y: 69}
   m_SizeDelta: {x: 391.18347, y: 97.79587}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1736250342
@@ -11832,8 +11833,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sitting in the tavern, dreaming of being hailed as a hero with all the
-    heroic deeds that that you have done
+  m_text: "You once more rest at the table in the corner of the inn. You can\u2019t
+    eat, not only are you too nervous for this endeavor but the gigantic breast plate
+    is also in front of your mouth.\r\nToo your dismay no one once more seems to
+    care. grumbles, muffled by the enormous breastplate\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -11898,7 +11901,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: -105.98214}
+  m_margin: {x: 0, y: 0, z: -178.79207, w: -105.98214}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
