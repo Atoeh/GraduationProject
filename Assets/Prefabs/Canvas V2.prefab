@@ -716,7 +716,7 @@ RectTransform:
   m_GameObject: {fileID: 2035417013425375125}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2077421, y: 1.1367891, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 975593181020494533}
@@ -729,7 +729,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.8, y: 25}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2274896704648156818
@@ -1282,7 +1282,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 92.9, y: 51}
+  m_SizeDelta: {x: 150, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3964328382708608469
 MonoBehaviour:
@@ -1362,14 +1362,14 @@ RectTransform:
   m_GameObject: {fileID: 3399237423987539038}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2077421, y: 1.1367891, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7019068131042272449}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.635434, y: -152.56223}
+  m_AnchoredPosition: {x: 2.635434, y: -149}
   m_SizeDelta: {x: 250, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4489717749905881690
@@ -2013,9 +2013,9 @@ RectTransform:
   - {fileID: 4971039740705630121}
   - {fileID: 4416603162768855586}
   - {fileID: 387381051843679364}
-  - {fileID: 573434597619680161}
   - {fileID: 3470288454618221008}
   - {fileID: 5304858039368907011}
+  - {fileID: 573434597619680161}
   - {fileID: 7755917446988519793}
   - {fileID: 2173693303381629257}
   - {fileID: 8738268809775643436}
@@ -3718,7 +3718,7 @@ MonoBehaviour:
   TavernPanel: {fileID: 0}
   MerchantPanel0: {fileID: 0}
   CandleDiedPanel: {fileID: 0}
-  lootUI: {fileID: 0}
+  lootUI: {fileID: 7843995846278523978}
 --- !u!1 &9203315424061557853
 GameObject:
   m_ObjectHideFlags: 0
