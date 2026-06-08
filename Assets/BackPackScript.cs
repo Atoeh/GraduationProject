@@ -62,7 +62,7 @@ public class BackPackScript : MonoBehaviour
         }
         else
         { 
-            firstLootLine.SetActive(false);
+            //firstLootLine.SetActive(false);
         }
     }
 
