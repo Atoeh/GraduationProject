@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7c7b9df3141f8ea48a7b1afc840d6c85
+guid: 6fbdb8972bcf86d4fb127b42c84e440b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -49,7 +49,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 56, z: 42, w: 0}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Heart_0
+      name: backPackieV1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 56
-        width: 42
-        height: 56
+        y: 74
+        width: 51
+        height: 74
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,20 +125,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd2822d4ebb04ba46a27a0da365ab2ec
-      internalID: 1560374252
+      spriteID: af437ba3435c4ac46b53d889a403b808
+      internalID: 855455314
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heart_1
+      name: backPackieV1_1
       rect:
         serializedVersion: 2
-        x: 42
-        y: 56
-        width: 42
-        height: 56
+        x: 51
+        y: 74
+        width: 51
+        height: 74
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 782edbaa2288ecb44b003ddc92d423f5
-      internalID: -1226270348
+      spriteID: 2e2f3c3bbdd72334192f6f93ac442c6c
+      internalID: -619318842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heart_2
+      name: backPackieV1_2
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 42
-        height: 56
+        width: 51
+        height: 74
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,8 +169,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3d867e1e2e74c04881414f876164c2d
-      internalID: 951670791
+      spriteID: 9eee1cf499d36f844b3a2e1cb2ffeee0
+      internalID: -1034459165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backPackieV1_3
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 0
+        width: 51
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b69edbe4d832b2a4fa26e01c67ee4f9b
+      internalID: 1342113703
       vertices: []
       indices: 
       edges: []
@@ -179,8 +201,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    spriteID: 0163b4944d33ddb4eb1445eaf38c7a26
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -189,11 +211,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":42.0,"y":56.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":51.0,"y":74.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Heart_0: 1560374252
-      Heart_1: -1226270348
-      Heart_2: 951670791
+      backPackieV1_0: 855455314
+      backPackieV1_1: -619318842
+      backPackieV1_2: -1034459165
+      backPackieV1_3: 1342113703
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

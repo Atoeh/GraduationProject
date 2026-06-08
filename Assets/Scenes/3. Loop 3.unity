@@ -4288,6 +4288,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e10be2f5a748844dbd0b2b7e6fafd4a, type: 3}
+--- !u!1 &709159215 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5631083765084304703, guid: 832ff407dfcb0c145868ac0d559f1ffa, type: 3}
+  m_PrefabInstance: {fileID: 1755903113}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &713156350
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12265,6 +12270,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2554573191873846485, guid: 832ff407dfcb0c145868ac0d559f1ffa, type: 3}
+      propertyPath: maxTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2554573191873846485, guid: 832ff407dfcb0c145868ac0d559f1ffa, type: 3}
+      propertyPath: introLine
+      value: 
+      objectReference: {fileID: 709159215}
     - target: {fileID: 3399237423987539038, guid: 832ff407dfcb0c145868ac0d559f1ffa, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -12288,6 +12301,10 @@ PrefabInstance:
     - target: {fileID: 5243128044933262412, guid: 832ff407dfcb0c145868ac0d559f1ffa, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 157.54025
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631083765084304703, guid: 832ff407dfcb0c145868ac0d559f1ffa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6019346422725372918, guid: 832ff407dfcb0c145868ac0d559f1ffa, type: 3}
       propertyPath: m_Name
@@ -12393,6 +12410,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7038208465562231971, guid: 832ff407dfcb0c145868ac0d559f1ffa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7243141639278987453, guid: 832ff407dfcb0c145868ac0d559f1ffa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -12437,7 +12458,8 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -174.81699
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1854961861696971985, guid: 832ff407dfcb0c145868ac0d559f1ffa, type: 3}
     m_RemovedGameObjects:
     - {fileID: 8552835972075276787, guid: 832ff407dfcb0c145868ac0d559f1ffa, type: 3}
     - {fileID: 5042782167637881753, guid: 832ff407dfcb0c145868ac0d559f1ffa, type: 3}
