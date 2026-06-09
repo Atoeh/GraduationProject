@@ -1020,7 +1020,7 @@ GameObject:
   - component: {fileID: 166753272189597471}
   - component: {fileID: 5280288168254402275}
   m_Layer: 5
-  m_Name: DialogBox
+  m_Name: BPCounter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

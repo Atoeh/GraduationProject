@@ -8,8 +8,6 @@ public class BackPackScript : MonoBehaviour
     [SerializeField]
     private GameObject introLine;
     [SerializeField]
-    private GameObject counterLine;
-    [SerializeField]
     private GameObject firstLootLine;
 
     [SerializeField]
@@ -19,6 +17,9 @@ public class BackPackScript : MonoBehaviour
     [SerializeField]
     private float maxTime;
     private float startTime;
+
+    [SerializeField]
+    private int warningAmm;
 
     private void OnEnable()
     {
@@ -37,7 +38,9 @@ public class BackPackScript : MonoBehaviour
         introDone = false;
         isMunching = false;
         munchText.SetActive(false);
-        //popUpLootText = popUpObj.GetComponent<TMP_Text>();
+        introLine.SetActive(false);
+        firstLootLine.SetActive(false);
+        warningAmm = 0;
     }
 
     private void Update()
@@ -57,12 +60,29 @@ public class BackPackScript : MonoBehaviour
     {
         if (!introDone)
         {
+            GameEvents.ToggleMoveUI();
             introLine.SetActive(true);
             introDone = true;
+            Debug.Log("Backpack intro");
         }
-        else
-        { 
-            //firstLootLine.SetActive(false);
+
+        if (value < 0)
+        {
+            GameEvents.ToggleMoveUI();
+            warningAmm += 1;
+
+            if (warningAmm == 1)
+            {
+                Debug.Log("Hey");
+            }
+            if (warningAmm == 3)
+            {
+                Debug.Log("What are you doing?");
+            }
+            if (warningAmm == 5)
+            {
+                Debug.Log("Lets talk this through");
+            }
         }
     }
 

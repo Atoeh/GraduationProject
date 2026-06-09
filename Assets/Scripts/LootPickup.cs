@@ -3,8 +3,9 @@ using UnityEngine;
 public class LootPickUp : MonoBehaviour
 {
     public float lootValue;
+    public GameObject visual;
     [SerializeField]
-    private GameObject visual;
+    private GameObject canvas;
 
     private void OnEnable()
     {
@@ -38,8 +39,11 @@ public class LootPickUp : MonoBehaviour
 
     private void InstantiateVisual()
     {
-        if(visual != null)
-            Instantiate(visual, transform.position, transform.rotation, transform);
+        if (visual != null)
+        {
+            Transform canv = canvas.transform;
+            Instantiate(visual, canv.position, canv.rotation, canv);
+        }
     }
 
     private void UnInteractable()

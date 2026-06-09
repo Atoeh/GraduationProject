@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1445784290424115691}
   - component: {fileID: 3832280595819603945}
   m_Layer: 0
-  m_Name: LootPickUP
+  m_Name: LootPickUPV1
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

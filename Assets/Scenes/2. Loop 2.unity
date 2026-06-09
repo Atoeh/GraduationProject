@@ -5613,12 +5613,12 @@ MonoBehaviour:
     you not-so-carefully laid out during your last visit seems to still rest on the
     counter between you.
 
-    
 
-    Once more you barter for a piece of armor. This
-    time however you gravitate to the most outstanding (or rather outlandish) piece
-    of gear you can find a gigantic breast plate! At least two sizes are too large
-    for you.
+
+    Once more you barter for a piece of armor. This time
+    however you gravitate to the most outstanding (or rather outlandish) piece of
+    gear you can find a gigantic breast plate! At least two sizes are too large for
+    you.
 
 '
   m_isRightToLeft: 0
@@ -10901,6 +10901,7 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 8552835972075276787, guid: 832ff407dfcb0c145868ac0d559f1ffa, type: 3}
     - {fileID: 5042782167637881753, guid: 832ff407dfcb0c145868ac0d559f1ffa, type: 3}
+    - {fileID: 270572808326378843, guid: 832ff407dfcb0c145868ac0d559f1ffa, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7019068131042272449, guid: 832ff407dfcb0c145868ac0d559f1ffa, type: 3}
       insertIndex: -1
