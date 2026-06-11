@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -13,10 +14,13 @@ public class LootUiScript : MonoBehaviour
     private GameObject currLootObj;
     [SerializeField]
     private GameObject popUpObj;
+    [SerializeField]
+    private GameObject worthObj;
 
     private TMP_Text quotaText;
     private TMP_Text currLootText;
     private TMP_Text popUpLootText;
+    private TMP_Text worthText;
 
     private bool popUpIsTrue;
     [SerializeField]
@@ -28,16 +32,31 @@ public class LootUiScript : MonoBehaviour
     [SerializeField]
     private float currLootValue;
 
+    [SerializeField] 
+    private List<float> worthList;
+    [SerializeField]
+    private List<GameObject> imageList;
+    private int lootCount;
+    private GameObject lootImage;
+    [SerializeField]
+    private GameObject spawnLocation;
+    [SerializeField]
+    private GameObject nullImage;
+
     private void OnEnable()
     {
         //GameEvents.OnQuotaSet += SetQuotaUI;
-        GameEvents.OnLootPickUp += LootPopUP;    
+        GameEvents.OnLootPickUp += LootValuePopUp;
+        GameEvents.OnLootPickUp += ShowNewloot;
+        GameEvents.OnDropLoot += ShowPreviousLoot;
     }
 
     private void OnDisable()
     {
     //    GameEvents.OnQuotaSet -= SetQuotaUI;
-        GameEvents.OnLootPickUp -= LootPopUP;
+        GameEvents.OnLootPickUp -= LootValuePopUp;
+        GameEvents.OnLootPickUp -= ShowNewloot;
+        GameEvents.OnDropLoot += ShowPreviousLoot;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -47,6 +66,7 @@ public class LootUiScript : MonoBehaviour
         quotaText = quotaObj.GetComponent<TMP_Text>();
         currLootText = currLootObj.GetComponent<TMP_Text>();
         popUpLootText = popUpObj.GetComponent<TMP_Text>();
+        worthText = worthObj.GetComponent<TMP_Text>();
         popUpIsTrue = false;
     }
 
@@ -63,7 +83,7 @@ public class LootUiScript : MonoBehaviour
             popUpObj.SetActive(false);
     }
 
-    //Set Quota text
+    //Set Quota text, this will have to change i guess
     public void SetQuotaUI(float value)
     {
         quotaValue = value;
@@ -76,18 +96,46 @@ public class LootUiScript : MonoBehaviour
         currLootText.text = value.ToString();
     }
 
-    public void LootPopUP(float value)
+    public void LootValuePopUp(float value, GameObject image)
     {
         string text;
-        if (value >= 0)
+        text = value.ToString();
+        //popUpLootText.text = text;
+        worthText.text = text;
+        //startTime = Time.time;
+        //popUpIsTrue = true;
+    }
+
+    public void ShowNewloot(float value, GameObject image)
+    {
+        worthList.Add(value);
+        imageList.Add(image);
+        UpdateLootShowCase();
+        lootCount++;
+    }
+
+    public void ShowPreviousLoot()
+    {
+        if (lootCount >= 1)
         {
-            text = "+ " + value.ToString();
+            lootCount--;
+            UpdateLootShowCase();
+            Debug.Log("Low");
         }
         else
-            text = value.ToString();
+        {
+            Instantiate(nullImage, spawnLocation.transform);
+            worthText.text = "0";
+            GameEvents.NoLoot();
+        }
+    }
 
-        popUpLootText.text = text;
-        startTime = Time.time;
-        popUpIsTrue = true;
+    private void UpdateLootShowCase()
+    {
+        GameObject image = imageList[lootCount];
+        Instantiate(image, spawnLocation.transform);
+
+        worthText.text = worthList[lootCount].ToString();
+
     }
 }

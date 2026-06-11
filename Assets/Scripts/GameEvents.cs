@@ -1,5 +1,6 @@
 using System;
 using Unity.VisualScripting;
+using UnityEngine;
 
 public static class GameEvents
 {
@@ -9,7 +10,8 @@ public static class GameEvents
     public static event Action<float> OnChangeDarkness;
     public static event Action<float> OnQuotaSet;
 
-    public static event Action<float> OnLootPickUp;
+    public static event Action<float, GameObject> OnLootPickUp;
+    public static event Action OnDropLoot;
     public static event Action OnNoLoot;
     public static event Action OnQuotaHit;
     public static event Action<bool> OnOpenDoor; //Exit door even, misschien andere naam?
@@ -34,9 +36,14 @@ public static class GameEvents
         OnChangeDarkness?.Invoke(value);
     }
 
-    public static void LootPickUp(float value)
+    public static void LootPickUp(float value, GameObject image)
     {
-        OnLootPickUp?.Invoke(value);
+        OnLootPickUp?.Invoke(value, image);
+    }
+
+    public static void DropLoot()
+    { 
+        OnDropLoot?.Invoke();
     }
 
     public static void NoLoot()

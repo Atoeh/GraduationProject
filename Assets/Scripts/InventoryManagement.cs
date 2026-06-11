@@ -29,7 +29,8 @@ public class InventoryManagement : MonoBehaviour
         GameEvents.OnLootPickUp -= LootPickUp;   
     }
 
-    private void LootPickUp(float value)
+    //Called NoLoot niet meer zit nu in de LootUi
+    private void LootPickUp(float value, GameObject image)
     {
         //verrander de waarde van curr loot in de quota dinges
         //Wacht moet dat hier of moet ik daar nog een ander script voor maken omdat dit een manager is?

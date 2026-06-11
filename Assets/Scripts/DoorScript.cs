@@ -21,7 +21,7 @@ public class DoorScript : MonoBehaviour
         GameEvents.OnQuotaHit -= QuotaHit;
     }
 
-    private void CheckAmmount(float value)
+    private void CheckAmmount(float value, GameObject image)
     {
         if (openOnQuota == false)
         {

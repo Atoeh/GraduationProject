@@ -56,7 +56,7 @@ public class BackPackScript : MonoBehaviour
             munchText.SetActive(false);
     }
 
-    private void OpenDialogue(float value)
+    private void OpenDialogue(float value, GameObject image)
     {
         if (!introDone)
         {
@@ -86,7 +86,7 @@ public class BackPackScript : MonoBehaviour
         }
     }
 
-    private void MunchDown(float value)
+    private void MunchDown(float value, GameObject image)
     {
         startTime = Time.time;
         isMunching = true;

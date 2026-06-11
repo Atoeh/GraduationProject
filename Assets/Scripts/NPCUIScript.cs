@@ -16,14 +16,16 @@ public class NPCUIScript : MonoBehaviour
     [SerializeField] 
     private float StealAmm = 240;
     public GameObject npcBody;
+    [SerializeField]
+    private GameObject lootImage;
 
     //-------------------------------DROPPING Sequence
-    [SerializeField]
-    private float dropAmm = -20f;
-    [SerializeField]
-    private float dropped = 0f;
-    [SerializeField]
-    private float dropMax = 40f;
+    //[SerializeField]
+    //private float dropAmm = -20f;
+    //[SerializeField]
+    //private float dropped = 0f;
+    //[SerializeField]
+    //private float dropMax = 40f;
 
     [SerializeField]
     private GameObject comment1;
@@ -53,7 +55,7 @@ public class NPCUIScript : MonoBehaviour
         npcBody = FindFirstObjectByType<NPCScript>().gameObject;
         introObj.SetActive(true);
         choiceObj.SetActive(false); 
-        dropped = 0f;
+        //dropped = 0f;
     }
 
     public void NextButton()
@@ -65,23 +67,23 @@ public class NPCUIScript : MonoBehaviour
 
     public void DropLoot()
     {
-        GameEvents.LootPickUp(dropAmm);
-        dropped += dropAmm;
-        if (dropped >= dropMax && dropped <= 2*dropMax)
-        {
-            Debug.Log("backpackie comment 1");
-            comment1.SetActive(true);
-        }
-        if (dropped >= 2 * dropMax)
-        {
-            Debug.Log("Backpackie comment 2");
-            comment2.SetActive(true);
-        }
-        if (dropped > 3 * dropMax)
-        {
-            Debug.Log("Backpackie Blocking you");
-            blocked.SetActive(true);
-        }
+        GameEvents.DropLoot();
+        //dropped += dropAmm;
+        //if (dropped >= dropMax && dropped <= 2*dropMax)
+        //{
+        //    Debug.Log("backpackie comment 1");
+        //    comment1.SetActive(true);
+        //}
+        //if (dropped >= 2 * dropMax)
+        //{
+        //    Debug.Log("Backpackie comment 2");
+        //    comment2.SetActive(true);
+        //}
+        //if (dropped > 3 * dropMax)
+        //{
+        //    Debug.Log("Backpackie Blocking you");
+        //    blocked.SetActive(true);
+        //}
     }
     public void PickUpPerson()
     {
@@ -92,7 +94,7 @@ public class NPCUIScript : MonoBehaviour
 
     public void StealLoot()
     {
-        GameEvents.LootPickUp(StealAmm);
+        GameEvents.LootPickUp(StealAmm, lootImage);
         ClosePopUP();
     }
 

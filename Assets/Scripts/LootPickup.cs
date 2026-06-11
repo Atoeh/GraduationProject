@@ -4,8 +4,7 @@ public class LootPickUp : MonoBehaviour
 {
     public float lootValue;
     public GameObject visual;
-    [SerializeField]
-    private GameObject canvas;
+
 
     private void OnEnable()
     {
@@ -31,7 +30,7 @@ public class LootPickUp : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            GameEvents.LootPickUp(lootValue);
+            GameEvents.LootPickUp(lootValue, visual);
             //Fucntie toevoegen die particle effect spawnt op loot collectie
             Destroy(this.gameObject);
         }
@@ -41,8 +40,7 @@ public class LootPickUp : MonoBehaviour
     {
         if (visual != null)
         {
-            Transform canv = canvas.transform;
-            Instantiate(visual, canv.position, canv.rotation, canv);
+            Instantiate(visual, transform.position, transform.rotation, transform);
         }
     }
 

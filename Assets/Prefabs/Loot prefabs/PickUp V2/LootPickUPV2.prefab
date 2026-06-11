@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2229887679605314978}
   - component: {fileID: 4820683909270425344}
   - component: {fileID: 9026502593917212231}
-  - component: {fileID: 1445784290424115691}
   - component: {fileID: 3832280595819603945}
+  - component: {fileID: 1123031145246419891}
   m_Layer: 0
   m_Name: LootPickUPV2
   m_TagString: Interactable
@@ -84,21 +84,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 0
---- !u!114 &1445784290424115691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1318700714435947191}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c88068d1bf126ac47b798e8e97d2a42a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  lootValue: 40
-  visual: {fileID: 7554963240644494341, guid: c9f7f4ae6c5109f448ee6cff07d29a0f, type: 3}
-  canvas: {fileID: 8254029782392126891}
 --- !u!114 &3832280595819603945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,6 +96,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc44e79bd83a7c245be357285e0a6756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FacePlayerScript
+--- !u!114 &1123031145246419891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318700714435947191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abb35c39680ae7b499128eadea6d1d78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LootPickUpV2
+  lootValue: 0
+  visual: {fileID: 7554963240644494341, guid: c9f7f4ae6c5109f448ee6cff07d29a0f, type: 3}
 --- !u!1 &8254029782392126891
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,7 +137,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8254029782392126891}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 4}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -146,8 +145,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 687, y: 383.5}
-  m_SizeDelta: {x: 1366, y: 768}
+  m_AnchoredPosition: {x: 0, y: 0.5}
+  m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &8413220919404638095
 Canvas:
