@@ -610,9 +610,7 @@ MonoBehaviour:
   choiceObj: {fileID: 8874721461088093986}
   StealAmm: 260
   npcBody: {fileID: 0}
-  dropAmm: -20
-  dropped: 0
-  dropMax: 40
+  lootImage: {fileID: 8788696440994305287, guid: 98b0ff480a08508498dfe8e859b6882e, type: 3}
   comment1: {fileID: 0}
   comment2: {fileID: 0}
   blocked: {fileID: 0}

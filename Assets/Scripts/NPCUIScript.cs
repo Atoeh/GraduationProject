@@ -35,8 +35,6 @@ public class NPCUIScript : MonoBehaviour
     private GameObject blocked;
     [SerializeField]
 
-    //-------------------------------
-
     private void OnEnable()
     {
         GameEvents.OnNoLoot += EnableButton;
