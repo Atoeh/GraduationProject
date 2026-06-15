@@ -5,6 +5,7 @@ public class InventoryManagement : MonoBehaviour
 {
     private float quota;
     public float lootAmmount = 0;
+    public bool quotaIsTreu = false;
 
     void Start()
     {
@@ -13,10 +14,13 @@ public class InventoryManagement : MonoBehaviour
         {
             quota += loot.lootValue;
         }
-        GameEvents.QuotaSet(quota);
-        Debug.Log("quota is " + quota);
-        Debug.Log("Length is " + allLoot.Length.ToString());
-        ResetLoot();
+        if (quotaIsTreu == true)
+        {
+            GameEvents.QuotaSet(quota);
+            Debug.Log("quota is " + quota);
+            Debug.Log("Length is " + allLoot.Length.ToString());
+            ResetLoot();
+        }
     }
 
     private void OnEnable()
