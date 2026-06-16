@@ -21,17 +21,24 @@ public class CutSceneScripts : MonoBehaviour
     private Image image;
     private Color color;
 
+    [Header("Audio")]
+    [SerializeField]
+    AudioClip ambienceClip;
+    [SerializeField]
+    AudioClip musicClip;
+    [SerializeField]
+    AudioClip transitionEffectClip;
+
     void Start()
     {
         color = GetComponentInChildren<Image>().color;
 
-        storyBoardSize = storyBoard.Length;
-        Debug.Log("storyBoardLength = " + storyBoard.Length);
+        storyBoardSize = storyBoard.Length + 1;
         currScreen = 0;
 
-        for (int i = 0; i < storyBoardSize; i++)
+        for (int i = 0; i < storyBoard.Length; i++)
         {
-            storyBoard[i].SetActive(false);   
+            storyBoard[i].SetActive(false);
         }
         
         if (startsDark == true)
@@ -45,6 +52,8 @@ public class CutSceneScripts : MonoBehaviour
         }
     }
 
+    // ----------------------- (RE-) START CUTSCENE -------------------------
+
     public void StartCutScene()
     {
         //Pause the game
@@ -52,10 +61,13 @@ public class CutSceneScripts : MonoBehaviour
         StartCoroutine(Next());
     }
 
+    //Not used rn
     public void RestartCutScene()
     {
         StartCoroutine(Next());
     }
+
+    // ----------------------- NEXT SCREEN -------------------------
 
     public void NextScreen()
     {
@@ -79,35 +91,68 @@ public class CutSceneScripts : MonoBehaviour
             storyBoard[currScreen - 1].SetActive(false);
 
         //enable new UI
+        Debug.Log( "Scene before adding = " + currScreen);
         storyBoard[currScreen].SetActive(true);
-        currScreen = (currScreen + 1) % (storyBoardSize + 1);
-        Debug.Log("currScreen = " + currScreen);
+        currScreen = (currScreen + 1) % (storyBoardSize);
+        Debug.Log("Scene after adding = " + currScreen);
+
 
         //Fade to UI
         StartCoroutine(Transition(false));
         yield return new WaitForSeconds(transTime);
     }
 
-    public void PreviousScreen()
+    // ----------------------- PREVIOUS SCREEN -------------------------
+
+    public IEnumerator Previous()
     {
-        StartCoroutine(Transition(true));
-        currScreen = (currScreen--);
+        //Fade to black
+        StartCoroutine (Transition(true));
+        yield return new WaitForSeconds(transTime);
+
+        //disable ui
+        Debug.Log("Scene before adding = " + currScreen);
+        storyBoard[currScreen - 1].SetActive(false);
+        
+        //load previous ui
+        storyBoard[currScreen - 2].SetActive(true);
+        currScreen = currScreen - 1;
+
+        //Fade to ui
         StartCoroutine(Transition(false));
+        yield return new WaitForSeconds(transTime);
     }
 
-    public void CloseScreen()
+    public void PreviousScreen()
     {
+        StartCoroutine(Previous());
+    }
+
+    // ----------------------- CLOSE SCREEN -------------------------
+
+    public IEnumerator Close()
+    {
+        //Fade to black
         StartCoroutine(Transition(true));
-        
-        for (int i = 0; i < storyBoardSize; i++)
+        yield return new WaitForSeconds(transTime);
+
+        //disable ui (all for good measure)
+        for (int i = 0; i < storyBoard.Length; i++)
         {
             storyBoard[i].SetActive(false);
         }
 
+        //Fade to gameplay
         StartCoroutine(Transition(false));
-        //Unpause the game
-        GameEvents.TimerPause();
+        yield return new WaitForSeconds(transTime);
     }
+
+    public void CloseScreen()
+    {
+        StartCoroutine(Close());
+    }
+
+    // ----------------------- TRANSITION SCREEN -------------------------
 
     public IEnumerator Transition(bool fadeInIsTrue)
     {
