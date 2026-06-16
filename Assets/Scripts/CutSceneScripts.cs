@@ -10,6 +10,7 @@ public class CutSceneScripts : MonoBehaviour
     GameObject[] storyBoard;
     private int storyBoardSize;
     private int currScreen;
+    private int nextScreen;
 
     [Header("Scene transition")]
     public float transTime;
@@ -25,6 +26,7 @@ public class CutSceneScripts : MonoBehaviour
         color = GetComponentInChildren<Image>().color;
 
         storyBoardSize = storyBoard.Length;
+        Debug.Log("storyBoardLength = " + storyBoard.Length);
         currScreen = 0;
 
         for (int i = 0; i < storyBoardSize; i++)
@@ -36,7 +38,7 @@ public class CutSceneScripts : MonoBehaviour
         {
             screenIsDark = true;
             color.a = 1f;
-            image .color = color;
+            image.color = color;
 
             //Wordt nu door UI manager gedaan
             //StartCutScene();
@@ -45,52 +47,72 @@ public class CutSceneScripts : MonoBehaviour
 
     public void StartCutScene()
     {
-        Next();
+        //Pause the game
+        GameEvents.TimerPause();
+        StartCoroutine(Next());
     }
 
     public void RestartCutScene()
     {
-        Next();
+        StartCoroutine(Next());
     }
 
-    public void Next()
+    public void NextScreen()
+    {
+        StartCoroutine(Next());
+    }
+
+    public IEnumerator Next()
     {
         //fade to black
         if (screenIsDark == false)
         {
-            StartCoroutine(Transition());
+            StartCoroutine(Transition(true));
+            yield return new WaitForSeconds(transTime);
+        } else
+        {
+            screenIsDark = false;
         }
 
-        //load UI
+        //disable old UI
+        if (currScreen > 0)
+            storyBoard[currScreen - 1].SetActive(false);
+
+        //enable new UI
         storyBoard[currScreen].SetActive(true);
-        currScreen = (currScreen ++) % storyBoardSize;
-        
+        currScreen = (currScreen + 1) % (storyBoardSize + 1);
+        Debug.Log("currScreen = " + currScreen);
+
         //Fade to UI
-        StartCoroutine(Transition());
+        StartCoroutine(Transition(false));
+        yield return new WaitForSeconds(transTime);
     }
 
-    public void Previous()
+    public void PreviousScreen()
     {
-        StartCoroutine(Transition());
-        //Previous element
-        StartCoroutine(Transition());
+        StartCoroutine(Transition(true));
+        currScreen = (currScreen--);
+        StartCoroutine(Transition(false));
     }
 
-    public void Close()
+    public void CloseScreen()
     {
-        StartCoroutine(Transition());
+        StartCoroutine(Transition(true));
         
         for (int i = 0; i < storyBoardSize; i++)
         {
             storyBoard[i].SetActive(false);
         }
 
-        StartCoroutine(Transition());
+        StartCoroutine(Transition(false));
+        //Unpause the game
+        GameEvents.TimerPause();
     }
 
-    public IEnumerator Transition()
+    public IEnumerator Transition(bool fadeInIsTrue)
     {
-        Debug.Log("Transition performing");
+        //Debug.Log("Transition performing");
+        //Debug.Log("TransTime = " + transTime);
 
         float timer = 0f;
 
@@ -98,10 +120,16 @@ public class CutSceneScripts : MonoBehaviour
         {
             timer += Time.deltaTime;
 
-            if (screenIsDark == false)
-                color.a = Mathf.Clamp01(timer / transTime);
+            if (fadeInIsTrue == false)
+            {
+                color.a = 1f - Mathf.Clamp01(timer / transTime);
+                //Debug.Log("FadingOut");
+            }
             else
-                color.a = color.a - Mathf.Clamp01(timer / transTime);
+            {
+                color.a = Mathf.Clamp01(timer / transTime);
+                //Debug.Log("FadingIn");
+            }
 
             image.color = color;
             yield return null;

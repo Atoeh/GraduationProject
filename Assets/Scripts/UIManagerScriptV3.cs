@@ -43,8 +43,8 @@ public class UIManagerScriptV3 : MonoBehaviour
 
         if (introPanel != null)
         {
-            IntroScreen();
             introPanel.GetComponent<CutSceneScripts>().transTime = transitionTime;
+            IntroScreen();
         }
         if (outroPanel != null)
             outroPanel.GetComponent<CutSceneScripts>().transTime = transitionTime;

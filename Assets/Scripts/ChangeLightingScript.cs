@@ -13,10 +13,11 @@ public class ChangeLightingScript : MonoBehaviour
 {
     //UIManager
     [SerializeField]
+    private GameObject uiManagerHolder;
     UIManagerScript uiManager;
 
     //GLobal Volume stuff
-    public Volume volume;
+    //public Volume volume;
 
     //Candle values
     [SerializeField]
@@ -26,6 +27,11 @@ public class ChangeLightingScript : MonoBehaviour
     private void OnEnable()
     {
         candleAmmount = this.GetComponent<Slider>().value;
+    }
+
+    private void Start()
+    {
+        uiManager = uiManagerHolder.GetComponent<UIManagerScript>();
     }
 
     public void CheckCandleAmmount()
