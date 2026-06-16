@@ -14,7 +14,7 @@ public static class GameEvents
     public static event Action OnDropLoot;
     public static event Action OnNoLoot;
     public static event Action OnQuotaHit;
-    public static event Action<bool> OnOpenDoor; //Exit door even, misschien andere naam?
+    public static event Action OnOpenDoor; //Exit door even, misschien andere naam?
 
     public static event Action OnTimerPause;
     public static event Action OnExitLevel; // wat doel hier ook alweer van
@@ -61,9 +61,9 @@ public static class GameEvents
         OnQuotaHit?.Invoke();
     }
 
-    public static void OpenDoor(bool isQuotaHit)
+    public static void OpenDoor()
     { 
-        OnOpenDoor?.Invoke(isQuotaHit);
+        OnOpenDoor?.Invoke();
     }
 
     public static void TimerPause()

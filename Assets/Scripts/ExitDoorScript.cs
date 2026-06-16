@@ -43,7 +43,7 @@ public class ExitDoorScript : MonoBehaviour
         {
             //voor nu met bool doorgeven omdat..
             GameEvents.TimerPause();
-            GameEvents.OpenDoor(isOpen);
+            GameEvents.OpenDoor();
             Debug.Log("DoorOpened triggered");
         }
     }

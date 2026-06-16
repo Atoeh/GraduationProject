@@ -98,7 +98,7 @@ public class UIManagerScriptV2 : MonoBehaviour
     }
 
     //Change this so that this executes the code within the merchant panel Thingy?
-    void GoToMerchant(bool isQuotaHit)
+    void GoToMerchant()
     {
         MerchantPanel0.SetActive(true);
     }

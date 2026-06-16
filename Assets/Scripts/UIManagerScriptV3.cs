@@ -118,19 +118,14 @@ public class UIManagerScriptV3 : MonoBehaviour
     }
 
     //Change this so that this executes the code within the merchant panel Thingy?
-    void GoToMerchant(bool isQuotaHit)
+    void GoToMerchant()
     {
-        //StartCoroutine(TransitionCoroutine());
-        outroPanel.SetActive(true); // moet functie in script van Paneel zelf worden!!!!
-        //StartCoroutine(TransitionCoroutine());
+        outroPanel.GetComponent<CutSceneScripts>().StartCutScene();
     }
 
     void GameOverScreen()
     {
-        //StartCoroutine(TransitionCoroutine());
-        gameOverPanel.SetActive(true); // moet functie in script van Paneel zelf worden!!!!
-        //StartCoroutine(TransitionCoroutine());
-        Debug.Log("Game Over Screen activated");
+        gameOverPanel.GetComponent<CutSceneScripts>().StartCutScene();
     }
 
     void IntroScreen()

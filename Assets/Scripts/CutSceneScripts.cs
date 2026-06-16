@@ -5,14 +5,14 @@ using UnityEngine.UI;
 
 public class CutSceneScripts : MonoBehaviour
 {
-    [Header ("Storyboard")]
+    [Header ("- Storyboard -")]
     [SerializeField]
     GameObject[] storyBoard;
     private int storyBoardSize;
     private int currScreen;
     private int nextScreen;
 
-    [Header("Scene transition")]
+    [Header("- Scene transition -")]
     public float transTime;
     [SerializeField]
     private bool startsDark;
@@ -21,7 +21,7 @@ public class CutSceneScripts : MonoBehaviour
     private Image image;
     private Color color;
 
-    [Header("Audio")]
+    [Header("- Audio -")]
     [SerializeField]
     AudioClip ambienceClip;
     [SerializeField]
@@ -56,7 +56,7 @@ public class CutSceneScripts : MonoBehaviour
 
     public void StartCutScene()
     {
-        //Pause the game
+        Debug.Log("StartCutscene");
         GameEvents.TimerPause();
         StartCoroutine(Next());
     }
