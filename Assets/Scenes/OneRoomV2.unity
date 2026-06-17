@@ -2758,6 +2758,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManagement
   lootAmmount: 0
+  quotaIsTreu: 0
 --- !u!1001 &436392256
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7901,6 +7902,10 @@ PrefabInstance:
       propertyPath: uiManager
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 62047972619627572, guid: 8cf3c0600a67c3b43bc04d8cd76963ab, type: 3}
+      propertyPath: uiManagerHolder
+      value: 
+      objectReference: {fileID: 1225679320}
     - target: {fileID: 488642689534275456, guid: 8cf3c0600a67c3b43bc04d8cd76963ab, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

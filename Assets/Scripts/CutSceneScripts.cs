@@ -31,7 +31,7 @@ public class CutSceneScripts : MonoBehaviour
 
     void Start()
     {
-        color = GetComponentInChildren<Image>().color;
+        color = image.GetComponentInChildren<Image>().color;
 
         storyBoardSize = storyBoard.Length + 1;
         currScreen = 0;

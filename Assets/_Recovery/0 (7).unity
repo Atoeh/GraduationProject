@@ -855,7 +855,7 @@ MonoBehaviour:
   quotaObj: {fileID: 2107052995}
   currLootObj: {fileID: 271724353}
   worthObj: {fileID: 1099099015}
-  quotaValue: 0
+  quotaValue: 15
   currLootValue: 0
   worthList: []
   imageList: []
@@ -4186,7 +4186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   visual: {fileID: 1488702318644074751, guid: b5618cef552c95d499a378a916fb1264, type: 3}
   backPackUI: {fileID: 100071210}
-  canvasVisual: {fileID: 0}
+  canvasVisual: {fileID: 8318091290278788847, guid: e0ca092b85d56fd4dbfe6f42f214d658, type: 3}
 --- !u!4 &624989746 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 936655011711060175, guid: 5e10be2f5a748844dbd0b2b7e6fafd4a, type: 3}
@@ -6653,6 +6653,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: TurnLeft
       objectReference: {fileID: 0}
+    - target: {fileID: 2687210421873628524, guid: 3de75acf25df75a4bbefcf45103ce761, type: 3}
+      propertyPath: m_text
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2705666924821785194, guid: 3de75acf25df75a4bbefcf45103ce761, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -6788,6 +6792,10 @@ PrefabInstance:
     - target: {fileID: 6694943207124250114, guid: 3de75acf25df75a4bbefcf45103ce761, type: 3}
       propertyPath: transitionTime
       value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118395174115374066, guid: 3de75acf25df75a4bbefcf45103ce761, type: 3}
+      propertyPath: m_text
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7633205505913023034, guid: 3de75acf25df75a4bbefcf45103ce761, type: 3}
       propertyPath: m_Name
@@ -10222,10 +10230,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28224a12ff1431e4eb5ab6e2ed070eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  popUpPrefab1: {fileID: 3132942266393825006, guid: 017e0172f800281408aeb8603009ecb6, type: 3}
-  popUpPrefab2: {fileID: 3132942266393825006, guid: 472fb5be7b7854b43ae0abd086f8208c, type: 3}
+  popUpPrefab: {fileID: 3132942266393825006, guid: 017e0172f800281408aeb8603009ecb6, type: 3}
   popUpLocation: {fileID: 1112206053}
-  canEnter: 0
 --- !u!4 &1557203211 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8172016010439650042, guid: 596d85cac194b3f4f80c42ea707aa2a0, type: 3}

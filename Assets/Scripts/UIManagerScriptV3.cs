@@ -96,12 +96,18 @@ public class UIManagerScriptV3 : MonoBehaviour
 
     void SetQuotaUI(float value)
     {
-        lootUI.GetComponent<LootUiScript>().SetQuotaUI(value);
+        if (lootUI.GetComponent<LootUiScript>() != null)
+            lootUI.GetComponent<LootUiScript>().SetQuotaUI(value);
+        else
+            lootUI.GetComponent<LootUiScriptV2>().SetQuotaUI(value);
     }
 
     void UpdateLootUI(float value)
     {
-        lootUI.GetComponent<LootUiScript>().UpdateUI(value);
+        if (lootUI.GetComponent<LootUiScript>() != null)
+            lootUI.GetComponent<LootUiScript>().UpdateUI(value);
+        else
+            lootUI.GetComponent<LootUiScriptV2>().UpdateUI(value);
     }
 
     void ToggleButtonsInChildren()

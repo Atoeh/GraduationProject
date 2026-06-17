@@ -48,6 +48,7 @@ public class LootPickUpV2 : MonoBehaviour
 
     private void UnInteractable()
     {
+        //Destroys the scipt not the object
         Destroy(this);
     }
 }
