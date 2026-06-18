@@ -96,8 +96,12 @@ public class UIManagerScriptV3 : MonoBehaviour
 
     void SetQuotaUI(float value)
     {
+        Debug.Log("Setquota in UIManagaer");
         if (lootUI.GetComponent<LootUiScript>() != null)
-            lootUI.GetComponent<LootUiScript>().SetQuotaUI(value);
+        {
+            if (lootUI.GetComponent<LootUiScript>().enabled)
+                lootUI.GetComponent<LootUiScript>().SetQuotaUI(value);
+        }
         else
             lootUI.GetComponent<LootUiScriptV2>().SetQuotaUI(value);
     }
@@ -105,7 +109,10 @@ public class UIManagerScriptV3 : MonoBehaviour
     void UpdateLootUI(float value)
     {
         if (lootUI.GetComponent<LootUiScript>() != null)
-            lootUI.GetComponent<LootUiScript>().UpdateUI(value);
+        {
+            if (lootUI.GetComponent<LootUiScript>().enabled)
+                lootUI.GetComponent<LootUiScript>().UpdateUI(value);
+        }
         else
             lootUI.GetComponent<LootUiScriptV2>().UpdateUI(value);
     }

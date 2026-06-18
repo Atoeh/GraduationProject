@@ -1,22 +1,43 @@
 using System;
+using Unity.Jobs;
 using UnityEngine;
 
 public class InventoryManagementScriptV2 : MonoBehaviour
 {
-    [SerializeField]
+    [Header("- Loot variables -")]
+
     private float quota;
     public float lootAmmount = 0;
+
+    [Header("- Quota variables -")]
+
     public bool quotaIsTreu = false;
     [SerializeField]
     private bool quotaIsAll = false;
 
+    [Header ("- Quota Array variables -")]
+
+    [SerializeField]
+    private float[] quotaArray;
+    [SerializeField]
+    private int quotaIndex;
+
     void Start()
     {
-        if (quotaIsAll == true)
+        if (quotaIsTreu == true)
         {
-            QuotaIsAll();
+            if (quotaIsAll == true)
+            {
+                QuotaIsAll();
+            }
+            else
+            {
+                quotaIndex = 0;
+                quota = quotaArray[quotaIndex];
+                UpdateQuota(quota);
+                quotaIndex++;
+            }
         }
-        //ResetLoot();
     }
 
     private void OnEnable()
@@ -39,14 +60,17 @@ public class InventoryManagementScriptV2 : MonoBehaviour
 
         if (lootAmmount >= quota)
         {
-            Debug.Log("QuotaHit");
+            //Debug.Log("QuotaHit");
+            ReachedQuota();
             GameEvents.QuotaHit();
+            ResetLoot();
         }
 
-        if (lootAmmount <= 0)
+        if (lootAmmount <= 0 && value < 0)
         {
             GameEvents.NoLoot();
             Debug.Log("NoLoot called");
+            ResetLoot() ;
         }
     }
 
@@ -56,9 +80,9 @@ public class InventoryManagementScriptV2 : MonoBehaviour
         GameEvents.InventoryUpdated(lootAmmount);
     }
 
-    public void UpdateQuota()
+    public void UpdateQuota(float value)
     {
-        GameEvents.QuotaSet(quota);
+        GameEvents.QuotaSet(value);
     }
 
     public void QuotaIsAll()
@@ -69,9 +93,36 @@ public class InventoryManagementScriptV2 : MonoBehaviour
             quota += loot.lootValue;
         }
 
-        UpdateQuota();
+        UpdateQuota(quota);
+    }
 
-        //Debug.Log("quota is " + quota);
-        //Debug.Log("Length is " + allLoot.Length.ToString());
+    public void ReachedQuota()
+    {
+        if (quotaIsAll == false)
+        {
+            //als alle quotas nog niet gehaald zijn verplaats speler met volgende quota
+            if (quotaIndex < quotaArray.Length)
+            {
+                ResetLoot();
+                quota = quotaArray[quotaIndex];
+                UpdateQuota(quota);
+                quotaIndex++;
+            }
+            else
+            {
+                LastQuotaReached();
+            }
+        }
+        else
+            LastQuotaReached();
+    }
+
+//Should trigger the final cutscene
+    public void LastQuotaReached()
+    {
+        if (quotaIsTreu == true)
+        {
+            Debug.Log("All quotas have been completed should now trigger the endcutscene");
+        }
     }
 }

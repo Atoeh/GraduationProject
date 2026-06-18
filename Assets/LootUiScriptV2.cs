@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 using static UnityEngine.Rendering.DebugUI;
 
@@ -60,7 +61,7 @@ public class LootUiScriptV2 : MonoBehaviour
     {
         GameEvents.OnLootPickUp -= LootValuePopUp;
         GameEvents.OnLootPickUp -= ShowNewloot;
-        GameEvents.OnDropLoot += ShowPreviousLoot;
+        GameEvents.OnDropLoot -= ShowPreviousLoot;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -90,7 +91,10 @@ public class LootUiScriptV2 : MonoBehaviour
     //Set Quota text, this will have to change i guess
     public void SetQuotaUI(float value)
     {
+        Debug.Log("Quota UI updated, quota = " + value);
         quotaValue = value;
+        if (quotaText == null)
+            quotaText = quotaObj.GetComponent<TMP_Text>();
         quotaText.text = quotaValue.ToString();
     }
 

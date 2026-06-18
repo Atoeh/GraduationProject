@@ -56,7 +56,7 @@ public class CutSceneScripts : MonoBehaviour
 
     public void StartCutScene()
     {
-        Debug.Log("StartCutscene");
+        //Debug.Log("StartCutscene");
         GameEvents.TimerPause();
         StartCoroutine(Next());
     }
@@ -91,10 +91,10 @@ public class CutSceneScripts : MonoBehaviour
             storyBoard[currScreen - 1].SetActive(false);
 
         //enable new UI
-        Debug.Log( "Scene before adding = " + currScreen);
+        //Debug.Log( "Scene before adding = " + currScreen);
         storyBoard[currScreen].SetActive(true);
         currScreen = (currScreen + 1) % (storyBoardSize);
-        Debug.Log("Scene after adding = " + currScreen);
+        //Debug.Log("Scene after adding = " + currScreen);
 
 
         //Fade to UI
