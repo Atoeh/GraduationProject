@@ -18,12 +18,15 @@ public class UIManagerScriptV3 : MonoBehaviour
     [SerializeField]
     private GameObject darknessUi;
 
-    [Header("- UI Panels -")]
+    [Header("- CutScenes and Panels -")]
 
     [SerializeField]
     private GameObject introPanel;
     [SerializeField]
     private GameObject outroPanel;
+    [SerializeField]
+    private GameObject[] quotaCutScenes;
+    private int quotaSceneIndex;
     [SerializeField]
     private GameObject gameOverPanel;
     [SerializeField]
@@ -60,6 +63,7 @@ public class UIManagerScriptV3 : MonoBehaviour
             candleTimerUI.SetActive(false);
         }
 
+        quotaSceneIndex = 0;
     }
 
     void OnEnable()
@@ -104,6 +108,15 @@ public class UIManagerScriptV3 : MonoBehaviour
         }
         else
             lootUI.GetComponent<LootUiScriptV2>().SetQuotaUI(value);
+
+        if (quotaCutScenes != null)
+            StartQuotaCutScene();
+    }
+
+    public void StartQuotaCutScene()
+    {
+        quotaCutScenes[quotaSceneIndex].GetComponent<CutSceneScripts>().StartCutScene();
+        quotaSceneIndex++;
     }
 
     void UpdateLootUI(float value)
