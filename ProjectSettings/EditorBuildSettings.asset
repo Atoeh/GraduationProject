@@ -6,19 +6,19 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/0. PresStart.unity
+    path: Assets/Scenes/Iteration 2/0. PresStart.unity
     guid: 069264fe6da9f9b48bdbcc8f08f95e9b
   - enabled: 1
-    path: Assets/Scenes/1. Loop 1.unity
+    path: Assets/Scenes/Iteration 2/1. Loop 1.unity
     guid: 3c4791a3e94977d42b2a189b723174bd
   - enabled: 1
-    path: Assets/Scenes/2. Loop 2.unity
+    path: Assets/Scenes/Iteration 2/2. Loop 2.unity
     guid: d59299bb5dfcba44ab717740b8da01c4
   - enabled: 1
-    path: Assets/Scenes/3. Loop 3.unity
+    path: Assets/Scenes/Iteration 2/3. Loop 3.unity
     guid: 085e37e13b0551241bfb2f27a5fd8a74
   - enabled: 0
-    path: Assets/Scenes/4. EndScreen.unity
+    path: Assets/Scenes/Iteration 2/4. EndScreen.unity
     guid: 143537caf282c4444bbeb95d164842a3
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
