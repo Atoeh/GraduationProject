@@ -63,7 +63,8 @@ public class UIManagerScriptV3 : MonoBehaviour
             candleTimerUI.SetActive(false);
         }
 
-        quotaSceneIndex = 0;
+        //start op -1 met omdat de eerste SetQuota meteen op start is gecalled
+        quotaSceneIndex = - 1;
     }
 
     void OnEnable()
@@ -109,8 +110,9 @@ public class UIManagerScriptV3 : MonoBehaviour
         else
             lootUI.GetComponent<LootUiScriptV2>().SetQuotaUI(value);
 
-        if (quotaCutScenes.Length > 0)
+        if (quotaCutScenes.Length > 0 && quotaSceneIndex >= 0)
             StartQuotaCutScene();
+        else quotaSceneIndex++;
     }
 
     public void StartQuotaCutScene()

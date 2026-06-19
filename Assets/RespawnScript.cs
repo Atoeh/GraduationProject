@@ -10,11 +10,13 @@ public class RespawnScript : MonoBehaviour
     private void OnEnable()
     {
         GameEvents.OnQuotaHit += MovePlayer;
+        GameEvents.OnCandleDepleted += MovePlayer;
     }
 
     private void OnDisable()
     {
         GameEvents.OnQuotaHit -= MovePlayer;
+        GameEvents.OnCandleDepleted -= MovePlayer;
     }
 
     private void MovePlayer()
