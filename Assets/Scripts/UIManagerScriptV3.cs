@@ -109,7 +109,7 @@ public class UIManagerScriptV3 : MonoBehaviour
         else
             lootUI.GetComponent<LootUiScriptV2>().SetQuotaUI(value);
 
-        if (quotaCutScenes != null)
+        if (quotaCutScenes.Length > 0)
             StartQuotaCutScene();
     }
 
