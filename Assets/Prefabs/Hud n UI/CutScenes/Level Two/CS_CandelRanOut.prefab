@@ -1277,7 +1277,7 @@ GameObject:
   - component: {fileID: 8609964627628283800}
   - component: {fileID: 5487781697798286823}
   m_Layer: 5
-  m_Name: Level2 intro
+  m_Name: CS_CandelRanOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

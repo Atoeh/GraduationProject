@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Iteration 2/0. PresStart.unity
-    guid: 069264fe6da9f9b48bdbcc8f08f95e9b
+    path: Assets/Scenes/0. PresStart 1.unity
+    guid: deb15d4e714f5f247b4779fbe108cf55
   - enabled: 1
     path: Assets/Scenes/1. WayToInn.unity
     guid: cfab767d8b686c34c9d8b7ed713e2582
@@ -15,8 +15,11 @@ EditorBuildSettings:
     path: Assets/Scenes/2. TheDungeon.unity
     guid: b504cbf92ffa2a24dbd5f5c457845905
   - enabled: 1
-    path: Assets/Scenes/Iteration 2/4. EndScreen.unity
-    guid: 143537caf282c4444bbeb95d164842a3
+    path: Assets/Scenes/4. EndScreen1.unity
+    guid: d73ddf2c8f3971341ba349cb1f8c004c
+  - enabled: 1
+    path: Assets/Scenes/4. EndScreen2.unity
+    guid: e4a8e4bcc51b9f3429f4837f0e62c80d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

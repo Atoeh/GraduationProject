@@ -67,7 +67,8 @@ public static class GameEvents
     }
 
     public static void TimerPause()
-    { 
+    {
+        Debug.Log("TimerPauseCalled");
         OnTimerPause?.Invoke();
     }
 

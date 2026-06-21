@@ -2,15 +2,14 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
-public class CandleTimer : MonoBehaviour
+public class CandleTimerV2 : MonoBehaviour
 {
-    //Perhaps this should be linked to movement and not to actual time?
-
     [Header("- Timer array -")]
 
     [SerializeField]
-    public static float timeLeft = 0f;
+    private float timeLeft = 0f;
     public bool candleOn = true;
     private Slider slider;
 
@@ -24,6 +23,8 @@ public class CandleTimer : MonoBehaviour
     private float timeStart = 50f;
     private float timeSinceLastStep = 0f;
 
+    private bool timerRestarted;
+
     [Header("- Timer array -")]
 
     [SerializeField]
@@ -34,11 +35,15 @@ public class CandleTimer : MonoBehaviour
     private void OnEnable()
     {
         GameEvents.OnTimerPause += PauseTimer;
+        GameEvents.OnQuotaSet += NewTimer;
+        GameEvents.OnCandleDepleted += ResetTimer;
     }
 
     private void OnDisable()
     {
         GameEvents.OnTimerPause -= PauseTimer;
+        GameEvents.OnQuotaSet -= NewTimer;
+        GameEvents.OnCandleDepleted -= ResetTimer;
     }
 
     void Start()
@@ -47,6 +52,9 @@ public class CandleTimer : MonoBehaviour
         slider = GetComponent<Slider>();
         timeLeft = timeStart;
         SetSlider();
+
+        timerIndex = -1;
+        timerRestarted = false;
     }
 
     void Update()
@@ -54,11 +62,11 @@ public class CandleTimer : MonoBehaviour
         if (candleOn == true)
         {
             //Is there still time left?
-            if (timeLeft <= 0f)
+            if (timeLeft <= 0f && timerRestarted == false)
             {
-                GameEvents.CandleDepleted();
+                timerRestarted = true;
                 timeLeft = 0f;
-                candleOn = false;
+                GameEvents.CandleDepleted();
             }
 
             //if timeSincelastStep is larger then a second, subtract second from timer.
@@ -72,26 +80,27 @@ public class CandleTimer : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// function that adds a certain ammount of time to the timer / candle
-    /// </summary>
-    /// <param name="timeAdded"> the ammount of time that will be added to the timer/ candle. </param>
+    // ----------------------- STANDARD TIMER -------------------------
+
     public void AddTime(float timeAdded)
     {
         candleOn = true;
 
         //add time to timer but no more than the timeMax
         if ((timeLeft + timeAdded) <= timeMax)
-        { 
-            timeLeft += timeAdded; 
-        }else timeLeft = timeMax;
+        {
+            timeLeft += timeAdded;
+        }
+        else timeLeft = timeMax;
         SetSlider();
-        Debug.Log("added time, timeLest = " + timeLeft);
+        timerRestarted = false;
+
+        Debug.Log("added time, timeLeft = " + timeLeft);
     }
 
     private void SetSlider()
     {
-        slider.value = timeLeft/timeMax;
+        slider.value = timeLeft / timeMax;
     }
 
     public void PauseTimer()
@@ -107,4 +116,27 @@ public class CandleTimer : MonoBehaviour
         }
     }
 
+    private void ResetTimer()
+    {
+        //Resets the timer when the timer runs out
+        Debug.Log("The timer should reset here");
+        AddTime(timeMax);
+        //PauseTimer();
+    }
+
+    // ----------------------- SWITCH TIMER ON QUOTA -------------------------
+
+    private void NewTimer(float value)
+    {
+        //code that changes the timer, value not used
+        timerIndex++;
+        if (timerIndex < timerArray.Length)
+        {
+            timeMax = timerArray[timerIndex];
+            //als timeAdded meer dan timeMax is > timeLeft = timeMax.
+            AddTime(timeMax);
+        }else
+            Debug.Log("timerIndex is higher than timer array, timerIndex = " + timerIndex);
+        PauseTimer();
+    }
 }
