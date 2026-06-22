@@ -8,6 +8,7 @@ public class InventoryManagementScriptV2 : MonoBehaviour
 
     private float quota;
     public float lootAmmount = 0;
+    private bool lootless = false;
 
     [Header("- Quota variables -")]
 

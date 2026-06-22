@@ -27,16 +27,6 @@ public class LootUiScriptV2 : MonoBehaviour
     [SerializeField]
     private float currLootValue;
 
-    //[Header("Popup object and variables")]
-
-    //[SerializeField]
-    //private GameObject popUpObj;
-    //private TMP_Text popUpLootText;
-    //private bool popUpIsTrue;
-    //private float startTime;
-    //[SerializeField]
-    //private float popUpTime = 0.4f;
-
     [Header("Loot Tracker and visuals")]
 
     [SerializeField]
@@ -77,15 +67,7 @@ public class LootUiScriptV2 : MonoBehaviour
 
     private void Update()
     {
-        //if (popUpIsTrue == true)
-        //{
-        //    popUpObj.SetActive(true);
 
-        //    if (Time.time - startTime >= popUpTime)
-        //        popUpIsTrue = false;
-        //}
-        //else
-        //    popUpObj.SetActive(false);
     }
 
     //Set Quota text, this will have to change i guess
@@ -128,7 +110,7 @@ public class LootUiScriptV2 : MonoBehaviour
         {
             lootCount--;
             UpdateLootShowCase();
-            Debug.Log("Low");
+            //Debug.Log("Low");
         }
         else
         {

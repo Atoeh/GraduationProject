@@ -13,13 +13,13 @@ public class NPCScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
-        {
-            //pauze en open ui
-            GameEvents.TimerPause();
-            GameEvents.ToggleMoveUI();
-            Instantiate(uiElement, spawnPoint.transform);
-            uiElement.GetComponent<NPCUIScript>().npcBody = gameObject;
-        }
+        //if (other.tag == "Player")
+        //{
+        //    //pauze en open ui
+        //    GameEvents.TimerPause();
+        //    GameEvents.ToggleMoveUI();
+        //    Instantiate(uiElement, spawnPoint.transform);
+        //    uiElement.GetComponent<NPCUIScript>().npcBody = gameObject;
+        //}
     }
 }

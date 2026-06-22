@@ -41,11 +41,15 @@ public class LootPickUpV2 : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            GameEvents.LootPickUp(lootValue, canvasVisual);
+            PickUP();
             Destroy(this.gameObject);
         }
     }
 
+    public void PickUP()
+    {
+        GameEvents.LootPickUp(lootValue, canvasVisual);
+    }
     private void UnInteractable()
     {
         //Destroys the scipt not the object

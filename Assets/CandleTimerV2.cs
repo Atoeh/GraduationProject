@@ -11,26 +11,28 @@ public class CandleTimerV2 : MonoBehaviour
     [SerializeField]
     private float timeLeft = 0f;
     public bool candleOn = true;
+    [SerializeField]
     private Slider slider;
 
     [SerializeField]
     private float updateTime = 3f;
 
-    [SerializeField]
-    private float timeMax = 60f;
 
-    [SerializeField]
-    private float timeStart = 50f;
+    //[SerializeField]
+    //private float timeStart = 50f;
     private float timeSinceLastStep = 0f;
 
+    private float timeMax;
+
     private bool timerRestarted;
+
 
     [Header("- Timer array -")]
 
     [SerializeField]
     private float[] timerArray;
-    [SerializeField]
-    private int timerIndex;
+    //[SerializeField]
+    private int timerIndex = 0;
 
     private void OnEnable()
     {
@@ -49,11 +51,14 @@ public class CandleTimerV2 : MonoBehaviour
     void Start()
     {
         candleOn = false;
-        slider = GetComponent<Slider>();
-        timeLeft = timeStart;
-        SetSlider();
+        
+        //timeStart = timerArray[0];
+        //timeLeft = timeStart;
+        //timeLeft = timerArray[0];
+        //timeMax = timerArray[0];
+        //SetSlider();
 
-        timerIndex = -1;
+        //timerIndex = 0;
         timerRestarted = false;
     }
 
@@ -87,19 +92,22 @@ public class CandleTimerV2 : MonoBehaviour
         candleOn = true;
 
         //add time to timer but no more than the timeMax
-        if ((timeLeft + timeAdded) <= timeMax)
+        if ((timeLeft + timeAdded) < timeMax)
         {
             timeLeft += timeAdded;
         }
-        else timeLeft = timeMax;
+        else
+        {
+            Debug.Log("timeleft more then timeMax?");
+            timeLeft = timeMax;
+        }
         SetSlider();
         timerRestarted = false;
-
-        Debug.Log("added time, timeLeft = " + timeLeft);
     }
 
     private void SetSlider()
     {
+        Debug.Log("timeLeft = " + timeLeft + " timeMax = " + timeMax);
         slider.value = timeLeft / timeMax;
     }
 
@@ -118,10 +126,9 @@ public class CandleTimerV2 : MonoBehaviour
 
     private void ResetTimer()
     {
-        //Resets the timer when the timer runs out
         Debug.Log("The timer should reset here");
         AddTime(timeMax);
-        //PauseTimer();
+        PauseTimer();
     }
 
     // ----------------------- SWITCH TIMER ON QUOTA -------------------------
@@ -129,14 +136,16 @@ public class CandleTimerV2 : MonoBehaviour
     private void NewTimer(float value)
     {
         //code that changes the timer, value not used
-        timerIndex++;
+        //Debug.Log("timerIndex = " + timerIndex);
         if (timerIndex < timerArray.Length)
         {
             timeMax = timerArray[timerIndex];
             //als timeAdded meer dan timeMax is > timeLeft = timeMax.
             AddTime(timeMax);
-        }else
-            Debug.Log("timerIndex is higher than timer array, timerIndex = " + timerIndex);
+        }
+
+        timerIndex++;
+
         PauseTimer();
     }
 }
