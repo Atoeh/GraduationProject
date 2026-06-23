@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1123031145246419891, guid: 254e460e979fe324c867107ecaf41718, type: 3}
       propertyPath: valueMin
-      value: 6
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1123031145246419891, guid: 254e460e979fe324c867107ecaf41718, type: 3}
       propertyPath: canvasVisual

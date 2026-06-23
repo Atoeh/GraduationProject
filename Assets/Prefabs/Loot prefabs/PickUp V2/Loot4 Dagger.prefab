@@ -14,11 +14,11 @@ PrefabInstance:
       objectReference: {fileID: 1242092979487800171, guid: fadddf24235b7b74abee8774ba6c1d6e, type: 3}
     - target: {fileID: 1123031145246419891, guid: 254e460e979fe324c867107ecaf41718, type: 3}
       propertyPath: valueMax
-      value: 35
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1123031145246419891, guid: 254e460e979fe324c867107ecaf41718, type: 3}
       propertyPath: valueMin
-      value: 26
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1123031145246419891, guid: 254e460e979fe324c867107ecaf41718, type: 3}
       propertyPath: canvasVisual

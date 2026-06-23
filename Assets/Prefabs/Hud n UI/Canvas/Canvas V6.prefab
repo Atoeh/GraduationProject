@@ -2173,7 +2173,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6562249151035969027
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5677,6 +5677,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 133214889881478562, guid: 3de75acf25df75a4bbefcf45103ce761, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 213652046477311641, guid: 3de75acf25df75a4bbefcf45103ce761, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -30.8
@@ -5844,6 +5848,10 @@ PrefabInstance:
     - target: {fileID: 3686660546910562229, guid: 3de75acf25df75a4bbefcf45103ce761, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 74.37774
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103542333319541122, guid: 3de75acf25df75a4bbefcf45103ce761, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5328228284249505438, guid: 3de75acf25df75a4bbefcf45103ce761, type: 3}
       propertyPath: uiManagerHolder
@@ -6135,9 +6143,9 @@ MonoBehaviour:
   slider: {fileID: 682135321769185523}
   updateTime: 2
   timerArray:
-  - 10
-  - 30
-  - 100
+  - 45
+  - 90
+  - 180
 --- !u!224 &8836697355917513821 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4509309760871321865, guid: 3de75acf25df75a4bbefcf45103ce761, type: 3}
