@@ -107,8 +107,15 @@ public class UIManagerScriptV3 : MonoBehaviour
             if (lootUI.GetComponent<LootUiScript>().enabled)
                 lootUI.GetComponent<LootUiScript>().SetQuotaUI(value);
         }
-        else
+        if (lootUI.GetComponent<LootUiScriptV2>() != null)
+        {
             lootUI.GetComponent<LootUiScriptV2>().SetQuotaUI(value);
+        }
+        if (lootUI.GetComponent<LootUiScriptV3>() != null)
+        {
+            lootUI.GetComponent<LootUiScriptV3>().SetQuotaUI(value);
+            lootUI.GetComponent<LootUiScriptV3>().ChangeTitle();
+        }
 
         if (quotaCutScenes.Length > 0 && quotaSceneIndex >= 0)
         {
@@ -116,6 +123,8 @@ public class UIManagerScriptV3 : MonoBehaviour
         }
         else quotaSceneIndex++;
     }
+
+    //should later be done through the lootUIScripts...
 
     public void StartQuotaCutScene()
     {
