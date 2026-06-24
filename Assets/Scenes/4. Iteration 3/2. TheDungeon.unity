@@ -1668,14 +1668,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 300801088480579075, guid: 5fc14b40ebdcf7b4f8d7a90db4741d06, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 579840443935077267, guid: 5fc14b40ebdcf7b4f8d7a90db4741d06, type: 3}
       propertyPath: manager
       value: 
       objectReference: {fileID: 433421837}
+    - target: {fileID: 596183048888848404, guid: 5fc14b40ebdcf7b4f8d7a90db4741d06, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 700211571824446757, guid: 5fc14b40ebdcf7b4f8d7a90db4741d06, type: 3}
       propertyPath: manager
       value: 
       objectReference: {fileID: 433421837}
+    - target: {fileID: 822909795739573842, guid: 5fc14b40ebdcf7b4f8d7a90db4741d06, type: 3}
+      propertyPath: m_text
+      value: 'Ever since you felt it for the first time you knew.
+
+        You felt
+        the CALL TO ADVENTURE.'
+      objectReference: {fileID: 0}
     - target: {fileID: 852256739944888446, guid: 5fc14b40ebdcf7b4f8d7a90db4741d06, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1688,6 +1703,25 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1517254642}
+    - target: {fileID: 1996273419530078058, guid: 5fc14b40ebdcf7b4f8d7a90db4741d06, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2566883935722132443, guid: 5fc14b40ebdcf7b4f8d7a90db4741d06, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3119008506293781057, guid: 5fc14b40ebdcf7b4f8d7a90db4741d06, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4798905928947605949, guid: 5fc14b40ebdcf7b4f8d7a90db4741d06, type: 3}
+      propertyPath: m_text
+      value: 'Like any adventurer, your journey starts at an inn.
+
+        Or rather,
+        on your way to the inn "The broken shovel"'
+      objectReference: {fileID: 0}
     - target: {fileID: 5862615407765446004, guid: 5fc14b40ebdcf7b4f8d7a90db4741d06, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1712,10 +1746,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas V6
       objectReference: {fileID: 0}
+    - target: {fileID: 7003967578832627762, guid: 5fc14b40ebdcf7b4f8d7a90db4741d06, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7042078959134158654, guid: 5fc14b40ebdcf7b4f8d7a90db4741d06, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1517254642}
+    - target: {fileID: 7070474983151154873, guid: 5fc14b40ebdcf7b4f8d7a90db4741d06, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7271795130665126746, guid: 5fc14b40ebdcf7b4f8d7a90db4741d06, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1806,6 +1848,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7814711087472505663, guid: 5fc14b40ebdcf7b4f8d7a90db4741d06, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8257923182708912556, guid: 5fc14b40ebdcf7b4f8d7a90db4741d06, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -382,11 +382,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You knock at the door of the inn and hear a voice from behind the door:
-    "You managed to find some coin? Grab some grub whilst it''s still hot"
-
-
-'
+  m_text: "You once more knock on the door and the same void answers: \n\"Managed
+    to find some coin?, come in, grab a plate of stew.\""
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

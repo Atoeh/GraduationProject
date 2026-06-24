@@ -382,11 +382,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You knock at the door of the inn and hear a voice from behind the door:
-    "You need some coin to enter here. If you have no coin, look around the dungeon"
-
-
-'
+  m_text: "As you knock on the door a voice answers: \n\"If you want to enter, you'll
+    need some coin. Look around the corridor behind you if you have none.\""
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
