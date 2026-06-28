@@ -2047,7 +2047,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Despite the size of your GEAR, you are not noticed.
 
-    And that while
+    And that whilse
     your GEAR is better than some of the others.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -4170,7 +4170,7 @@ PrefabInstance:
       objectReference: {fileID: -1284366801, guid: dba3234c3e517e648bc44e1776d96090, type: 3}
     - target: {fileID: 850773214260008261, guid: 5fc14b40ebdcf7b4f8d7a90db4741d06, type: 3}
       propertyPath: m_text
-      value: "You are in the inn, wearing your armor.\r\nIt is so large that it covers
+      value: "You are in the inn, wearing your armor.\r\nIt is so large, it covers
         your mouth. You cant eat\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 852256739944888446, guid: 5fc14b40ebdcf7b4f8d7a90db4741d06, type: 3}

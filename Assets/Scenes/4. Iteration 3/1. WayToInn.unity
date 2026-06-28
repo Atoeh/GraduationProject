@@ -1151,6 +1151,18 @@ PrefabInstance:
       propertyPath: m_Interactable
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6466977753695291533, guid: 696ac1ce399bf0d4a9e1c667eb048d3b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5152131344852479154}
+    - target: {fileID: 6466977753695291533, guid: 696ac1ce399bf0d4a9e1c667eb048d3b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadNextScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 6466977753695291533, guid: 696ac1ce399bf0d4a9e1c667eb048d3b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LoadSceneScript, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 6890913579939003562, guid: 696ac1ce399bf0d4a9e1c667eb048d3b, type: 3}
       propertyPath: m_Interactable
       value: 0
@@ -1196,8 +1208,30 @@ PrefabInstance:
     - {fileID: 1589124043778313263, guid: 696ac1ce399bf0d4a9e1c667eb048d3b, type: 3}
     - {fileID: 3037207206774380193, guid: 696ac1ce399bf0d4a9e1c667eb048d3b, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3288083972749999123, guid: 696ac1ce399bf0d4a9e1c667eb048d3b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5152131344852479154}
   m_SourcePrefab: {fileID: 100100000, guid: 696ac1ce399bf0d4a9e1c667eb048d3b, type: 3}
+--- !u!1 &5152131344852479153 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3288083972749999123, guid: 696ac1ce399bf0d4a9e1c667eb048d3b, type: 3}
+  m_PrefabInstance: {fileID: 5152131344852479152}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5152131344852479154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5152131344852479153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c88a471c0650b3648be0ac0088a9562f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoadSceneScript
+  currScene:
+    m_Handle: 0
 --- !u!1001 &5510736935646420433
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -50,7 +50,7 @@ public class CandleTimerV2 : MonoBehaviour
 
     void Start()
     {
-        candleOn = false;
+        candleOn = true;
         
         //timeStart = timerArray[0];
         //timeLeft = timeStart;
@@ -60,6 +60,7 @@ public class CandleTimerV2 : MonoBehaviour
 
         //timerIndex = 0;
         timerRestarted = false;
+
     }
 
     void Update()
@@ -89,7 +90,7 @@ public class CandleTimerV2 : MonoBehaviour
 
     public void AddTime(float timeAdded)
     {
-        candleOn = true;
+        //candleOn = true;
 
         //add time to timer but no more than the timeMax
         if ((timeLeft + timeAdded) < timeMax)
@@ -122,13 +123,14 @@ public class CandleTimerV2 : MonoBehaviour
             candleOn = true;
             timeSinceLastStep = 0;
         }
+        Debug.Log("candle is  " + candleOn);
     }
 
     private void ResetTimer()
     {
         Debug.Log("The timer should reset here");
         AddTime(timeMax);
-        PauseTimer();
+        //PauseTimer();
     }
 
     // ----------------------- SWITCH TIMER ON QUOTA -------------------------
@@ -146,6 +148,6 @@ public class CandleTimerV2 : MonoBehaviour
 
         timerIndex++;
 
-        PauseTimer();
+        //PauseTimer();
     }
 }
