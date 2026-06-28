@@ -314,7 +314,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fbda653305c35eb4285c5d76e4abac0d, type: 3}
+  m_Sprite: {fileID: -66217606, guid: b362c869a8205fd4b97b3131b5ba51ef, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -753,7 +753,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 5.600006}
+  m_AnchoredPosition: {x: 0, y: -34}
   m_SizeDelta: {x: 391.18347, y: 97.79587}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &496955521
@@ -1747,8 +1747,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 500, y: 170}
+  m_AnchoredPosition: {x: 0, y: -9}
+  m_SizeDelta: {x: 500, y: 118.75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &886397614
 MonoBehaviour:
@@ -2662,7 +2662,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fbda653305c35eb4285c5d76e4abac0d, type: 3}
+  m_Sprite: {fileID: -1919001924, guid: b362c869a8205fd4b97b3131b5ba51ef, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2874,6 +2874,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas END
       objectReference: {fileID: 0}
+    - target: {fileID: 891873617589605479, guid: b284c19216ff86b49a584a2c3b285eff, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 325220638, guid: b362c869a8205fd4b97b3131b5ba51ef, type: 3}
     - target: {fileID: 1724386145789294518, guid: b284c19216ff86b49a584a2c3b285eff, type: 3}
       propertyPath: m_text
       value: 'It is a few days later now, you feel naked without your GEAR.

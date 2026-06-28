@@ -2045,10 +2045,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Despite the size of your GEAR, you are not noticed.
+  m_text: 'Despite the your enhanced pressence, you are not noticed.
 
-    And that while
-    your GEAR is better than some of the others.'
+    But how?
+    your GEAR is better than that of some of the others.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -9606,6 +9606,10 @@ PrefabInstance:
       propertyPath: movementButton
       value: 
       objectReference: {fileID: 989499227}
+    - target: {fileID: 2207158560457066360, guid: d8fff9a350dc15b4cb10435beee86ed1, type: 3}
+      propertyPath: rotationDuration
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 2479252644036250131, guid: d8fff9a350dc15b4cb10435beee86ed1, type: 3}
       propertyPath: movementButton
       value: 

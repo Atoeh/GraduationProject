@@ -218,7 +218,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fbda653305c35eb4285c5d76e4abac0d, type: 3}
+  m_Sprite: {fileID: -257847543, guid: b362c869a8205fd4b97b3131b5ba51ef, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -431,7 +431,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fbda653305c35eb4285c5d76e4abac0d, type: 3}
+  m_Sprite: {fileID: -624004474, guid: b362c869a8205fd4b97b3131b5ba51ef, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3216,6 +3216,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas END
       objectReference: {fileID: 0}
+    - target: {fileID: 891873617589605479, guid: b284c19216ff86b49a584a2c3b285eff, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c98a32555b0909647befaa28127d42f8, type: 3}
     - target: {fileID: 1724386145789294518, guid: b284c19216ff86b49a584a2c3b285eff, type: 3}
       propertyPath: m_text
       value: 'The LOOT that you took was worth a lot.
