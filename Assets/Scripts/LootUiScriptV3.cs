@@ -36,6 +36,7 @@ public class LootUiScriptV3 : MonoBehaviour
     private List<float> worthList;
     [SerializeField]
     private List<GameObject> imageList;
+    [SerializeField]
     private int lootCount;
     private GameObject lootImage;
     [SerializeField]
@@ -120,10 +121,10 @@ public class LootUiScriptV3 : MonoBehaviour
 
     public void ShowPreviousLoot()
     {
-        SubtractFromTotal();
         if (lootCount >= 1)
         {
             lootCount--;
+            SubtractFromTotal();
             UpdateLootShowCase();
             //Debug.Log("Low");
         }
@@ -151,7 +152,13 @@ public class LootUiScriptV3 : MonoBehaviour
 
     private void SubtractFromTotal()
     {
-        totalLootValue -= worthList[lootCount];
+        //lootCount--;
+        if (lootCount < 0)
+            lootCount = 0;
+
+        Debug.Log("lootCount" + lootCount);
+        //if (worthList.Count <= lootCount)
+            totalLootValue -= worthList[lootCount];
         allLootText.text = totalLootValue.ToString();
     }
 

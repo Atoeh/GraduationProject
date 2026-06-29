@@ -14,11 +14,11 @@ public class LootPickUpV2 : MonoBehaviour
 
     private void OnEnable()
     {
-        GameEvents.OnNoLoot += UnInteractable;
+        //GameEvents.OnNoLoot += UnInteractable;
     }
     private void OnDisable()
     {
-        GameEvents.OnNoLoot -= UnInteractable;
+        //GameEvents.OnNoLoot -= UnInteractable;
     }
     private void OnDrawGizmos()
     {
@@ -52,7 +52,7 @@ public class LootPickUpV2 : MonoBehaviour
     }
     private void UnInteractable()
     {
-        //Destroys the scipt not the object
+        //Destroys the script not the object
         Destroy(this);
     }
 }

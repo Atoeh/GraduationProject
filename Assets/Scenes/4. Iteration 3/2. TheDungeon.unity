@@ -9494,6 +9494,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8122578774804385195, guid: c0779caee536ccd4fa7c30eadeadd0b2, type: 3}
+      propertyPath: badEnding
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8122578774804385195, guid: c0779caee536ccd4fa7c30eadeadd0b2, type: 3}
+      propertyPath: goodEnding
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8122578774804385195, guid: c0779caee536ccd4fa7c30eadeadd0b2, type: 3}
       propertyPath: 'lootCollection.Array.data[0]'
       value: 
       objectReference: {fileID: 1904964338}
