@@ -10,7 +10,7 @@ public class CandleTimerV2 : MonoBehaviour
 
     [SerializeField]
     private float timeLeft = 0f;
-    public bool candleOn = true;
+    public bool candleOn = false;
     [SerializeField]
     private Slider slider;
 
@@ -50,8 +50,8 @@ public class CandleTimerV2 : MonoBehaviour
 
     void Start()
     {
-        candleOn = true;
-        
+        //candleOn = true;
+
         //timeStart = timerArray[0];
         //timeLeft = timeStart;
         //timeLeft = timerArray[0];
@@ -59,8 +59,8 @@ public class CandleTimerV2 : MonoBehaviour
         //SetSlider();
 
         //timerIndex = 0;
+        Debug.Log("CandleTimer Start - timeLeft: " + timeLeft + " candleOn: " + candleOn);
         timerRestarted = false;
-
     }
 
     void Update()
@@ -139,11 +139,15 @@ public class CandleTimerV2 : MonoBehaviour
     {
         //code that changes the timer, value not used
         //Debug.Log("timerIndex = " + timerIndex);
+        Debug.Log("NewTimer called with value: " + value);
+        Debug.Log("NewTimer called - timerIndex: " + timerIndex);
         if (timerIndex < timerArray.Length)
         {
             timeMax = timerArray[timerIndex];
             //als timeAdded meer dan timeMax is > timeLeft = timeMax.
             AddTime(timeMax);
+            candleOn = true;
+            Debug.Log("Timer started - timeLeft: " + timeLeft + " timeMax: " + timeMax);
         }
 
         timerIndex++;

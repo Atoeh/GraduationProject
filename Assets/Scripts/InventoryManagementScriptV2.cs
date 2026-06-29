@@ -23,8 +23,9 @@ public class InventoryManagementScriptV2 : MonoBehaviour
     [SerializeField]
     private int quotaIndex;
 
-    void Start()
+    void Awake()
     {
+        Debug.Log("Quota Awake called");
         if (quotaIsTreu == true)
         {
             if (quotaIsAll == true)

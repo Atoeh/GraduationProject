@@ -60,7 +60,7 @@ public class CutSceneScripts : MonoBehaviour
     public void StartCutScene()
     {
         Debug.Log("StartCutscene");
-        GameEvents.TimerPause();
+        //GameEvents.TimerPause();
         StartCoroutine(Next());
     }
 

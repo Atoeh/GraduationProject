@@ -5983,6 +5983,7 @@ MonoBehaviour:
   totalLootValue: 0
   worthList: []
   imageList: []
+  lootCount: 0
   spawnLocation: {fileID: 8968495209983760791}
   nullImage: {fileID: 8318091290278788847, guid: e0ca092b85d56fd4dbfe6f42f214d658, type: 3}
   titleObj: {fileID: 3349960265968549964}
@@ -6018,7 +6019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   timeLeft: 0
-  candleOn: 1
+  candleOn: 0
   slider: {fileID: 682135321769185523}
   updateTime: 2
   timerArray:
