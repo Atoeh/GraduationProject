@@ -55,11 +55,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   introDone: 0
   introLine: {fileID: 0}
-  counterLine: {fileID: 0}
   firstLootLine: {fileID: 0}
   isMunching: 0
   munchText: {fileID: 8086671961948558009}
   maxTime: 0.3
+  warningAmm: 0
 --- !u!1 &638409513805085312
 GameObject:
   m_ObjectHideFlags: 0
@@ -3939,9 +3939,14 @@ MonoBehaviour:
   quotaObj: {fileID: 6947972588526491309}
   currLootObj: {fileID: 3847329940557819430}
   popUpObj: {fileID: 7274494800062622062}
+  worthObj: {fileID: 0}
   startTime: 0
   quotaValue: 0
   currLootValue: 0
+  worthList: []
+  imageList: []
+  spawnLocation: {fileID: 0}
+  nullImage: {fileID: 0}
 --- !u!1 &7867861510772459281
 GameObject:
   m_ObjectHideFlags: 0
@@ -4268,8 +4273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c00c0938274be34419625a35b107291b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  uiManager: {fileID: 8206347909674715851}
-  volume: {fileID: 0}
+  uiManagerHolder: {fileID: 0}
   candleOn: 1
 --- !u!114 &495600662929371603
 MonoBehaviour:
@@ -4287,6 +4291,8 @@ MonoBehaviour:
   updateTime: 1
   timeMax: 180
   timeStart: 180
+  timerArray: []
+  timerIndex: 0
 --- !u!1 &8866801076953176060
 GameObject:
   m_ObjectHideFlags: 0

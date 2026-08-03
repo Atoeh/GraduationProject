@@ -4138,10 +4138,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1517254642}
-    - target: {fileID: 1695766827310307839, guid: 5fc14b40ebdcf7b4f8d7a90db4741d06, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -1022610135, guid: e1ff47545318eb64783999cecd9d9f9b, type: 3}
     - target: {fileID: 1965961540921589579, guid: 5fc14b40ebdcf7b4f8d7a90db4741d06, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -4233,10 +4229,6 @@ PrefabInstance:
       propertyPath: m_text
       value: "Together with your filled backpack, its way too heavy! \n\nAs you put
         them on the ground you see some shiny loot drop out of their pockets."
-      objectReference: {fileID: 0}
-    - target: {fileID: 3555876228976570744, guid: 5fc14b40ebdcf7b4f8d7a90db4741d06, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3713118479947052796, guid: 5fc14b40ebdcf7b4f8d7a90db4741d06, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -4351,10 +4343,6 @@ PrefabInstance:
     - target: {fileID: 5923265754249348402, guid: 5fc14b40ebdcf7b4f8d7a90db4741d06, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 1.2500305
-      objectReference: {fileID: 0}
-    - target: {fileID: 5942450703196090087, guid: 5fc14b40ebdcf7b4f8d7a90db4741d06, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5960910818525375935, guid: 5fc14b40ebdcf7b4f8d7a90db4741d06, type: 3}
       propertyPath: m_text
