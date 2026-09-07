@@ -24,5 +24,4 @@ public class ItemData : ScriptableObject
 
         return shape;
     }
-
 }

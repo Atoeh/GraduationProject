@@ -1,3 +1,5 @@
+using System.Xml.Serialization;
+using Unity.Hierarchy;
 using UnityEngine;
 using UnityEngine.UI;
 using static UnityEditor.Progress;
@@ -6,7 +8,6 @@ public class LootPickUpV3 : MonoBehaviour
 {
     public ItemData itemData;
     public Sprite sprite;
-
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.maroon;

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &7857856766486392003
+--- !u!1001 &3007171772509382060
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -11,34 +11,38 @@ PrefabInstance:
     - target: {fileID: 1123031145246419891, guid: 254e460e979fe324c867107ecaf41718, type: 3}
       propertyPath: visual
       value: 
-      objectReference: {fileID: 6021995959516925850, guid: 251f854768d5d7b44b15a2b4dff77668, type: 3}
+      objectReference: {fileID: 5688922595972931282, guid: c75baef8ec1d93248a7d0087dc9c3677, type: 3}
     - target: {fileID: 1123031145246419891, guid: 254e460e979fe324c867107ecaf41718, type: 3}
       propertyPath: valueMax
-      value: 60
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1123031145246419891, guid: 254e460e979fe324c867107ecaf41718, type: 3}
       propertyPath: valueMin
-      value: 60
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1123031145246419891, guid: 254e460e979fe324c867107ecaf41718, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1123031145246419891, guid: 254e460e979fe324c867107ecaf41718, type: 3}
       propertyPath: canvasVisual
       value: 
-      objectReference: {fileID: 6021995959516925850, guid: f6208504148756b41a808722445c1252, type: 3}
+      objectReference: {fileID: 5688922595972931282, guid: bee8111a442a31246903fbdcf5946c73, type: 3}
     - target: {fileID: 1318700714435947191, guid: 254e460e979fe324c867107ecaf41718, type: 3}
       propertyPath: m_Name
-      value: Loot6 Gem1
+      value: Loot2 Pouch 1
       objectReference: {fileID: 0}
     - target: {fileID: 2229887679605314978, guid: 254e460e979fe324c867107ecaf41718, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2229887679605314978, guid: 254e460e979fe324c867107ecaf41718, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2229887679605314978, guid: 254e460e979fe324c867107ecaf41718, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14
+      value: 4.2130566
       objectReference: {fileID: 0}
     - target: {fileID: 2229887679605314978, guid: 254e460e979fe324c867107ecaf41718, type: 3}
       propertyPath: m_LocalRotation.w
@@ -71,5 +75,27 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1318700714435947191, guid: 254e460e979fe324c867107ecaf41718, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4959232572564272412}
   m_SourcePrefab: {fileID: 100100000, guid: 254e460e979fe324c867107ecaf41718, type: 3}
+--- !u!1 &4321038484040240923 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1318700714435947191, guid: 254e460e979fe324c867107ecaf41718, type: 3}
+  m_PrefabInstance: {fileID: 3007171772509382060}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4959232572564272412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4321038484040240923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e864f25bcde68549afbe474a79cbeec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LootPickUpV3
+  itemData: {fileID: 11400000, guid: 834622cc037e3d940b834081f1686a17, type: 2}
+  sprite: {fileID: 0}
