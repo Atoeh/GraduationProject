@@ -18,7 +18,7 @@ public class InnPopUpScript : MonoBehaviour
 
     public void EnterInn()
     {
-        GameEvents.OpenDoor();
+        GameEvents.ExitLevel();
     }
 
     public void ClosePopUP()

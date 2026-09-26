@@ -74,8 +74,8 @@ public class UIManagerScriptV3 : MonoBehaviour
         GameEvents.OnChangeDarkness += ChangeDarkness;
         GameEvents.OnQuotaSet += SetQuotaUI;
         GameEvents.OnInventoryUpdated += UpdateLootUI;
-        GameEvents.OnOpenDoor += GoToMerchant;
-        GameEvents.OnCandleDepleted += GameOverScreen;
+        GameEvents.OnExitLevel += GoToMerchant;
+        GameEvents.OnTimerRanOut += GameOverScreen;
     }
 
     void OnDisable()
@@ -85,8 +85,8 @@ public class UIManagerScriptV3 : MonoBehaviour
         GameEvents.OnChangeDarkness -= ChangeDarkness;
         GameEvents.OnQuotaSet -= SetQuotaUI;
         GameEvents.OnInventoryUpdated -= UpdateLootUI;
-        GameEvents.OnOpenDoor -= GoToMerchant;
-        GameEvents.OnCandleDepleted -= GameOverScreen;
+        GameEvents.OnExitLevel -= GoToMerchant;
+        GameEvents.OnTimerRanOut -= GameOverScreen;
     }
 
     void ToggleMoveUI()

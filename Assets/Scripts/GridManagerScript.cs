@@ -1,13 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GridManager : MonoBehaviour
 {
     [Header("- Grid Objects -")]
     [SerializeField] private GameObject cellPrefab;
     public Transform gridParent;
-    [SerializeField] private ItemData firstItemData;
-    [SerializeField] private ItemData secondItemData;
     [SerializeField] private Canvas canvas;
     [SerializeField] private TrashScript trash;
 
@@ -22,24 +21,28 @@ public class GridManager : MonoBehaviour
 
     private Image[,] cellImages;
 
+    private float totalValue = 0f;
+
+    [Header("- Value Tracker -")]
+    [SerializeField] private TMP_Text valueText;
+
+
     void Start()
     {
         GenerateGrid();
-        SpawnItemFromData(firstItemData, 0, 0);
-        SpawnItemFromData(secondItemData, 0, 2);
     }
 
-    private void SpawnItemFromData(ItemData data, int x, int y)
-    {
-        GameObject itemObject = new GameObject("InventoryItem");
-        InventoryItem item = itemObject.AddComponent<InventoryItem>();
-        item.Initialize(data);
+    //private void SpawnItemFromData(ItemData data, int x, int y)
+    //{
+    //    GameObject itemObject = new GameObject("InventoryItem");
+    //    InventoryItem item = itemObject.AddComponent<InventoryItem>();
+    //    item.Initialize(data);
 
-        if (PlaceItem(item, x, y))
-            SpawnItemVisual(item);
-        else
-            Destroy(itemObject);
-    }
+    //    if (PlaceItem(item, x, y))
+    //        SpawnItemVisual(item);
+    //    else
+    //        Destroy(itemObject);
+    //}
 
     public void SpawnHeldItem(ItemData data)
     {
@@ -73,10 +76,11 @@ public class GridManager : MonoBehaviour
         containerRect.pivot = new Vector2(0f, 1f);
         containerRect.sizeDelta = new Vector2(width, height);
 
-        imageRect.anchorMin = Vector2.zero;
-        imageRect.anchorMax = Vector2.one;
-        imageRect.sizeDelta = Vector2.zero;
+        imageRect.anchorMin = new Vector2(0.5f, 0.5f);
+        imageRect.anchorMax = new Vector2(0.5f, 0.5f);
         imageRect.pivot = new Vector2(0.5f, 0.5f);
+        imageRect.anchoredPosition = Vector2.zero;
+        imageRect.sizeDelta = new Vector2(width, height);
 
         // Add drag handler and start dragging immediately
         DragHandler dragHandler = itemVisual.AddComponent<DragHandler>();
@@ -188,10 +192,11 @@ public class GridManager : MonoBehaviour
         containerRect.sizeDelta = new Vector2(width, height);
 
         // Image fills container exactly
-        imageRect.anchorMin = Vector2.zero;
-        imageRect.anchorMax = Vector2.one;
-        imageRect.sizeDelta = Vector2.zero;
+        imageRect.anchorMin = new Vector2(0.5f, 0.5f);
+        imageRect.anchorMax = new Vector2(0.5f, 0.5f);
         imageRect.pivot = new Vector2(0.5f, 0.5f);
+        imageRect.anchoredPosition = Vector2.zero;
+        imageRect.sizeDelta = new Vector2(width, height);
 
         float posX = gridParentRect.anchoredPosition.x + (item.gridX * (cellSize + cellSpacing));
         float posY = gridParentRect.anchoredPosition.y - (item.gridY * (cellSize + cellSpacing));
@@ -270,5 +275,31 @@ public class GridManager : MonoBehaviour
         {
             cellImage.color = Color.white;
         }
+    }
+
+    public void AddValue(float value)
+    {
+        totalValue += value;
+        Debug.Log("Total inventory value: " + totalValue);
+        UpdateValueDisplay();
+        CkeckQuota();
+    }
+
+    public void RemoveValue(float value)
+    {
+        totalValue -= value;
+        Debug.Log("Total inventory value: " + totalValue);
+        UpdateValueDisplay();
+        CkeckQuota();
+    }
+
+    public void UpdateValueDisplay()
+    {
+        valueText.text = totalValue.ToString();
+    }
+
+    public void CkeckQuota()
+    { 
+        GameManager.Instance.CompareQuota(totalValue);
     }
 }

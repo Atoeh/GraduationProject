@@ -9,41 +9,50 @@ using UnityEngine;
 
 public class ExitDoorScript : MonoBehaviour
 {
-    private bool isOpen = false;
+    private bool doorOpen = false;
+    private bool doorLocked = false;
+
     [SerializeField]
     private GameObject doorBorder;
     [SerializeField]
     private GameObject ExitText;
 
-    private void Start()
-    {
-        isOpen = false;
-        ExitText.SetActive(false);
-    }
-
     private void OnEnable()
     {
-        GameEvents.OnQuotaHit += UnlockExit;
+        GameEvents.OnQuotaHit += OpenDoor;
     }
     private void OnDisable()
     {
-        GameEvents.OnQuotaHit -= UnlockExit;
+        GameEvents.OnQuotaHit -= OpenDoor;
     }
 
-    private void UnlockExit()
+    private void Start()
     {
-        isOpen = true;
+        doorOpen = false;
+        ExitText.SetActive(false);
+    }
+
+    private void OpenDoor()
+    {
+        doorOpen = true;
         doorBorder.SetActive(false);
         ExitText.SetActive(true);  
     }
 
+    private void CloseDoor()
+    {
+        doorOpen = false;
+        doorBorder.SetActive(true);
+        ExitText.SetActive(false);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player" && isOpen == true)
+        if (other.tag == "Player" && doorOpen == true)
         {
             //voor nu met bool doorgeven omdat..
             GameEvents.TimerPause();
-            GameEvents.OpenDoor();
+            GameEvents.ExitLevel();
             Debug.Log("DoorOpened triggered");
         }
     }

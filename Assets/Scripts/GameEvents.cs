@@ -14,11 +14,13 @@ public static class GameEvents
     public static event Action OnDropLoot;
     public static event Action OnNoLoot;
     public static event Action OnQuotaHit;
-    public static event Action OnOpenDoor; //Exit door even, misschien andere naam?
+    public static event Action OnQuotaLost;
+
+    //public static event Action OnInteractNPC;
 
     public static event Action OnTimerPause;
     public static event Action OnExitLevel; // wat doel hier ook alweer van
-    public static event Action OnCandleDepleted; //change name to game over?
+    public static event Action OnTimerRanOut; //change name to game over?
     public static event Action OnLeaveGame;
 
     public static void ToggleMoveUI()
@@ -41,6 +43,7 @@ public static class GameEvents
         OnLootPickUp?.Invoke(value, image);
     }
 
+
     public static void DropLoot()
     { 
         OnDropLoot?.Invoke();
@@ -61,14 +64,14 @@ public static class GameEvents
         OnQuotaHit?.Invoke();
     }
 
-    public static void OpenDoor()
+    public static void QuotaLost()
     { 
-        OnOpenDoor?.Invoke();
+        OnQuotaLost?.Invoke();
     }
 
     public static void TimerPause()
     {
-        Debug.Log("TimerPauseCalled");
+        Debug.Log("Event TimerPause Called");
         OnTimerPause?.Invoke();
     }
 
@@ -77,9 +80,9 @@ public static class GameEvents
         OnExitLevel?.Invoke();
     }
 
-    public static void CandleDepleted()
+    public static void TimerRanOut()
     {
-        OnCandleDepleted?.Invoke();
+        OnTimerRanOut?.Invoke();
     }
 
     public static void LeaveGame()

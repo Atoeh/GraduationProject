@@ -10,7 +10,7 @@ public class SceneManagement : MonoBehaviour
     private void OnEnable()
     {
         GameEvents.OnExitLevel += GoToNextLevel;
-        GameEvents.OnCandleDepleted += GameOver;
+        GameEvents.OnTimerRanOut += GameOver;
         GameEvents.OnLeaveGame += OpenStartScreen;
         //Niet op reachen van de deur maar op klikken van next level na merchant
         //GameEvents.OnOpenDoor += GoToNextLevel;
@@ -19,7 +19,7 @@ public class SceneManagement : MonoBehaviour
     private void OnDisable()
     {
         GameEvents.OnExitLevel += GoToNextLevel;
-        GameEvents.OnCandleDepleted -= GameOver;
+        GameEvents.OnTimerRanOut -= GameOver;
         //Niet op reachen van de deur maar op klikken van next level na merchant
         //GameEvents.OnOpenDoor -= GoToNextLevel;
     }

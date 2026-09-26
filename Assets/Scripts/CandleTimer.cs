@@ -56,7 +56,7 @@ public class CandleTimer : MonoBehaviour
             //Is there still time left?
             if (timeLeft <= 0f)
             {
-                GameEvents.CandleDepleted();
+                GameEvents.TimerRanOut();
                 timeLeft = 0f;
                 candleOn = false;
             }

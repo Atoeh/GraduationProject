@@ -38,14 +38,14 @@ public class CandleTimerV2 : MonoBehaviour
     {
         GameEvents.OnTimerPause += PauseTimer;
         GameEvents.OnQuotaSet += NewTimer;
-        GameEvents.OnCandleDepleted += ResetTimer;
+        GameEvents.OnTimerRanOut += ResetTimer;
     }
 
     private void OnDisable()
     {
         GameEvents.OnTimerPause -= PauseTimer;
         GameEvents.OnQuotaSet -= NewTimer;
-        GameEvents.OnCandleDepleted -= ResetTimer;
+        GameEvents.OnTimerRanOut -= ResetTimer;
     }
 
     void Start()
@@ -72,7 +72,7 @@ public class CandleTimerV2 : MonoBehaviour
             {
                 timerRestarted = true;
                 timeLeft = 0f;
-                GameEvents.CandleDepleted();
+                GameEvents.TimerRanOut();
             }
 
             //if timeSincelastStep is larger then a second, subtract second from timer.

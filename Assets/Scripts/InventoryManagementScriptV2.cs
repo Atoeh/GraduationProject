@@ -8,7 +8,6 @@ public class InventoryManagementScriptV2 : MonoBehaviour
 
     private float quota;
     public float lootAmmount = 0;
-    private bool lootless = false;
 
     [Header("- Quota variables -")]
 
@@ -25,7 +24,7 @@ public class InventoryManagementScriptV2 : MonoBehaviour
 
     void Awake()
     {
-        Debug.Log("Quota Awake called");
+        //Debug.Log("Quota Awake called");
         if (quotaIsTreu == true)
         {
             if (quotaIsAll == true)

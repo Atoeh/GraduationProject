@@ -29,7 +29,7 @@ public class CutSceneScripts : MonoBehaviour
     [SerializeField]
     AudioClip transitionEffectClip;
 
-    void Start()
+    private void Awake()
     {
         color = image.GetComponentInChildren<Image>().color;
 
@@ -38,20 +38,16 @@ public class CutSceneScripts : MonoBehaviour
 
         currScreen = 0;
 
-        //for (int i = 0; i < storyBoard.Length; i++)
         for (int i = 0; i < storyBoardSize; i++)
         {
-                storyBoard[i].SetActive(false);
+            storyBoard[i].SetActive(false);
         }
-        
+
         if (startsDark == true)
         {
             screenIsDark = true;
             color.a = 1f;
             image.color = color;
-
-            //Wordt nu door UI manager gedaan
-            //StartCutScene();
         }
     }
 

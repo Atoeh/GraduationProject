@@ -34,7 +34,7 @@ public class LootPickUpV3 : MonoBehaviour
     {
         if (other.CompareTag ("Player"))
         {
-            Debug.Log("Collided with player");
+            //Debug.Log("Collided with player");
             InventoryManager.Instance.PickupItem(itemData);
             Destroy(this.gameObject);
         }

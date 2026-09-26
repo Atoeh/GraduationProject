@@ -30,7 +30,7 @@ public class NPCScriptV2 : MonoBehaviour
         {
             Debug.Log("OpenDoor");
             //cutScene.GetComponent<CutSceneScripts>().StartCutScene();
-            GameEvents.OpenDoor();
+            GameEvents.QuotaHit();
         }
     }
     public void StealLoot()
