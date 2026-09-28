@@ -12,12 +12,12 @@ public class TimerManager : MonoBehaviour
 
     private bool candleOn = false;
     private float timeSinceLastStep = 0f;
-    private float timeMax;
+    public float timeMax;
     private bool timerRestarted = false;
 
     [Header("- Timer Array -")]
     [SerializeField] private float[] timerArray;
-    [SerializeField] private int timerIndex = 0;
+    public int timerIndex = 0;
 
     [Header("- Timer UI Elements -")]
     [SerializeField] private GameObject TextObject;
@@ -37,20 +37,19 @@ public class TimerManager : MonoBehaviour
         }
 
         timerText = TextObject.GetComponent<TMP_Text>();
+        timeMax = timerArray[timerIndex];
     }
 
     private void OnEnable()
     {
-        //GameEvents.OnTimerPause += PauseTimer;
-        GameEvents.OnTimerRanOut += ResetTimer;
-        //GameEvents.OnQuotaSet += NewTimer;
+        GameEvents.OnTimerRanOut += PauseTimer;
+        GameEvents.OnExitLevel += PauseTimer;
+        GameEvents.OnExitLevel += NextTimer;
     }
 
     private void OnDisable()
     {
-        //GameEvents.OnTimerPause -= PauseTimer;
-        //GameEvents.OnQuotaSet -= NewTimer;
-        GameEvents.OnTimerRanOut -= ResetTimer;
+        GameEvents.OnTimerRanOut -= PauseTimer;
     }
 
     void Update()
@@ -70,7 +69,7 @@ public class TimerManager : MonoBehaviour
             if (timeSinceLastStep >= updateTime)
             {
                 timeLeft -= updateTime;
-                Debug.Log("TimeLeft: " + timeLeft);
+                //Debug.Log("TimeLeft: " + timeLeft);
                 SetSlider();
                 SetText();
                 timeSinceLastStep = 0;
@@ -105,23 +104,31 @@ public class TimerManager : MonoBehaviour
         timeSinceLastStep = 0;
     }
 
-    private void ResetTimer()
+    // ----------------------- SWITCH TIMER ON NEW LEVEL -------------------------
+    //public void NewTimer()
+    //{
+    //    //value not used, timer duration used from the array instead
+    //    if (timerIndex < timerArray.Length)
+    //    {
+    //        timeMax = timerArray[timerIndex];
+    //        AddTime(timeMax);
+    //    }
+    //    timerIndex++;
+    //}
+
+    public void NextTimer()
     {
-        timeLeft = 0f;
-        AddTime(timeMax);
+        if (timerIndex < timerArray.Length)
+            timerIndex++;
+        else
+            Debug.Log("timerIndex out of bounds");
     }
 
-    // ----------------------- SWITCH TIMER ON NEW LEVEL -------------------------
-    public void NewTimer()
+    public void ResetTimer()
     {
-        //value not used, timer duration used from the array instead
-        if (timerIndex < timerArray.Length)
-        {
-            timeMax = timerArray[timerIndex];
-            AddTime(timeMax);
-            candleOn = true;
-        }
-        timerIndex++;
+        timeLeft = 0f;
+        timeMax = timerArray[timerIndex];
+        AddTime(timeMax);
     }
 
     // -------------------- TIMER VISUAL -------------------------

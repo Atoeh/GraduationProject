@@ -41,7 +41,6 @@ public class GameManager : MonoBehaviour
     private void OnEnable()
     {
         GameEvents.OnTimerPause += PauseGame;
-        GameEvents.OnExitLevel += LoadNextLevel;
         GameEvents.OnTimerRanOut += TriggerGameOver;
         GameEvents.OnLeaveGame += RestartGame;
     }
@@ -49,7 +48,6 @@ public class GameManager : MonoBehaviour
     private void OnDisable()
     {
         GameEvents.OnTimerPause += PauseGame;
-        GameEvents.OnExitLevel -= LoadNextLevel;
         GameEvents.OnTimerRanOut -= TriggerGameOver;
         GameEvents.OnLeaveGame -= RestartGame;
     }
@@ -129,7 +127,7 @@ public class GameManager : MonoBehaviour
     public void StartDungeoneering()
     {
         Debug.Log("GameState: close intro and start with dungeoneering");
-        TimerManager.Instance.NewTimer();
+        TimerManager.Instance.ResetTimer();
         TimerManager.Instance.ResumeTimer();
     }
 

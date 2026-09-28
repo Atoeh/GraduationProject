@@ -902,13 +902,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2907950355856136253, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
       propertyPath: m_text
-      value: 'Body 2
-
-        Now try again'
+      value: Yo sick now go play
       objectReference: {fileID: 0}
     - target: {fileID: 3428714653358346637, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
       propertyPath: m_text
-      value: Game over 1
+      value: Intro 2
       objectReference: {fileID: 0}
     - target: {fileID: 3517220248980556899, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
       propertyPath: m_Name
@@ -1004,15 +1002,18 @@ PrefabInstance:
       objectReference: {fileID: 578370369}
     - target: {fileID: 7020423250879163426, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
       propertyPath: m_text
-      value: 'Body 1
+      value: 'You enter the dungeon
 
-        Game over buddy
+        Your goal? To gather loot
 
-        Happens to the best of us'
+        Exlpore,
+        gather, and escape.
+
+        Try to gather the loot of the most value.'
       objectReference: {fileID: 0}
     - target: {fileID: 7025326038694287497, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
       propertyPath: m_text
-      value: Game over 1
+      value: Intro 1
       objectReference: {fileID: 0}
     - target: {fileID: 8132839513348020769, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
       propertyPath: m_IsActive
@@ -1864,23 +1865,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 3
   m_TargetDisplay: 0
---- !u!1 &981861516 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3517220248980556899, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
-  m_PrefabInstance: {fileID: 1735505551}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &981861523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 981861516}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95fdaec1fbde7fd4c8d16255fcbad7d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameManagerBridge
 --- !u!1 &1110953086
 GameObject:
   m_ObjectHideFlags: 0
@@ -2761,7 +2745,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   timeLeft: 0
   updateTime: 1
-  timeMax: 0
   timerArray:
   - 40
   - 60
@@ -3175,83 +3158,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 606640310}
     m_Modifications:
-    - target: {fileID: 1057401963080864132, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1057401963080864132, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1057401963080864132, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1057401963080864132, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 981861523}
-    - target: {fileID: 1057401963080864132, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 981861523}
-    - target: {fileID: 1057401963080864132, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 1838014869}
-    - target: {fileID: 1057401963080864132, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1057401963080864132, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1057401963080864132, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: NextLevel
-      objectReference: {fileID: 0}
-    - target: {fileID: 1057401963080864132, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1057401963080864132, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: CloseScreen
-      objectReference: {fileID: 0}
-    - target: {fileID: 1057401963080864132, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GameManagerBridge, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1057401963080864132, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: CutSceneScripts, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1057401963080864132, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: CutSceneScripts, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1057401963080864132, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 1057401963080864132, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1057401963080864132, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 2907950355856136253, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
       propertyPath: m_text
-      value: 'Body 2
-
-        Now go to the next level'
+      value: Yo sick now go play
       objectReference: {fileID: 0}
     - target: {fileID: 3428714653358346637, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
       propertyPath: m_text
-      value: Outro 1
+      value: Intro 2
       objectReference: {fileID: 0}
     - target: {fileID: 4056884105742719417, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
       propertyPath: m_Pivot.x
@@ -3343,15 +3256,18 @@ PrefabInstance:
       objectReference: {fileID: 659242032}
     - target: {fileID: 7020423250879163426, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
       propertyPath: m_text
-      value: 'Body 1
+      value: 'You enter the dungeon
 
-        You gathered stuff,
+        Your goal? To gather loot
 
-        good'
+        Exlpore,
+        gather, and escape.
+
+        Try to gather the loot of the most value.'
       objectReference: {fileID: 0}
     - target: {fileID: 7025326038694287497, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
       propertyPath: m_text
-      value: Outro 1
+      value: Intro 1
       objectReference: {fileID: 0}
     - target: {fileID: 8132839513348020769, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
       propertyPath: m_IsActive
@@ -3360,10 +3276,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3517220248980556899, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 981861523}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
 --- !u!114 &1746443780 stripped
 MonoBehaviour:
@@ -3620,17 +3533,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4056884105742719417, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
   m_PrefabInstance: {fileID: 1735505551}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1838014869 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4920529476429059740, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
-  m_PrefabInstance: {fileID: 1735505551}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1838014867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41f9407d0c5db0545962500f68087079, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CutSceneScripts
 --- !u!1 &1870796487
 GameObject:
   m_ObjectHideFlags: 0
@@ -4836,7 +4738,7 @@ PrefabInstance:
     - target: {fileID: 1057401963080864132, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 7574641296092461211}
+      objectReference: {fileID: 7574641296092461210}
     - target: {fileID: 1057401963080864132, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -4855,7 +4757,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1057401963080864132, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartDungeon
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1057401963080864132, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -4867,7 +4769,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1057401963080864132, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GameManagerBridge, Assembly-CSharp
+      value: GameManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1057401963080864132, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -4891,9 +4793,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2907950355856136253, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
       propertyPath: m_text
-      value: 'Body 2
-
-        Yo sick now go play'
+      value: Yo sick now go play
       objectReference: {fileID: 0}
     - target: {fileID: 3428714653358346637, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
       propertyPath: m_text
@@ -4989,12 +4889,14 @@ PrefabInstance:
       objectReference: {fileID: 1906466848}
     - target: {fileID: 7020423250879163426, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
       propertyPath: m_text
-      value: 'Body 1
+      value: 'You enter the dungeon
 
-        You enter the dungeon Your goal? To gather loot
+        Your goal? To gather loot
 
         Exlpore,
-        gather, and escape. Try to gather the loot of the most value.'
+        gather, and escape.
+
+        Try to gather the loot of the most value.'
       objectReference: {fileID: 0}
     - target: {fileID: 7025326038694287497, guid: 3746710c1f4021849813fac5c65beda7, type: 3}
       propertyPath: m_text

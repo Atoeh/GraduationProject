@@ -13,8 +13,7 @@ public class ExitDoorScriptV2 : MonoBehaviour
     //private bool doorLocked = false;
 
     private GameObject doorBorder;
-    [SerializeField]
-    private GameObject ExitText;
+    [SerializeField] private GameObject ExitText;
 
     private void OnEnable()
     {
@@ -24,38 +23,36 @@ public class ExitDoorScriptV2 : MonoBehaviour
     private void OnDisable()
     {
         GameEvents.OnQuotaHit -= OpenDoor;
-        GameEvents.OnQuotaLost += CloseDoor;
+        GameEvents.OnQuotaLost -= CloseDoor;
     }
 
     private void Start()
     {
         doorOpen = false;
-        ExitText.SetActive(false);
+        ExitText.SetActive(doorOpen);
         doorBorder = this.gameObject;
     }
 
     private void OpenDoor()
     {
         doorOpen = true;
-        ExitText.SetActive(true);
+        Debug.Log("Door opens");
+        ExitText.SetActive(doorOpen);
     }
 
     private void CloseDoor()
     {
+        Debug.Log("Door closes");
         doorOpen = false;
-        ExitText.SetActive(false);
+        ExitText.SetActive(doorOpen);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collision with door");
-
         if (other.tag == "Player" && doorOpen == true)
         {
-            //voor nu met bool doorgeven omdat..
-            GameEvents.TimerPause();
+            Debug.Log("Collision with door");
             GameEvents.ExitLevel();
-            Debug.Log("DoorOpened triggered");
         }
     }
 }
