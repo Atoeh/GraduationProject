@@ -2745,6 +2745,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   timeLeft: 0
   updateTime: 1
+  timeMax: 0
   timerArray:
   - 40
   - 60
@@ -4607,7 +4608,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6143281280008107362, guid: 80596dd9b9a29034886ccc566ce24f5c, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4907753768182345541, guid: 80596dd9b9a29034886ccc566ce24f5c, type: 3}
+    - {fileID: 6417031527604423063, guid: 80596dd9b9a29034886ccc566ce24f5c, type: 3}
+    - {fileID: 2875052744351277232, guid: 80596dd9b9a29034886ccc566ce24f5c, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2842598256303997691, guid: 80596dd9b9a29034886ccc566ce24f5c, type: 3}

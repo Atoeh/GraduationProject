@@ -18,14 +18,11 @@ public class GridManager : MonoBehaviour
 
     private GameObject[,] cells;
     private bool[,] occupied;
-
     private Image[,] cellImages;
-
     private float totalValue = 0f;
 
     [Header("- Value Tracker -")]
     [SerializeField] private TMP_Text valueText;
-
 
     void Start()
     {
