@@ -681,10 +681,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4056884105742719417}
-  - component: {fileID: 5735457705016875687}
   - component: {fileID: 4920529476429059740}
   m_Layer: 5
-  m_Name: CutScene Template
+  m_Name: CSTemplate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -712,14 +711,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &5735457705016875687
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4115441713803043216}
-  m_CullTransparentMesh: 1
 --- !u!114 &4920529476429059740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1459,7 +1450,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8132839513348020769}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1727,15 +1718,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1514997608671661522, guid: 193cd1604e07f3e42a06988090ba4f3b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1514997608671661522, guid: 193cd1604e07f3e42a06988090ba4f3b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1514997608671661522, guid: 193cd1604e07f3e42a06988090ba4f3b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1514997608671661522, guid: 193cd1604e07f3e42a06988090ba4f3b, type: 3}
       propertyPath: m_AnchoredPosition.x
