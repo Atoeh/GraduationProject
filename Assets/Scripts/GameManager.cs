@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -13,7 +14,7 @@ public class GameManager : MonoBehaviour
     private bool quotaStillTrue;
 
     [Header("- Quota Array variables -")]
-    
+
     [SerializeField] private int quotaIndex;
     [SerializeField] private float[] levelQuotas;
 
@@ -22,6 +23,10 @@ public class GameManager : MonoBehaviour
     //[SerializeField] private Scene start;
     private int startScene = 0;
     private int currentScene;
+
+    [Header("- Game States -")]
+    [SerializeField] private bool[] gameState;
+    
 
     // --------------------- SETUP ---------------------
 

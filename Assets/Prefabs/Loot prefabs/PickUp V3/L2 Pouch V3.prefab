@@ -30,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 5688922595972931282, guid: bee8111a442a31246903fbdcf5946c73, type: 3}
     - target: {fileID: 1318700714435947191, guid: 254e460e979fe324c867107ecaf41718, type: 3}
       propertyPath: m_Name
-      value: Loot2 Pouch 1
+      value: L2 Pouch V3
       objectReference: {fileID: 0}
     - target: {fileID: 2229887679605314978, guid: 254e460e979fe324c867107ecaf41718, type: 3}
       propertyPath: m_LocalPosition.x
@@ -72,7 +72,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1123031145246419891, guid: 254e460e979fe324c867107ecaf41718, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -99,3 +100,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LootPickUpV3
   itemData: {fileID: 11400000, guid: 834622cc037e3d940b834081f1686a17, type: 2}
   sprite: {fileID: 0}
+  cutScene: {fileID: 0}

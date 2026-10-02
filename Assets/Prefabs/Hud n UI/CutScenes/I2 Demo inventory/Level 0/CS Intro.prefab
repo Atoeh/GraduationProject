@@ -396,9 +396,6 @@ GameObject:
   - component: {fileID: 144844126931606681}
   - component: {fileID: 4384952334068241307}
   - component: {fileID: 4831169326777574795}
-  - component: {fileID: 1960504830402638007}
-  - component: {fileID: 1231672067986932716}
-  - component: {fileID: 8052734914529827194}
   m_Layer: 5
   m_Name: CloseButton
   m_TagString: Untagged
@@ -508,9 +505,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8052734914529827194}
-        m_TargetAssemblyTypeName: GameManagerBridge, Assembly-CSharp
-        m_MethodName: StartDungeon
+      - m_Target: {fileID: 4508651568529491383}
+        m_TargetAssemblyTypeName: CutSceneScripts, Assembly-CSharp
+        m_MethodName: CloseScreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -520,43 +517,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1960504830402638007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1899232287561033910}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6f511d8dd262ce42a296dab2f46426e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ToggleScript
-  toggleObject: {fileID: 0}
---- !u!114 &1231672067986932716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1899232287561033910}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7554971579feb5340ab508479e810dc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PauseTimerScipt
---- !u!114 &8052734914529827194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1899232287561033910}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95fdaec1fbde7fd4c8d16255fcbad7d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameManagerBridge
 --- !u!1 &1970386196578683232
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,7 +706,7 @@ GameObject:
   - component: {fileID: 7725390109868856876}
   - component: {fileID: 3278366559957432315}
   m_Layer: 5
-  m_Name: Scene 1
+  m_Name: Scene END
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1408,9 +1368,6 @@ GameObject:
   - component: {fileID: 5944520140592328195}
   - component: {fileID: 6690992571516773773}
   - component: {fileID: 4012786585063666144}
-  - component: {fileID: 8611129431726966632}
-  - component: {fileID: 1818297030826226290}
-  - component: {fileID: 8827010858282195899}
   m_Layer: 5
   m_Name: PreviousButton
   m_TagString: Untagged
@@ -1520,7 +1477,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4508651568529491383}
         m_TargetAssemblyTypeName: CutSceneScripts, Assembly-CSharp
         m_MethodName: PreviousScreen
         m_Mode: 1
@@ -1532,43 +1489,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8611129431726966632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4056171167940245855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6f511d8dd262ce42a296dab2f46426e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ToggleScript
-  toggleObject: {fileID: 0}
---- !u!114 &1818297030826226290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4056171167940245855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7554971579feb5340ab508479e810dc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PauseTimerScipt
---- !u!114 &8827010858282195899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4056171167940245855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95fdaec1fbde7fd4c8d16255fcbad7d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameManagerBridge
 --- !u!1 &4500633894069066558
 GameObject:
   m_ObjectHideFlags: 0
@@ -2155,6 +2075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41f9407d0c5db0545962500f68087079, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CutSceneScripts
+  spawner: {fileID: 0}
   storyBoard:
   - {fileID: 8396897779733257969}
   - {fileID: 2247474079124369668}
@@ -2176,9 +2097,6 @@ GameObject:
   - component: {fileID: 6055163665262850262}
   - component: {fileID: 5328806842497108799}
   - component: {fileID: 2139899660258619015}
-  - component: {fileID: 1466651785284195904}
-  - component: {fileID: 2425735464030942889}
-  - component: {fileID: 3205298060235943619}
   m_Layer: 5
   m_Name: CloseButton
   m_TagString: Untagged
@@ -2288,7 +2206,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4508651568529491383}
         m_TargetAssemblyTypeName: CutSceneScripts, Assembly-CSharp
         m_MethodName: CloseScreen
         m_Mode: 1
@@ -2300,43 +2218,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1466651785284195904
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6160508869594577267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6f511d8dd262ce42a296dab2f46426e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ToggleScript
-  toggleObject: {fileID: 0}
---- !u!114 &2425735464030942889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6160508869594577267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7554971579feb5340ab508479e810dc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PauseTimerScipt
---- !u!114 &3205298060235943619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6160508869594577267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95fdaec1fbde7fd4c8d16255fcbad7d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameManagerBridge
 --- !u!1 &6551196982177870030
 GameObject:
   m_ObjectHideFlags: 0
@@ -2424,9 +2305,6 @@ GameObject:
   - component: {fileID: 7693316099497495175}
   - component: {fileID: 7320745592237708313}
   - component: {fileID: 1147247298557994910}
-  - component: {fileID: 6138644249386630088}
-  - component: {fileID: 7939593377810464720}
-  - component: {fileID: 5931201223808539884}
   m_Layer: 5
   m_Name: PreviousButton
   m_TagString: Untagged
@@ -2536,7 +2414,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4508651568529491383}
         m_TargetAssemblyTypeName: CutSceneScripts, Assembly-CSharp
         m_MethodName: PreviousScreen
         m_Mode: 1
@@ -2548,43 +2426,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &6138644249386630088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6792639166044817403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6f511d8dd262ce42a296dab2f46426e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ToggleScript
-  toggleObject: {fileID: 0}
---- !u!114 &7939593377810464720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6792639166044817403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7554971579feb5340ab508479e810dc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PauseTimerScipt
---- !u!114 &5931201223808539884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6792639166044817403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95fdaec1fbde7fd4c8d16255fcbad7d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameManagerBridge
 --- !u!1 &7677769236814831024
 GameObject:
   m_ObjectHideFlags: 0
@@ -2733,9 +2574,6 @@ GameObject:
   - component: {fileID: 8457909896538319830}
   - component: {fileID: 5241171731119895560}
   - component: {fileID: 6442434806182433650}
-  - component: {fileID: 3784512717247148271}
-  - component: {fileID: 5153298725559598114}
-  - component: {fileID: 2898770038001701789}
   m_Layer: 5
   m_Name: NextButton
   m_TagString: Untagged
@@ -2845,7 +2683,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4508651568529491383}
         m_TargetAssemblyTypeName: CutSceneScripts, Assembly-CSharp
         m_MethodName: NextScreen
         m_Mode: 1
@@ -2857,43 +2695,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &3784512717247148271
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7870912591362670847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6f511d8dd262ce42a296dab2f46426e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ToggleScript
-  toggleObject: {fileID: 0}
---- !u!114 &5153298725559598114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7870912591362670847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7554971579feb5340ab508479e810dc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PauseTimerScipt
---- !u!114 &2898770038001701789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7870912591362670847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95fdaec1fbde7fd4c8d16255fcbad7d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameManagerBridge
 --- !u!1 &8001453775960103162
 GameObject:
   m_ObjectHideFlags: 0
@@ -2906,9 +2707,6 @@ GameObject:
   - component: {fileID: 4205010260718237108}
   - component: {fileID: 3230822181751291611}
   - component: {fileID: 8687558561767175368}
-  - component: {fileID: 3080434652331741012}
-  - component: {fileID: 3288180087944427606}
-  - component: {fileID: 445061210526998638}
   m_Layer: 5
   m_Name: NextButton
   m_TagString: Untagged
@@ -3018,7 +2816,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4508651568529491383}
         m_TargetAssemblyTypeName: CutSceneScripts, Assembly-CSharp
         m_MethodName: NextScreen
         m_Mode: 1
@@ -3030,43 +2828,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &3080434652331741012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8001453775960103162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6f511d8dd262ce42a296dab2f46426e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ToggleScript
-  toggleObject: {fileID: 0}
---- !u!114 &3288180087944427606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8001453775960103162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7554971579feb5340ab508479e810dc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PauseTimerScipt
---- !u!114 &445061210526998638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8001453775960103162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95fdaec1fbde7fd4c8d16255fcbad7d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameManagerBridge
 --- !u!1 &8396897779733257969
 GameObject:
   m_ObjectHideFlags: 0
@@ -3079,7 +2840,7 @@ GameObject:
   - component: {fileID: 2812717164259813021}
   - component: {fileID: 4346298357090463107}
   m_Layer: 5
-  m_Name: Scene 0
+  m_Name: Scene (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -1,6 +1,8 @@
 using System.Xml.Serialization;
 using Unity.Hierarchy;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 using static UnityEditor.Progress;
 
@@ -8,6 +10,13 @@ public class LootPickUpV3 : MonoBehaviour
 {
     public ItemData itemData;
     public Sprite sprite;
+
+    public GameObject cutScene;
+    private GameObject cSInstance;
+    private CutSceneScripts script;
+
+    [SerializeField] private UIManagerScriptV4 hud;
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.maroon;
@@ -34,9 +43,26 @@ public class LootPickUpV3 : MonoBehaviour
     {
         if (other.CompareTag ("Player"))
         {
-            //Debug.Log("Collided with player");
-            InventoryManager.Instance.PickupItem(itemData);
-            Destroy(this.gameObject);
+            if (cutScene != null)
+            {
+                UIManagerScriptV4.Instance.StartCutScene(cutScene, this);
+            }
+            else
+            {
+                PickUpItem();
+            }
         }
+    }
+
+    //Seperate functions so that a cutscene can trigger it aswell
+    public void PickUpItem()
+    {
+        InventoryManager.Instance.PickupItem(itemData);
+        Destroy(this.gameObject);
+    }
+
+    public void DestroyItem()
+    {
+        Destroy(this.gameObject);
     }
 }

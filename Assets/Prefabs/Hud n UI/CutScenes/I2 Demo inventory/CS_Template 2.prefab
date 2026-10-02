@@ -253,6 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41f9407d0c5db0545962500f68087079, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CutSceneScripts
+  spawner: {fileID: 0}
   storyBoard:
   - {fileID: 6902188307863295107}
   - {fileID: 4532608923312616404}
@@ -484,9 +485,6 @@ GameObject:
   - component: {fileID: 5046774033485825390}
   - component: {fileID: 4010485610402281638}
   - component: {fileID: 9078197030832808452}
-  - component: {fileID: 7933078691399855004}
-  - component: {fileID: 163093476056755280}
-  - component: {fileID: 9056860303104399724}
   m_Layer: 5
   m_Name: NextButton
   m_TagString: Untagged
@@ -608,43 +606,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &7933078691399855004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1672592788878677020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6f511d8dd262ce42a296dab2f46426e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ToggleScript
-  toggleObject: {fileID: 0}
---- !u!114 &163093476056755280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1672592788878677020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7554971579feb5340ab508479e810dc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PauseTimerScipt
---- !u!114 &9056860303104399724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1672592788878677020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95fdaec1fbde7fd4c8d16255fcbad7d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameManagerBridge
 --- !u!1 &1940467683086672706
 GameObject:
   m_ObjectHideFlags: 0
@@ -3086,9 +3047,6 @@ GameObject:
   - component: {fileID: 2882029003121979422}
   - component: {fileID: 6201555311717675759}
   - component: {fileID: 4653921300915599473}
-  - component: {fileID: 3126588758155153497}
-  - component: {fileID: 1065663669717001943}
-  - component: {fileID: 3493441969150265650}
   m_Layer: 5
   m_Name: CloseButton
   m_TagString: Untagged
@@ -3198,7 +3156,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3493441969150265650}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameManagerBridge, Assembly-CSharp
         m_MethodName: StartDungeon
         m_Mode: 1
@@ -3210,43 +3168,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &3126588758155153497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9148223242560005526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6f511d8dd262ce42a296dab2f46426e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ToggleScript
-  toggleObject: {fileID: 0}
---- !u!114 &1065663669717001943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9148223242560005526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7554971579feb5340ab508479e810dc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PauseTimerScipt
---- !u!114 &3493441969150265650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9148223242560005526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95fdaec1fbde7fd4c8d16255fcbad7d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameManagerBridge
 --- !u!1 &9160981831160382160
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CutSceneScripts : MonoBehaviour
 {
+    [Header("- Spawner -")]
+    public LootPickUpV3 spawner;
+
     [Header ("- Storyboard -")]
     [SerializeField]
     GameObject[] storyBoard;
@@ -51,7 +55,15 @@ public class CutSceneScripts : MonoBehaviour
         }
     }
 
-    // ----------------------- (RE-) START CUTSCENE -------------------------
+    // ----------------------- GAME MANAGER ----------------------------------
+
+    public void RestartLevel() => GameManager.Instance.RestartLevel();
+
+    public void NextLevel() => GameManager.Instance.LoadNextLevel();
+
+    public void StartDungeon() => GameManager.Instance.StartDungeoneering();
+
+    // ----------------------- FUNCTION FOR BUTTONS STATE CUTSCENE -------------------------
 
     public void StartCutScene()
     {
@@ -60,13 +72,17 @@ public class CutSceneScripts : MonoBehaviour
         StartCoroutine(Next());
     }
 
-    //Not used rn
     public void RestartCutScene()
     {
         StartCoroutine(Next());
     }
 
-    // ----------------------- NEXT SCREEN -------------------------
+    public void DestroyCutScene()
+    { 
+        Destroy(gameObject);
+    }
+
+    // ----------------------- BUTTONS - CHANGE SCREEN -------------------------
 
     public void NextScreen()
     {
@@ -98,8 +114,6 @@ public class CutSceneScripts : MonoBehaviour
         yield return new WaitForSeconds(transTime);
     }
 
-    // ----------------------- PREVIOUS SCREEN -------------------------
-
     public IEnumerator Previous()
     {
         //Fade to black
@@ -124,7 +138,10 @@ public class CutSceneScripts : MonoBehaviour
         StartCoroutine(Previous());
     }
 
-    // ----------------------- CLOSE SCREEN -------------------------
+    public void CloseScreen()
+    {
+        StartCoroutine(Close());
+    }
 
     public IEnumerator Close()
     {
@@ -143,37 +160,44 @@ public class CutSceneScripts : MonoBehaviour
         yield return new WaitForSeconds(transTime);
     }
 
-    public void CloseScreen()
+    // ----------------------- FUNCTIONS FOR BUTTONS FOR SPAWNER ------------------------
+
+    public void PickUpSpawner()
     {
-        StartCoroutine(Close());
+        if (spawner != null)
+            spawner.PickUpItem();
+    }
+
+    public void DestroySpawner()
+    {
+        if (spawner != null)
+            spawner.DestroyItem();
     }
 
     // ----------------------- TRANSITION SCREEN -------------------------
 
     public IEnumerator Transition(bool fadeInIsTrue)
     {
-        //Debug.Log("Transition performing");
-        //Debug.Log("TransTime = " + transTime);
-
         float timer = 0f;
 
         while (timer < transTime)
         {
             timer += Time.deltaTime;
 
-            if (fadeInIsTrue == false)
+            if (fadeInIsTrue)
             {
-                color.a = 1f - Mathf.Clamp01(timer / transTime);
-                //Debug.Log("FadingOut");
+                color.a = Mathf.Clamp01(timer / transTime);
+                //Debug.Log(" is fading in");
             }
             else
             {
-                color.a = Mathf.Clamp01(timer / transTime);
-                //Debug.Log("FadingIn");
+                color.a = 1f - Mathf.Clamp01(timer / transTime);
+                //Debug.Log("is fading out);
             }
 
             image.color = color;
             yield return null;
         }
     }
+
 }

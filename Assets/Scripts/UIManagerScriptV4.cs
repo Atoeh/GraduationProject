@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class UIManagerScriptV4 : MonoBehaviour
 {
+    public static UIManagerScriptV4 Instance;
+
     [Header("- UI Element Groups -")]
 
     [SerializeField] private GameObject candleTimerUI;
@@ -15,16 +17,25 @@ public class UIManagerScriptV4 : MonoBehaviour
     [SerializeField] private GameObject introObject;
     [SerializeField] private GameObject outroObject;
     [SerializeField] private GameObject gameOverPanel;
-    [SerializeField] private float transitionTime;
 
     private CutSceneScripts introCutScene;
     private CutSceneScripts outroCutScene;
     private CutSceneScripts gameOverCutScene;
 
+    private GameObject cutSceneInstance;
+    private CutSceneScripts cutSceneScript;
+
+    [SerializeField] private float transitionTime;
+
     [Header("- Enabled Ui elements -")]
 
     [SerializeField] private bool enableCandleTimer = false;
     private bool movUIState;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     void OnEnable()
     { 
@@ -52,23 +63,23 @@ public class UIManagerScriptV4 : MonoBehaviour
     void Start()
     {
         //is it smart to set the transition time through here?
-        if (introObject != null)
-        { 
-            introCutScene = introObject.GetComponent<CutSceneScripts>(); 
-            introCutScene.transTime = transitionTime;
-        }
+        //if (introObject != null)
+        //{ 
+        //    introCutScene = introObject.GetComponent<CutSceneScripts>(); 
+        //    introCutScene.transTime = transitionTime;
+        //}
 
-        if (outroObject != null)
-        {
-            outroCutScene = outroObject.GetComponent<CutSceneScripts>();
-            outroCutScene.transTime = transitionTime;
-        }
+        //if (outroObject != null)
+        //{
+        //    outroCutScene = outroObject.GetComponent<CutSceneScripts>();
+        //    outroCutScene.transTime = transitionTime;
+        //}
 
-        if (gameOverPanel != null)
-        {
-            gameOverCutScene = gameOverPanel.GetComponent<CutSceneScripts>();
-            gameOverCutScene.transTime = transitionTime;
-        }
+        //if (gameOverPanel != null)
+        //{
+        //    gameOverCutScene = gameOverPanel.GetComponent<CutSceneScripts>();
+        //    gameOverCutScene.transTime = transitionTime;
+        //}
 
         movUIState = true;
 
@@ -96,7 +107,7 @@ public class UIManagerScriptV4 : MonoBehaviour
 
     void StartIntro()
     {
-        introCutScene.StartCutScene();
+        StartCutScene(introObject, null);
     }
 
     void StartOutro()
@@ -108,4 +119,18 @@ public class UIManagerScriptV4 : MonoBehaviour
     { 
         gameOverCutScene.StartCutScene(); 
     }
+
+    public void StartCutScene(GameObject cutScene, LootPickUpV3 spawnItem)
+    {
+        //setup of cutsccene
+        cutSceneInstance = Instantiate(cutScene);
+        cutSceneScript = cutSceneInstance.GetComponent<CutSceneScripts>();
+        
+        cutSceneScript.transTime = transitionTime;
+        if (spawnItem != null)
+            cutSceneScript.spawner = spawnItem;
+        
+        cutSceneScript.StartCutScene();
+    }
+
 }
