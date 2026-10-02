@@ -27,7 +27,7 @@ public class UIManagerScriptV4 : MonoBehaviour
     private bool movUIState;
 
     void OnEnable()
-    {
+    { 
         //Events subscriben
 
         //GameEvents.OnStartLevel

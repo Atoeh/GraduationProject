@@ -513,6 +513,7 @@ GameObject:
   - component: {fileID: 1057401963080864132}
   - component: {fileID: 7302998385368218028}
   - component: {fileID: 4680179861338951458}
+  - component: {fileID: 9097723462602612935}
   m_Layer: 5
   m_Name: CloseButton
   m_TagString: Untagged
@@ -622,9 +623,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4920529476429059740}
-        m_TargetAssemblyTypeName: CutSceneScripts, Assembly-CSharp
-        m_MethodName: CloseScreen
+      - m_Target: {fileID: 9097723462602612935}
+        m_TargetAssemblyTypeName: GameManagerBridge, Assembly-CSharp
+        m_MethodName: StartDungeon
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -659,6 +660,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7554971579feb5340ab508479e810dc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseTimerScipt
+--- !u!114 &9097723462602612935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3517220248980556899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95fdaec1fbde7fd4c8d16255fcbad7d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManagerBridge
 --- !u!1 &4115441713803043216
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,7 +697,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4115441713803043216}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -742,6 +755,7 @@ GameObject:
   - component: {fileID: 1558902285435522805}
   - component: {fileID: 3449600988358658864}
   - component: {fileID: 8141356068359707321}
+  - component: {fileID: 232065300446712529}
   m_Layer: 5
   m_Name: PreviousButton
   m_TagString: Untagged
@@ -888,6 +902,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7554971579feb5340ab508479e810dc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseTimerScipt
+--- !u!114 &232065300446712529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4937523364890221418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95fdaec1fbde7fd4c8d16255fcbad7d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManagerBridge
 --- !u!1 &5190602098801170145
 GameObject:
   m_ObjectHideFlags: 0
@@ -1038,6 +1064,7 @@ GameObject:
   - component: {fileID: 3730833882799754225}
   - component: {fileID: 2318611321187533417}
   - component: {fileID: 5510652328786855333}
+  - component: {fileID: 3714000515018862745}
   m_Layer: 5
   m_Name: NextButton
   m_TagString: Untagged
@@ -1184,6 +1211,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7554971579feb5340ab508479e810dc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseTimerScipt
+--- !u!114 &3714000515018862745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6416670661333269993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95fdaec1fbde7fd4c8d16255fcbad7d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManagerBridge
 --- !u!1 &6955586144505619596
 GameObject:
   m_ObjectHideFlags: 0
@@ -1749,13 +1788,73 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5112006040697270142, guid: 193cd1604e07f3e42a06988090ba4f3b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1585545589013664360}
+    - targetCorrespondingSourceObject: {fileID: 4665887005683278005, guid: 193cd1604e07f3e42a06988090ba4f3b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8269444163588977826}
+    - targetCorrespondingSourceObject: {fileID: 5287361903578498227, guid: 193cd1604e07f3e42a06988090ba4f3b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6151471907349411914}
   m_SourcePrefab: {fileID: 100100000, guid: 193cd1604e07f3e42a06988090ba4f3b, type: 3}
 --- !u!1 &1293612873544973686 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8498273845550394149, guid: 193cd1604e07f3e42a06988090ba4f3b, type: 3}
   m_PrefabInstance: {fileID: 7213703394974963283}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2516746297125009709 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5112006040697270142, guid: 193cd1604e07f3e42a06988090ba4f3b, type: 3}
+  m_PrefabInstance: {fileID: 7213703394974963283}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1585545589013664360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2516746297125009709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95fdaec1fbde7fd4c8d16255fcbad7d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManagerBridge
+--- !u!1 &2656198567611332326 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4665887005683278005, guid: 193cd1604e07f3e42a06988090ba4f3b, type: 3}
+  m_PrefabInstance: {fileID: 7213703394974963283}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8269444163588977826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2656198567611332326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95fdaec1fbde7fd4c8d16255fcbad7d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManagerBridge
+--- !u!1 &3277567916684989152 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5287361903578498227, guid: 193cd1604e07f3e42a06988090ba4f3b, type: 3}
+  m_PrefabInstance: {fileID: 7213703394974963283}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6151471907349411914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3277567916684989152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95fdaec1fbde7fd4c8d16255fcbad7d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManagerBridge
 --- !u!224 &8149935639940553601 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1514997608671661522, guid: 193cd1604e07f3e42a06988090ba4f3b, type: 3}
