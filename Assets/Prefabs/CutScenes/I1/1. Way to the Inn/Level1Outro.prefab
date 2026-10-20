@@ -1132,7 +1132,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &492227709363542335
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1485,7 +1485,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1648974873466483728
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2342,7 +2342,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6961955759904171365
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4420,6 +4420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41f9407d0c5db0545962500f68087079, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CutSceneScripts
+  spawner: {fileID: 0}
   storyBoard:
   - {fileID: 1988418455398316821}
   - {fileID: 1184878387334996001}
