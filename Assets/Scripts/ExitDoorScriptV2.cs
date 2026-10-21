@@ -13,7 +13,11 @@ public class ExitDoorScriptV2 : MonoBehaviour
     //private bool doorLocked = false;
 
     private GameObject doorBorder;
-    [SerializeField] private GameObject ExitText;
+    //[SerializeField] private GameObject exitText;
+
+    [SerializeField] private GameObject exitText;
+    [SerializeField] private GameObject cutScene;
+    [SerializeField] private Transform hudTransform;
 
     private void OnEnable()
     {
@@ -29,7 +33,7 @@ public class ExitDoorScriptV2 : MonoBehaviour
     private void Start()
     {
         doorOpen = false;
-        ExitText.SetActive(doorOpen);
+        exitText.SetActive(doorOpen);
         doorBorder = this.gameObject;
     }
 
@@ -37,22 +41,30 @@ public class ExitDoorScriptV2 : MonoBehaviour
     {
         doorOpen = true;
         Debug.Log("Door opens");
-        ExitText.SetActive(doorOpen);
+        exitText.SetActive(doorOpen);
     }
 
     private void CloseDoor()
     {
         Debug.Log("Door closes");
         doorOpen = false;
-        ExitText.SetActive(doorOpen);
+        exitText.SetActive(doorOpen);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player" && doorOpen == true)
+        if (other.tag == "Player")
         {
-            Debug.Log("Collision with door");
-            GameEvents.ExitLevel();
+            if(doorOpen)
+            {
+                Debug.Log("Collided with door + quota met = ExitLevel??");
+                GameEvents.ExitLevel();
+            }
+            else
+            {
+                Debug.Log("Collided with door + quota not met = popup");
+                //Instantiate(cutScene, hudTransform);
+            }
         }
     }
 }

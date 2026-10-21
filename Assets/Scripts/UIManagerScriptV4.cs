@@ -112,7 +112,8 @@ public class UIManagerScriptV4 : MonoBehaviour
 
     void StartOutro()
     {
-        outroCutScene.StartCutScene();
+        //outroCutScene.StartCutScene();
+        StartCutScene(outroObject,  null);
     }
 
     void StartGameOver() 
@@ -132,5 +133,4 @@ public class UIManagerScriptV4 : MonoBehaviour
         
         cutSceneScript.StartCutScene();
     }
-
 }

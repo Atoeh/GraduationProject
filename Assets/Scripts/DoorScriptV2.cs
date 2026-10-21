@@ -1,47 +1,66 @@
-using Unity.VisualScripting;
-using Unity.VisualScripting.Antlr3.Runtime;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
-using UnityEngine.UI;
+
+//Wat doet de deur?
+//1 Deur is niet interactief (later een popup dat je quota moet hitten voordat je er weer uit mag)
+//2 Speler heeft quota (event) gehaald (later een popup dat de deur geopend is)
+//3 Deur is interactief
+//4 Wann met de deur geinteracteerd wordt wordt van scenegeswitched
 
 public class DoorScriptV2 : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject popUpPrefab1;
-    [SerializeField]
-    private GameObject popUpPrefab2;
+    private bool doorOpen;
 
-    [SerializeField]
-    private GameObject popUpLocation;
-    private GameObject popUpChoice;
-    GameObject popUp;
-    [SerializeField]
-    private bool canEnter;
-
-    private void Start()
-    {
-        popUpChoice = popUpPrefab1;
-    }
+    [SerializeField] private GameObject parentObj;
+    [SerializeField] private GameObject cutScene1;
+    [SerializeField] private GameObject cutScene2;
+    [SerializeField] private Transform hudTransform;
 
     private void OnEnable()
     {
-        GameEvents.OnQuotaHit += PickUP;
+        GameEvents.OnQuotaHit += OpenDoor;
+        GameEvents.OnQuotaLost += CloseDoor;
     }
-
     private void OnDisable()
     {
-        GameEvents.OnQuotaHit -= PickUP;
+        GameEvents.OnQuotaHit -= OpenDoor;
+        GameEvents.OnQuotaLost -= CloseDoor;
+    }
+
+    private void Start()
+    {
+        doorOpen = false;
+    }
+
+    private void OpenDoor()
+    {
+        doorOpen = true;
+    }
+
+    private void CloseDoor()
+    {
+        doorOpen = false;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" )
         {
-            popUp = Instantiate(popUpChoice, popUpLocation.transform);
+            if (doorOpen)
+            {
+                Debug.Log("Collided with door + quota met = Open the door");
+                if (cutScene2 != null)
+                {
+                    UIManagerScriptV4.Instance.StartCutScene(cutScene2, null);
+                    Debug.Log("Instantiate cutscene 2");
+                }
+                Destroy(parentObj);
+            }
+            else
+            {
+                Debug.Log("Collided with door + quota not met = popup");
+                UIManagerScriptV4.Instance.StartCutScene(cutScene1, null);
+            }
         }
-    }
-
-    public void PickUP()
-    {
-        popUpChoice = popUpPrefab2;
     }
 }

@@ -25,6 +25,7 @@ public class MovementTriggerScript : MonoBehaviour
         {
             button.interactable = false;
             movementEnabled = false;
+            //Debug.Log("Edge detected");
         }
     }
 
