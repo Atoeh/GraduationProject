@@ -2063,6 +2063,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1706021110}
     - target: {fileID: 7002849497846079216, guid: 9fabbc6485f4cd444a1b60a63f845e65, type: 3}
+      propertyPath: gameOverPanel
+      value: 
+      objectReference: {fileID: 8570101694424970039, guid: 1ffcaa0b91f2c6d4c973e9e91b6d2b88, type: 3}
+    - target: {fileID: 7002849497846079216, guid: 9fabbc6485f4cd444a1b60a63f845e65, type: 3}
       propertyPath: enableCandleTimer
       value: 0
       objectReference: {fileID: 0}

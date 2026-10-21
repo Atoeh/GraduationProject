@@ -150,11 +150,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 14109066190151501, guid: ab0fd0c3c2ba6104797756d6e0a816b9, type: 3}
       propertyPath: 'levelQuotas.Array.data[2]'
-      value: 355
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 14109066190151501, guid: ab0fd0c3c2ba6104797756d6e0a816b9, type: 3}
       propertyPath: 'levelQuotas.Array.data[3]'
-      value: 550
+      value: 850
       objectReference: {fileID: 0}
     - target: {fileID: 305032554250232903, guid: ab0fd0c3c2ba6104797756d6e0a816b9, type: 3}
       propertyPath: m_Name
@@ -2912,6 +2912,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1895780579901086767, guid: 9fabbc6485f4cd444a1b60a63f845e65, type: 3}
   m_PrefabInstance: {fileID: 2031199759}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2031199761 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7002849497846079216, guid: 9fabbc6485f4cd444a1b60a63f845e65, type: 3}
+  m_PrefabInstance: {fileID: 2031199759}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195474c1974d3414eb718a674582502c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1001 &2042461244
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3623,7 +3634,7 @@ MonoBehaviour:
   itemData: {fileID: 11400000, guid: ac2773aa5cc228047b7f78a6f1e1d705, type: 2}
   sprite: {fileID: 0}
   cutScene: {fileID: 0}
-  hud: {fileID: 0}
+  hud: {fileID: 2031199761}
 --- !u!4 &7810324697794959043
 Transform:
   m_ObjectHideFlags: 0
