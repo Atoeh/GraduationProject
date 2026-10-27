@@ -396,6 +396,7 @@ GameObject:
   - component: {fileID: 144844126931606681}
   - component: {fileID: 4384952334068241307}
   - component: {fileID: 4831169326777574795}
+  - component: {fileID: 7086722004210937958}
   m_Layer: 5
   m_Name: CloseButton
   m_TagString: Untagged
@@ -505,6 +506,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 7086722004210937958}
+        m_TargetAssemblyTypeName: GameManagerBridge, Assembly-CSharp
+        m_MethodName: StartDungeon
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 4508651568529491383}
         m_TargetAssemblyTypeName: CutSceneScripts, Assembly-CSharp
         m_MethodName: CloseScreen
@@ -517,6 +530,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7086722004210937958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899232287561033910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95fdaec1fbde7fd4c8d16255fcbad7d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManagerBridge
 --- !u!1 &1970386196578683232
 GameObject:
   m_ObjectHideFlags: 0
