@@ -132,30 +132,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 14109066190151501, guid: ab0fd0c3c2ba6104797756d6e0a816b9, type: 3}
-      propertyPath: quotaIsTrue
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 14109066190151501, guid: ab0fd0c3c2ba6104797756d6e0a816b9, type: 3}
-      propertyPath: levelQuotas.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 14109066190151501, guid: ab0fd0c3c2ba6104797756d6e0a816b9, type: 3}
-      propertyPath: 'levelQuotas.Array.data[0]'
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 14109066190151501, guid: ab0fd0c3c2ba6104797756d6e0a816b9, type: 3}
-      propertyPath: 'levelQuotas.Array.data[1]'
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 14109066190151501, guid: ab0fd0c3c2ba6104797756d6e0a816b9, type: 3}
-      propertyPath: 'levelQuotas.Array.data[2]'
-      value: 355
-      objectReference: {fileID: 0}
-    - target: {fileID: 14109066190151501, guid: ab0fd0c3c2ba6104797756d6e0a816b9, type: 3}
-      propertyPath: 'levelQuotas.Array.data[3]'
-      value: 550
-      objectReference: {fileID: 0}
     - target: {fileID: 305032554250232903, guid: ab0fd0c3c2ba6104797756d6e0a816b9, type: 3}
       propertyPath: m_Name
       value: GameManagerV5
@@ -1391,7 +1367,9 @@ PrefabInstance:
       value: Level Inn
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1015002169095757041, guid: 45508f97376a52d49b9edaae0d0c9171, type: 3}
+    - {fileID: 8779406392163482481, guid: 45508f97376a52d49b9edaae0d0c9171, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45508f97376a52d49b9edaae0d0c9171, type: 3}

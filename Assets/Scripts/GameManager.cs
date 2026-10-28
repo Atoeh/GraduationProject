@@ -8,10 +8,9 @@ public class GameManager : MonoBehaviour
 
     [Header("- Quota variables -")]
 
-    [SerializeField] public bool quotaIsTrue = false;
     [SerializeField] private bool quotaIsAll = false;
 
-    private bool quotaStillTrue;
+    private bool quotaPrevReached;
 
     [Header("- Quota Array variables -")]
 
@@ -26,7 +25,7 @@ public class GameManager : MonoBehaviour
 
     [Header("- Game States -")]
     [SerializeField] private bool[] gameState;
-    
+
 
     // --------------------- SETUP ---------------------
 
@@ -37,7 +36,7 @@ public class GameManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        else 
+        else
         {
             Destroy(gameObject);
         }
@@ -84,22 +83,21 @@ public class GameManager : MonoBehaviour
     // --------------------- GAMESTATE CHANGES ---------------------
     public void CompareQuota(float value)
     {
-        Debug.Log("collected vs quota: " + value + " / " + levelQuotas[quotaIndex]);
+        quotaIndex = SceneManager.GetActiveScene().buildIndex;
+        Debug.Log(quotaIndex + " = quotaIndex");
 
-        //Quota has been reached for this level
-        if (quotaIsTrue && levelQuotas[quotaIndex] <= value)
+        if (value >= levelQuotas[quotaIndex] && !quotaPrevReached)
         {
-            if (!quotaStillTrue)
-            {
-                quotaStillTrue = true;
-                GameEvents.QuotaHit();
-            }
+            quotaPrevReached = true;
+            GameEvents.QuotaHit();
         }
-        else
+        else if (value <= levelQuotas[quotaIndex] && quotaPrevReached)
         {
-            quotaStillTrue = false;
+            quotaPrevReached = false;
             GameEvents.QuotaLost();
         }
+
+        Debug.Log("collected vs quota: " + value + " / " + levelQuotas[quotaIndex]);
     }
 
     public void TriggerGameOver()
@@ -132,8 +130,13 @@ public class GameManager : MonoBehaviour
     public void StartDungeoneering()
     {
         Debug.Log("GameState: close intro and start with dungeoneering");
-        TimerManager.Instance.ResetTimer();
-        TimerManager.Instance.ResumeTimer();
+        if (TimerManager.Instance)
+        {
+            TimerManager.Instance.ResetTimer();
+            TimerManager.Instance.ResumeTimer();
+        }
+        else
+            Debug.Log("StartDungeoneering Not performed : missing TimerManager");
     }
 
     public void StartInteraction(GameObject cutScene)

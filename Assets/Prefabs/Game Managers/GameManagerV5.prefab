@@ -48,6 +48,8 @@ MonoBehaviour:
   quotaIsAll: 0
   quotaIndex: 0
   levelQuotas:
-  - 50
-  - 355
-  - 550
+  - 12
+  - 1
+  - 1
+  - 1
+  gameState: 
