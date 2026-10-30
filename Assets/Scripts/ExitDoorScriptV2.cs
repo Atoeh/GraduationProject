@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
@@ -10,6 +11,7 @@ using UnityEngine;
 public class ExitDoorScriptV2 : MonoBehaviour
 {
     private bool doorOpen = false;
+    private bool permanentlyOpen = false;
     //private bool doorLocked = false;
 
     private GameObject doorBorder;
@@ -23,11 +25,15 @@ public class ExitDoorScriptV2 : MonoBehaviour
     {
         GameEvents.OnQuotaHit += OpenDoor;
         GameEvents.OnQuotaLost += CloseDoor;
+
+        GameEvents.OnNPCPickedup += OpenDoor;
     }
     private void OnDisable()
     {
         GameEvents.OnQuotaHit -= OpenDoor;
         GameEvents.OnQuotaLost -= CloseDoor;
+
+        GameEvents.OnNPCPickedup -= OpenDoor;
     }
 
     private void Start()
@@ -46,24 +52,38 @@ public class ExitDoorScriptV2 : MonoBehaviour
 
     private void CloseDoor()
     {
-        Debug.Log("Door closes");
-        doorOpen = false;
+        if (!permanentlyOpen)
+        {
+            Debug.Log("Door closes");
+            doorOpen = false;
+            exitText.SetActive(doorOpen);
+        }
+    }
+
+    private void PermanantlyOpenDoor()
+    {
+        Debug.Log("Door permanantly open, NPC pickedUp");
+        permanentlyOpen = true;
         exitText.SetActive(doorOpen);
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            if(doorOpen)
+            if (doorOpen)
             {
                 Debug.Log("Collided with door + quota met = ExitLevel??");
                 GameEvents.ExitLevel();
             }
             else
             {
+                if (permanentlyOpen)
+                {
+                    GameEvents.ExitLevel();
+                }
                 Debug.Log("Collided with door + quota not met = popup");
-                //Instantiate(cutScene, hudTransform);
             }
         }
     }

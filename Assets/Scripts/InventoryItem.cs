@@ -1,12 +1,21 @@
 using UnityEngine;
+using UnityEngine.Analytics;
+using System;
 
 public class InventoryItem : MonoBehaviour
 {
     public ItemData data;
-
     public bool[,] shape;
     public int gridX;
     public int gridY;
+
+    public MyStruct[] actionList;
+    [System.Serializable]
+    public struct MyStruct
+    {
+        public string title;
+        public int number;
+    }
 
     public void Initialize(ItemData itemData)
     {
@@ -34,4 +43,13 @@ public class InventoryItem : MonoBehaviour
 
         shape = rotated;
     }
+
+    public void PerformActions()
+    {
+
+    }
+
+    public void UnlockDoor()
+    { }
+
 }

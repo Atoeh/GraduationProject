@@ -37,11 +37,11 @@ public class TrashScript : MonoBehaviour
         image.color = originalColor;
     }
 
-    public void DisposeItem(GameObject itemVisual)
-    {
-        Destroy(itemVisual);
-        ResetHighlight();
-    }
+    // public void DisposeItem(GameObject itemVisual)
+    // {
+    //     Destroy(itemVisual);
+    //     ResetHighlight();
+    // }
 
     public void PlaySound()
     {

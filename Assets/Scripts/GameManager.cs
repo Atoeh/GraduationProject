@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
 
     private bool quotaPrevReached;
 
+    public float currentValue;
+
     [Header("- Quota Array variables -")]
 
     [SerializeField] private int quotaIndex;
@@ -83,6 +85,7 @@ public class GameManager : MonoBehaviour
     // --------------------- GAMESTATE CHANGES ---------------------
     public void CompareQuota(float value)
     {
+        currentValue = value;
         quotaIndex = SceneManager.GetActiveScene().buildIndex;
         Debug.Log(quotaIndex + " = quotaIndex");
 

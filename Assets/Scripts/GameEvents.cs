@@ -16,7 +16,7 @@ public static class GameEvents
     public static event Action OnQuotaHit;
     public static event Action OnQuotaLost;
 
-    //public static event Action OnInteractNPC;
+    public static event Action OnNPCPickedup;
 
     public static event Action OnTimerPause;
     public static event Action OnExitLevel; // wat doel hier ook alweer van
@@ -34,7 +34,7 @@ public static class GameEvents
     }
 
     public static void ChangeDarkness(float value)
-    { 
+    {
         OnChangeDarkness?.Invoke(value);
     }
 
@@ -43,9 +43,8 @@ public static class GameEvents
         OnLootPickUp?.Invoke(value, image);
     }
 
-
     public static void DropLoot()
-    { 
+    {
         OnDropLoot?.Invoke();
     }
 
@@ -55,7 +54,7 @@ public static class GameEvents
     }
 
     public static void QuotaSet(float value)
-    { 
+    {
         OnQuotaSet?.Invoke(value);
     }
 
@@ -65,8 +64,13 @@ public static class GameEvents
     }
 
     public static void QuotaLost()
-    { 
+    {
         OnQuotaLost?.Invoke();
+    }
+
+    public static void NPCPickedUp()
+    {
+        OnNPCPickedup?.Invoke();
     }
 
     public static void TimerPause()
@@ -86,7 +90,7 @@ public static class GameEvents
     }
 
     public static void LeaveGame()
-    { 
+    {
         OnLeaveGame?.Invoke();
     }
 
