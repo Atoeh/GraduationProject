@@ -6,11 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/5. Iteration 4/DEMO_INVENTORY.unity
-    guid: aa3544cb7ed3a614c8faa622082d8eca
+    path: Assets/Scenes/0. PresStart 1.unity
+    guid: c2c49ab55f3a05c4f8ec05bac39b4a5a
   - enabled: 1
-    path: Assets/Scenes/5. Iteration 4/DEMO_INVENTORY 1.unity
-    guid: 5872adb012fafa44aacf608b39663164
+    path: Assets/Scenes/1. WayToInn.unity
+    guid: dde8c07dee486524daa881a076f4b0a4
+  - enabled: 1
+    path: Assets/Scenes/2. Dungeon1.unity
+    guid: f30ca58fcbcbe5245b45ad6275d21666
+  - enabled: 1
+    path: Assets/Scenes/2. Dungeon2.unity
+    guid: 596fc39589b469e49b747c7776168158
+  - enabled: 1
+    path: Assets/Scenes/2. Dungeon3.unity
+    guid: d41f8f74f7951c741a67cd53f49b185e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
