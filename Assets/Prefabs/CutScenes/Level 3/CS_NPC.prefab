@@ -8,9 +8,49 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 173526232806356565, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -543
+      objectReference: {fileID: 0}
     - target: {fileID: 1050185057523769944, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
       propertyPath: m_Name
-      value: CS_LootTest Variant
+      value: CS_NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 1816378394331091328, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
+      propertyPath: startsDark
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3935482169497221213, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3935482169497221213, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3935482169497221213, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3935482169497221213, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3935482169497221213, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3935482169497221213, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3935482169497221213, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -254
+      objectReference: {fileID: 0}
+    - target: {fileID: 3935482169497221213, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -375
       objectReference: {fileID: 0}
     - target: {fileID: 4725614189371098365, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
       propertyPath: m_Pivot.x
@@ -92,8 +132,140 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5698134188163964578, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -765423667, guid: ec262635080f3e5489d32be0b69cd6a8, type: 3}
+    - target: {fileID: 7518690335027614504, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
+      propertyPath: m_text
+      value: 3rd level of the dungeon
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041706792581110424, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
+      propertyPath: m_text
+      value: 'There lies a person bleeding on the floor,
+
+        You can try to
+        carry him to safety but he will take 3X7 cells of your inventory.
+
+
+        You
+        will have to clear your entire inventory for it to fit.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8261083505271762188, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0.00012207
+      objectReference: {fileID: 0}
+    - target: {fileID: 8261083505271762188, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000061035156
+      objectReference: {fileID: 0}
+    - target: {fileID: 8359922737168730452, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8359922737168730452, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8359922737168730452, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 232233601741307159}
+    - target: {fileID: 8359922737168730452, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 748574941303920740}
+    - target: {fileID: 8359922737168730452, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8359922737168730452, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: NPCPickUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8359922737168730452, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: CloseScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 8359922737168730452, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: GameManagerBridge, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8359922737168730452, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: CutSceneScripts, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8359922737168730452, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8359922737168730452, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2219829527617650508, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 232233601741307159}
+    - targetCorrespondingSourceObject: {fileID: 2219829527617650508, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6645743249553671670}
   m_SourcePrefab: {fileID: 100100000, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
+--- !u!114 &748574941303920740 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1816378394331091328, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
+  m_PrefabInstance: {fileID: 1393418197337721316}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41f9407d0c5db0545962500f68087079, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CutSceneScripts
+--- !u!1 &979534321066178216 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2219829527617650508, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
+  m_PrefabInstance: {fileID: 1393418197337721316}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &232233601741307159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979534321066178216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95fdaec1fbde7fd4c8d16255fcbad7d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManagerBridge
+--- !u!114 &6645743249553671670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979534321066178216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b017af5d29d2f44bac5ae181ef38ff8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  isLargerThanValue: 0
+  isSmallerThanValue: 1
+  value: 1
+  button: {fileID: 7445016535766532272}
+--- !u!114 &7445016535766532272 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8359922737168730452, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
+  m_PrefabInstance: {fileID: 1393418197337721316}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979534321066178216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button

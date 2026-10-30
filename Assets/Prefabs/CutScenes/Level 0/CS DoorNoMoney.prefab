@@ -202,10 +202,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7377376464599544264, guid: 50a73ddec75fb774e98fb8c708e422e6, type: 3}
       propertyPath: m_text
-      value: '"Ah welcome. Oh... you seem to have no money."
+      value: '"Hello there. Oh... it seems that you seem to have no money on you."
 
-        "That is allright,
-        wander these halls and collect the scraps you can find."'
+
+        "That
+        is allright, if you wander these halls you can collect the scraps, that should
+        do for now."'
       objectReference: {fileID: 0}
     - target: {fileID: 7904788518035166430, guid: 50a73ddec75fb774e98fb8c708e422e6, type: 3}
       propertyPath: m_AnchoredPosition.x

@@ -28,9 +28,45 @@ PrefabInstance:
       propertyPath: 'storyBoard.Array.data[0]'
       value: 
       objectReference: {fileID: 5720491888619833835}
+    - target: {fileID: 1672592788878677020, guid: 50a73ddec75fb774e98fb8c708e422e6, type: 3}
+      propertyPath: m_Name
+      value: RestartButton
+      objectReference: {fileID: 0}
     - target: {fileID: 4532608923312616404, guid: 50a73ddec75fb774e98fb8c708e422e6, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4568322760277693197, guid: 50a73ddec75fb774e98fb8c708e422e6, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4568322760277693197, guid: 50a73ddec75fb774e98fb8c708e422e6, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4568322760277693197, guid: 50a73ddec75fb774e98fb8c708e422e6, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4568322760277693197, guid: 50a73ddec75fb774e98fb8c708e422e6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4568322760277693197, guid: 50a73ddec75fb774e98fb8c708e422e6, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4568322760277693197, guid: 50a73ddec75fb774e98fb8c708e422e6, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4568322760277693197, guid: 50a73ddec75fb774e98fb8c708e422e6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4568322760277693197, guid: 50a73ddec75fb774e98fb8c708e422e6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -375
       objectReference: {fileID: 0}
     - target: {fileID: 4653921300915599473, guid: 50a73ddec75fb774e98fb8c708e422e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

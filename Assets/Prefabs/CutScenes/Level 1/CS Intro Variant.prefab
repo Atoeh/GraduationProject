@@ -110,11 +110,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6839273665478498032, guid: 2e6dd032e3df91f419f9e1fcafafbdf2, type: 3}
       propertyPath: m_text
-      value: 2. Intro level 1
+      value: Let's see what type of loot you can find on the first floor of this
+        dungeon, try to gather atleast [insert number] coins worth of loot on this
+        floor.
       objectReference: {fileID: 0}
     - target: {fileID: 7662555150376864139, guid: 2e6dd032e3df91f419f9e1fcafafbdf2, type: 3}
       propertyPath: m_text
-      value: 1. Intro level 1
+      value: '"Only one way to find out...." you say to your self as you delve into
+        the dungeon.'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

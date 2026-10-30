@@ -18,9 +18,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6122441607912470433, guid: edc5db016907b3e4787c06431b1e1909, type: 3}
       propertyPath: m_text
-      value: '"Welcome, it seems that you have enough scraps on you te enter."
+      value: '"Welcome, it seems that you have no money. But you do have enough scraps
+        on you te enter."
 
-'
+
+        The door swings open. "Come in quick, the food
+        is still warm..."'
       objectReference: {fileID: 0}
     - target: {fileID: 8394005289746084763, guid: edc5db016907b3e4787c06431b1e1909, type: 3}
       propertyPath: m_Color.a
