@@ -44,12 +44,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e3b969bb4110bf4fa42b548f05207b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  quotaIsTrue: 1
   quotaIsAll: 0
+  currentValue: 0
   quotaIndex: 0
   levelQuotas:
+  - 0
+  - 10
+  - 11
   - 12
-  - 1
-  - 1
-  - 1
+  - 13
   gameState: 

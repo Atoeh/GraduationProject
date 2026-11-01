@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class TimerManager : MonoBehaviour
@@ -17,7 +18,7 @@ public class TimerManager : MonoBehaviour
 
     [Header("- Timer Array -")]
     [SerializeField] private float[] timerArray;
-    public int timerIndex = 0;
+    public int timerIndex;
 
     [Header("- Timer UI Elements -")]
     [SerializeField] private GameObject TextObject;
@@ -36,6 +37,7 @@ public class TimerManager : MonoBehaviour
             Destroy(gameObject);
         }
 
+        timerIndex = SceneManager.GetActiveScene().buildIndex;
         timerText = TextObject.GetComponent<TMP_Text>();
         timeMax = timerArray[timerIndex];
     }
@@ -50,6 +52,8 @@ public class TimerManager : MonoBehaviour
     private void OnDisable()
     {
         GameEvents.OnTimerRanOut -= PauseTimer;
+        GameEvents.OnExitLevel -= PauseTimer;
+        GameEvents.OnExitLevel -= NextTimer;
     }
 
     void Update()
@@ -95,33 +99,26 @@ public class TimerManager : MonoBehaviour
 
     public void PauseTimer()
     {
-         candleOn = false;
+        candleOn = false;
+        Debug.Log("Timer paused");
     }
 
     public void ResumeTimer()
     {
         candleOn = true;
         timeSinceLastStep = 0;
+        Debug.Log("Timer Resumed");
     }
 
     // ----------------------- SWITCH TIMER ON NEW LEVEL -------------------------
-    //public void NewTimer()
-    //{
-    //    //value not used, timer duration used from the array instead
-    //    if (timerIndex < timerArray.Length)
-    //    {
-    //        timeMax = timerArray[timerIndex];
-    //        AddTime(timeMax);
-    //    }
-    //    timerIndex++;
-    //}
-
     public void NextTimer()
     {
         if (timerIndex < timerArray.Length)
             timerIndex++;
         else
             Debug.Log("timerIndex out of bounds");
+
+        Debug.Log("NextTimer called");
     }
 
     public void ResetTimer()

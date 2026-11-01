@@ -12,15 +12,15 @@ public class ButtonConditionScript : MonoBehaviour
 
     void Start()
     {
-        CompareQuota();
+        CompareCondition();
     }
 
     void Update()
     {
-        CompareQuota();
+        CompareCondition();
     }
 
-    private void CompareQuota()
+    private void CompareCondition()
     {
         if (isLargerThanValue)
         {

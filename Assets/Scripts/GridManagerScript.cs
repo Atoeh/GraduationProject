@@ -161,11 +161,11 @@ public class GridManager : MonoBehaviour
     private void SpawnItemVisual(InventoryItem item)
     {
         // Parent container - handles position only
-        GameObject itemVisual = new GameObject("ItemVisual", typeof(RectTransform)); 
+        GameObject itemVisual = new GameObject("ItemVisual", typeof(RectTransform));
         itemVisual.transform.SetParent(canvas.transform, false);
 
         // Child image - handles visual only
-        GameObject itemImage = new GameObject("ItemImage", typeof(RectTransform)); 
+        GameObject itemImage = new GameObject("ItemImage", typeof(RectTransform));
         itemImage.transform.SetParent(itemVisual.transform, false);
 
         Image image = itemImage.AddComponent<Image>();
@@ -296,7 +296,8 @@ public class GridManager : MonoBehaviour
     }
 
     public void CkeckQuota()
-    { 
+    {
+        Debug.Log("CeckQuota called");
         GameManager.Instance.CompareQuota(totalValue);
     }
 }

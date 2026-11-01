@@ -44,7 +44,7 @@ public class DoorScriptV2 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player" )
+        if (other.tag == "Player")
         {
             if (doorOpen)
             {
@@ -52,7 +52,7 @@ public class DoorScriptV2 : MonoBehaviour
                 if (cutScene2 != null)
                 {
                     UIManagerScriptV4.Instance.StartCutScene(cutScene2, null);
-                    Debug.Log("Instantiate cutscene 2");
+                    //Debug.Log("Instantiate cutscene 2");
                 }
                 Destroy(parentObj);
             }

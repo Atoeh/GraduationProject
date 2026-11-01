@@ -1176,7 +1176,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 2031199760}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 239695444093205882, guid: 9ba1ef43c479add429fa19dfe0be60b4, type: 3}
       propertyPath: m_Pivot.x
@@ -1287,11 +1287,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ba1ef43c479add429fa19dfe0be60b4, type: 3}
---- !u!224 &1706021109 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 239695444093205882, guid: 9ba1ef43c479add429fa19dfe0be60b4, type: 3}
-  m_PrefabInstance: {fileID: 1706021108}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1706021110 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 894306722845769927, guid: 9ba1ef43c479add429fa19dfe0be60b4, type: 3}
@@ -1375,7 +1370,7 @@ PrefabInstance:
       objectReference: {fileID: 8570101694424970039, guid: 1ffcaa0b91f2c6d4c973e9e91b6d2b88, type: 3}
     - target: {fileID: 7002849497846079216, guid: 9fabbc6485f4cd444a1b60a63f845e65, type: 3}
       propertyPath: enableCandleTimer
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7852588873029782805, guid: 9fabbc6485f4cd444a1b60a63f845e65, type: 3}
       propertyPath: m_Name
@@ -1396,9 +1391,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1895780579901086767, guid: 9fabbc6485f4cd444a1b60a63f845e65, type: 3}
       insertIndex: -1
       addedObject: {fileID: 744633527}
-    - targetCorrespondingSourceObject: {fileID: 1895780579901086767, guid: 9fabbc6485f4cd444a1b60a63f845e65, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1706021109}
     - targetCorrespondingSourceObject: {fileID: 1895780579901086767, guid: 9fabbc6485f4cd444a1b60a63f845e65, type: 3}
       insertIndex: -1
       addedObject: {fileID: 360751850}
@@ -2222,6 +2214,7 @@ SceneRoots:
   - {fileID: 1480625308}
   - {fileID: 5510736935646420433}
   - {fileID: 2031199759}
+  - {fileID: 1706021108}
   - {fileID: 554990325}
   - {fileID: 2042461244}
   - {fileID: 7810324697794959043}

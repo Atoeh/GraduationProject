@@ -1455,7 +1455,7 @@ GameObject:
   - component: {fileID: 2511906462293012874}
   - component: {fileID: 4508651568529491383}
   m_Layer: 5
-  m_Name: CS Intro
+  m_Name: CS Intro Inn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -35,10 +35,11 @@ public class UIManagerScriptV4 : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        candleTimerUI = TimerManager.Instance.gameObject;
     }
 
     void OnEnable()
-    { 
+    {
         //Events subscriben
 
         //GameEvents.OnStartLevel
@@ -62,25 +63,6 @@ public class UIManagerScriptV4 : MonoBehaviour
 
     void Start()
     {
-        //is it smart to set the transition time through here?
-        //if (introObject != null)
-        //{ 
-        //    introCutScene = introObject.GetComponent<CutSceneScripts>(); 
-        //    introCutScene.transTime = transitionTime;
-        //}
-
-        //if (outroObject != null)
-        //{
-        //    outroCutScene = outroObject.GetComponent<CutSceneScripts>();
-        //    outroCutScene.transTime = transitionTime;
-        //}
-
-        //if (gameOverPanel != null)
-        //{
-        //    gameOverCutScene = gameOverPanel.GetComponent<CutSceneScripts>();
-        //    gameOverCutScene.transTime = transitionTime;
-        //}
-
         movUIState = true;
 
         if (enableCandleTimer == false)
@@ -93,7 +75,7 @@ public class UIManagerScriptV4 : MonoBehaviour
     }
 
     void ToggleMoveUI()
-{
+    {
         //Deze code moet Het de MovementButtons cluster zefl uitvoeren.
         bool state = !movUIState;
 
@@ -113,12 +95,12 @@ public class UIManagerScriptV4 : MonoBehaviour
     void StartOutro()
     {
         //outroCutScene.StartCutScene();
-        StartCutScene(outroObject,  null);
+        StartCutScene(outroObject, null);
     }
 
-    void StartGameOver() 
-    { 
-        gameOverCutScene.StartCutScene(); 
+    void StartGameOver()
+    {
+        gameOverCutScene.StartCutScene();
     }
 
     public void StartCutScene(GameObject cutScene, LootPickUpV3 spawnItem)
@@ -126,11 +108,11 @@ public class UIManagerScriptV4 : MonoBehaviour
         //setup of cutsccene
         cutSceneInstance = Instantiate(cutScene);
         cutSceneScript = cutSceneInstance.GetComponent<CutSceneScripts>();
-        
+
         cutSceneScript.transTime = transitionTime;
         if (spawnItem != null)
             cutSceneScript.spawner = spawnItem;
-        
+
         cutSceneScript.StartCutScene();
     }
 }

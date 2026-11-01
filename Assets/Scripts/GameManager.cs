@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 
     [Header("- Quota variables -")]
 
-    [SerializeField] private bool quotaIsAll = false;
+    //[SerializeField] private bool quotaIsAll = false;
 
     private bool quotaPrevReached;
 
@@ -87,7 +87,6 @@ public class GameManager : MonoBehaviour
     {
         currentValue = value;
         quotaIndex = SceneManager.GetActiveScene().buildIndex;
-        Debug.Log(quotaIndex + " = quotaIndex");
 
         if (value >= levelQuotas[quotaIndex] && !quotaPrevReached)
         {

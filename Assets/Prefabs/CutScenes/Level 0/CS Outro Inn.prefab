@@ -2497,7 +2497,7 @@ GameObject:
   - component: {fileID: 3772363052577924815}
   - component: {fileID: 7834581430343791602}
   m_Layer: 5
-  m_Name: CS Outro
+  m_Name: CS Outro Inn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -194,6 +194,8 @@ MonoBehaviour:
   updateTime: 1
   timeMax: 0
   timerArray:
+  - 0
+  - 0
   - 40
   - 60
   - 80
