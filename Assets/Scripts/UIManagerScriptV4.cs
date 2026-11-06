@@ -7,7 +7,7 @@ public class UIManagerScriptV4 : MonoBehaviour
 
     [Header("- UI Element Groups -")]
 
-    [SerializeField] private GameObject candleTimerUI;
+    // [SerializeField] private GameObject candleTimerUI;
     [SerializeField] private GameObject darknessUI;
     [SerializeField] private GameObject inventoryUI;
     [SerializeField] private GameObject movementUI;
@@ -16,7 +16,7 @@ public class UIManagerScriptV4 : MonoBehaviour
 
     [SerializeField] private GameObject introObject;
     [SerializeField] private GameObject outroObject;
-    [SerializeField] private GameObject gameOverPanel;
+    [SerializeField] private GameObject gameOverObject;
 
     private CutSceneScripts introCutScene;
     private CutSceneScripts outroCutScene;
@@ -29,13 +29,13 @@ public class UIManagerScriptV4 : MonoBehaviour
 
     [Header("- Enabled Ui elements -")]
 
-    [SerializeField] private bool enableCandleTimer = false;
+    //[SerializeField] private bool enableCandleTimer = false;
     private bool movUIState;
 
     private void Awake()
     {
         Instance = this;
-        candleTimerUI = TimerManager.Instance.gameObject;
+        // candleTimerUI = TimerManager.Instance.gameObject;
     }
 
     void OnEnable()
@@ -64,13 +64,6 @@ public class UIManagerScriptV4 : MonoBehaviour
     void Start()
     {
         movUIState = true;
-
-        if (enableCandleTimer == false)
-        {
-            darknessUI.SetActive(false);
-            candleTimerUI.SetActive(false);
-        }
-
         StartIntro();
     }
 
@@ -100,7 +93,7 @@ public class UIManagerScriptV4 : MonoBehaviour
 
     void StartGameOver()
     {
-        gameOverCutScene.StartCutScene();
+        StartCutScene(gameOverObject, null);
     }
 
     public void StartCutScene(GameObject cutScene, LootPickUpV3 spawnItem)

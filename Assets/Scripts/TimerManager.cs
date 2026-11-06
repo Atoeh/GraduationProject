@@ -1,3 +1,5 @@
+using System.Runtime.CompilerServices;
+using System.Threading;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,7 +13,8 @@ public class TimerManager : MonoBehaviour
     [SerializeField] private float timeLeft = 0f;
     [SerializeField] private float updateTime = 2f;
 
-    private bool candleOn = false;
+    private bool candleIsPaused = true;
+    private bool candleIsOn = false;
     private float timeSinceLastStep = 0f;
     public float timeMax;
     private bool timerRestarted = false;
@@ -21,7 +24,8 @@ public class TimerManager : MonoBehaviour
     public int timerIndex;
 
     [Header("- Timer UI Elements -")]
-    [SerializeField] private GameObject TextObject;
+    [SerializeField] private GameObject totalUI;
+    [SerializeField] private GameObject textObject;
     private TMP_Text timerText;
     [SerializeField] private Slider slider;
 
@@ -38,7 +42,7 @@ public class TimerManager : MonoBehaviour
         }
 
         timerIndex = SceneManager.GetActiveScene().buildIndex;
-        timerText = TextObject.GetComponent<TMP_Text>();
+        timerText = textObject.GetComponent<TMP_Text>();
         timeMax = timerArray[timerIndex];
     }
 
@@ -58,7 +62,7 @@ public class TimerManager : MonoBehaviour
 
     void Update()
     {
-        if (candleOn)
+        if (!candleIsPaused && candleIsOn)
         {
             //Is there still time left?
             if (timeLeft <= 0f && !timerRestarted)
@@ -99,13 +103,13 @@ public class TimerManager : MonoBehaviour
 
     public void PauseTimer()
     {
-        candleOn = false;
+        candleIsPaused = true;
         Debug.Log("Timer paused");
     }
 
     public void ResumeTimer()
     {
-        candleOn = true;
+        candleIsPaused = false;
         timeSinceLastStep = 0;
         Debug.Log("Timer Resumed");
     }
@@ -113,19 +117,28 @@ public class TimerManager : MonoBehaviour
     // ----------------------- SWITCH TIMER ON NEW LEVEL -------------------------
     public void NextTimer()
     {
-        if (timerIndex < timerArray.Length)
-            timerIndex++;
-        else
-            Debug.Log("timerIndex out of bounds");
-
         Debug.Log("NextTimer called");
+        timerIndex = (timerIndex + 1) % timerArray.Length;
     }
 
     public void ResetTimer()
     {
         timeLeft = 0f;
+        timerIndex = SceneManager.GetActiveScene().buildIndex;
         timeMax = timerArray[timerIndex];
-        AddTime(timeMax);
+
+        if (timeMax > 0)
+        {
+            ActivateTimer();
+            AddTime(timeMax);
+        }
+
+        if (timeMax <= 0 || SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            DeactivateTimer();
+        }
+
+        Debug.Log("TimerReset, current timeMax = " + timeMax);
     }
 
     // -------------------- TIMER VISUAL -------------------------
@@ -137,5 +150,19 @@ public class TimerManager : MonoBehaviour
     private void SetText()
     {
         timerText.text = timeLeft.ToString();
+    }
+
+    private void ActivateTimer()
+    {
+        candleIsOn = true;
+        totalUI.SetActive(true);
+        Debug.Log("Candle Turned on");
+    }
+
+    private void DeactivateTimer()
+    {
+        candleIsOn = false;
+        totalUI.SetActive(false);
+        Debug.Log("Candle Turned off");
     }
 }

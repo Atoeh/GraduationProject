@@ -142,11 +142,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8473089135695659587, guid: bf2190392a128ec41872c75ea3d2d3ea, type: 3}
       propertyPath: m_text
-      value: Title
+      value: 'Title Outro bad
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 8661742017748967780, guid: bf2190392a128ec41872c75ea3d2d3ea, type: 3}
       propertyPath: m_Name
-      value: CS Outro Variant 1
+      value: CS OutroBad
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

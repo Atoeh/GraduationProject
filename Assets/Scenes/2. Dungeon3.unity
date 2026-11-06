@@ -1486,6 +1486,10 @@ PrefabInstance:
       value: Door_ExitDungeon
       objectReference: {fileID: 0}
     - target: {fileID: 8040621361299531971, guid: 596d85cac194b3f4f80c42ea707aa2a0, type: 3}
+      propertyPath: cutScene
+      value: 
+      objectReference: {fileID: 3420585136668398127, guid: a40c14a1a19f81d4faa9e37abe4c36a3, type: 3}
+    - target: {fileID: 8040621361299531971, guid: 596d85cac194b3f4f80c42ea707aa2a0, type: 3}
       propertyPath: exitText
       value: 
       objectReference: {fileID: 365367665}

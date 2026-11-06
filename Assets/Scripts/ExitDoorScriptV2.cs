@@ -1,6 +1,8 @@
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
+using System.Xml.Serialization;
 using UnityEngine;
+using UnityEngine.AI;
 
 //Wat doet de deur?
 //1 Deur is niet interactief (later een popup dat je quota moet hitten voordat je er weer uit mag)
@@ -11,7 +13,7 @@ using UnityEngine;
 public class ExitDoorScriptV2 : MonoBehaviour
 {
     private bool doorOpen = false;
-    private bool permanentlyOpen = false;
+    private bool pickedUpNPC = false;
     //private bool doorLocked = false;
 
     private GameObject doorBorder;
@@ -26,7 +28,7 @@ public class ExitDoorScriptV2 : MonoBehaviour
         GameEvents.OnQuotaHit += OpenDoor;
         GameEvents.OnQuotaLost += CloseDoor;
 
-        GameEvents.OnNPCPickedup += OpenDoor;
+        GameEvents.OnNPCPickedup += NPCPickedUP;
     }
     private void OnDisable()
     {
@@ -47,24 +49,24 @@ public class ExitDoorScriptV2 : MonoBehaviour
     {
         doorOpen = true;
         Debug.Log("Door opens");
-        exitText.SetActive(doorOpen);
+        //exitText.SetActive(true);
     }
 
     private void CloseDoor()
     {
-        if (!permanentlyOpen)
+        if (!pickedUpNPC)
         {
             Debug.Log("Door closes");
             doorOpen = false;
-            exitText.SetActive(doorOpen);
+            exitText.SetActive(false);
         }
     }
 
-    private void PermanantlyOpenDoor()
+    private void NPCPickedUP()
     {
         Debug.Log("Door permanantly open, NPC pickedUp");
-        permanentlyOpen = true;
-        exitText.SetActive(doorOpen);
+        pickedUpNPC = true;
+        OpenDoor();
 
     }
 
@@ -74,17 +76,19 @@ public class ExitDoorScriptV2 : MonoBehaviour
         {
             if (doorOpen)
             {
-                Debug.Log("Collided with door + quota met = ExitLevel??");
-                GameEvents.ExitLevel();
-            }
-            else
-            {
-                if (permanentlyOpen)
+                if (pickedUpNPC)
                 {
+                    Debug.Log("Entered Door + NPC = GoodEnding");
+                    PlayCutscene();
+                }
+                else
+                {
+                    Debug.Log("Entered Door - NPC = BadEnding");
                     GameEvents.ExitLevel();
                 }
-                Debug.Log("Collided with door + quota not met = popup");
             }
         }
     }
+
+    private void PlayCutscene() => UIManagerScriptV4.Instance.StartCutScene(cutScene, null);
 }

@@ -200,7 +200,8 @@ MonoBehaviour:
   - 60
   - 80
   timerIndex: 0
-  TextObject: {fileID: 9000811438157976930}
+  totalUI: {fileID: 7726012031730615509}
+  textObject: {fileID: 9000811438157976930}
   slider: {fileID: 2972321845709486696}
 --- !u!1 &1488981394791978299
 GameObject:
