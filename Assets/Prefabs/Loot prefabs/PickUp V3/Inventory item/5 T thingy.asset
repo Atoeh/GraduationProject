@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b02c40ff0c8de46418bbf7b79c530bc8, type: 3}
-  m_Name: Item 4 Pouch
+  m_Name: 5 T thingy
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  itemName: 4
-  value: 20
-  sprite: {fileID: -98620946, guid: f2e7e37f4650f724195dadbd64e1bde9, type: 3}
+  itemName: 5
+  value: 60
+  sprite: {fileID: 2017456638, guid: f2e7e37f4650f724195dadbd64e1bde9, type: 3}
   shapeRows:
   - 10
   - 11
+  - 10

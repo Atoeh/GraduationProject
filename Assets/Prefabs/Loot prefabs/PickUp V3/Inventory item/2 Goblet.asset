@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b02c40ff0c8de46418bbf7b79c530bc8, type: 3}
-  m_Name: Item 3
+  m_Name: 2 Goblet
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  itemName: 3
+  itemName: A bronze Goblet
   value: 15
-  sprite: {fileID: 180188085, guid: f2e7e37f4650f724195dadbd64e1bde9, type: 3}
+  sprite: {fileID: -451760735, guid: f2e7e37f4650f724195dadbd64e1bde9, type: 3}
   shapeRows:
-  - 1
-  - 1
+  - 11
