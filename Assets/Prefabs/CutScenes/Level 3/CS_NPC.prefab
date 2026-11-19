@@ -138,18 +138,15 @@ PrefabInstance:
       objectReference: {fileID: -765423667, guid: ec262635080f3e5489d32be0b69cd6a8, type: 3}
     - target: {fileID: 7518690335027614504, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
       propertyPath: m_text
-      value: 3rd level of the dungeon
+      value: The third floor of the dungeon
       objectReference: {fileID: 0}
     - target: {fileID: 8041706792581110424, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
       propertyPath: m_text
       value: 'There lies a person bleeding on the floor,
 
         You can try to
-        carry him to safety but he will take 3X7 cells of your inventory.
-
-
-        You
-        will have to clear your entire inventory for it to fit.'
+        carry him to safety but you will have to clear your entire inventory for
+        them to fit.'
       objectReference: {fileID: 0}
     - target: {fileID: 8261083505271762188, guid: fc26222116d235d41a2660ca46d8d051, type: 3}
       propertyPath: m_SizeDelta.x

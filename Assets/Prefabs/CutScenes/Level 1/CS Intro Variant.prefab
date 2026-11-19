@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3315186502646665866, guid: 2e6dd032e3df91f419f9e1fcafafbdf2, type: 3}
       propertyPath: m_text
-      value: Title 2
+      value: Somewhere underground ...
       objectReference: {fileID: 0}
     - target: {fileID: 3452111846366450695, guid: 2e6dd032e3df91f419f9e1fcafafbdf2, type: 3}
       propertyPath: m_Pivot.x
@@ -98,7 +98,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4297445710854913347, guid: 2e6dd032e3df91f419f9e1fcafafbdf2, type: 3}
       propertyPath: m_text
-      value: Title 1
+      value: "Somewhere underground \u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 6079635178526000923, guid: 2e6dd032e3df91f419f9e1fcafafbdf2, type: 3}
       propertyPath: m_IsActive
@@ -110,8 +110,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6839273665478498032, guid: 2e6dd032e3df91f419f9e1fcafafbdf2, type: 3}
       propertyPath: m_text
-      value: 'Let''s see what type of loot you can find on the first floor of this
-        dungeon, gather as much as the quota indicates to go to the next level '
+      value: Gather as much LOOT as you can. Your goal is to carry at least [insert
+        number] but the more the better.
       objectReference: {fileID: 0}
     - target: {fileID: 7662555150376864139, guid: 2e6dd032e3df91f419f9e1fcafafbdf2, type: 3}
       propertyPath: m_text

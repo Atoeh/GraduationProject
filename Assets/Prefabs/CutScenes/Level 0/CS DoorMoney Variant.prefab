@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2475778073704381625, guid: edc5db016907b3e4787c06431b1e1909, type: 3}
+      propertyPath: storyBoard.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2475778073704381625, guid: edc5db016907b3e4787c06431b1e1909, type: 3}
+      propertyPath: 'storyBoard.Array.data[1]'
+      value: 
+      objectReference: {fileID: 3055704408432504013}
     - target: {fileID: 3890450586829950817, guid: edc5db016907b3e4787c06431b1e1909, type: 3}
       propertyPath: m_Name
       value: CS DoorMoney Variant
@@ -16,14 +24,13 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4703630299574809701, guid: edc5db016907b3e4787c06431b1e1909, type: 3}
+      propertyPath: m_text
+      value: "\u201CCome on in kid\u2026\u201D"
+      objectReference: {fileID: 0}
     - target: {fileID: 6122441607912470433, guid: edc5db016907b3e4787c06431b1e1909, type: 3}
       propertyPath: m_text
-      value: '"Welcome, it seems that you have no money. But you do have enough scraps
-        on you te enter."
-
-
-        The door swings open. "Come in quick, the food
-        is still warm..."'
+      value: "\"Hello there, It seems that you have enough LOOT to enter this place\u201D"
       objectReference: {fileID: 0}
     - target: {fileID: 8394005289746084763, guid: edc5db016907b3e4787c06431b1e1909, type: 3}
       propertyPath: m_Color.a
@@ -130,7 +137,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 435659824711653236, guid: edc5db016907b3e4787c06431b1e1909, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8501947837874077740, guid: edc5db016907b3e4787c06431b1e1909, type: 3}
@@ -159,3 +167,8 @@ MonoBehaviour:
   quickSkip: 0
   skipSpeedup: 5
   sendDoneDelay: 0.25
+--- !u!1 &3055704408432504013 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5006785240082018955, guid: edc5db016907b3e4787c06431b1e1909, type: 3}
+  m_PrefabInstance: {fileID: 8003923886212587078}
+  m_PrefabAsset: {fileID: 0}

@@ -313,8 +313,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Perhaps if you too were strapped in the finest of gear you would be treated
-    in the same way.
+  m_text: You too wish to experience this feeling of comradery. Perhaps if you too
+    were strapped in the finest ARMOR you would be treated in the same way.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -1307,12 +1307,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Around you adventureres boasting with to each other about the scrap they
+  m_text: Around you adventurers boasting with to each other about the LOOT they
     gathered in their adventures. They laugh and bond with one another.
-
-
-    You
-    too wish to experience this feeling of comradery.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -2771,10 +2767,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'The smell of greasy food and booze welcomes you as you enter the inn.
-    The room is packed but there is a small table unoccupied somewhere in the corner.
-
-'
+  m_text: The smell of greasy food and booze welcomes you as you enter the inn. You
+    take a seat at a small empty table in the corner.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
