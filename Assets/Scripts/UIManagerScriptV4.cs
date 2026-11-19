@@ -108,4 +108,10 @@ public class UIManagerScriptV4 : MonoBehaviour
 
         cutSceneScript.StartCutScene();
     }
+
+    public void SetQuotaUI()
+    {
+        // code to show te current quota that the player needs to reach
+        Debug.Log("SetQuotaUi called");
+    }
 }

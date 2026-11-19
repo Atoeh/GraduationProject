@@ -50,14 +50,18 @@ public class TimerManager : MonoBehaviour
     {
         GameEvents.OnTimerRanOut += PauseTimer;
         GameEvents.OnExitLevel += PauseTimer;
-        GameEvents.OnExitLevel += NextTimer;
+
+        GameEvents.OnNewSceneLoaded += ResetTimer;
+        //GameEvents.OnExitLevel += NextTimer;
     }
 
     private void OnDisable()
     {
         GameEvents.OnTimerRanOut -= PauseTimer;
         GameEvents.OnExitLevel -= PauseTimer;
-        GameEvents.OnExitLevel -= NextTimer;
+
+        GameEvents.OnNewSceneLoaded -= ResetTimer;
+        //GameEvents.OnExitLevel -= NextTimer;
     }
 
     void Update()
@@ -115,11 +119,12 @@ public class TimerManager : MonoBehaviour
     }
 
     // ----------------------- SWITCH TIMER ON NEW LEVEL -------------------------
-    public void NextTimer()
-    {
-        Debug.Log("NextTimer called");
-        timerIndex = (timerIndex + 1) % timerArray.Length;
-    }
+    
+    //public void NextTimer()
+    //{
+    //    Debug.Log("NextTimer called");
+    //    timerIndex = (timerIndex + 1) % timerArray.Length;
+    //}
 
     public void ResetTimer()
     {

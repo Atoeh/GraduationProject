@@ -18,6 +18,8 @@ public static class GameEvents
 
     public static event Action OnNPCPickedup;
 
+    public static event Action OnNewSceneLoaded;
+
     public static event Action OnTimerPause;
     public static event Action OnExitLevel; // wat doel hier ook alweer van
     public static event Action OnTimerRanOut; //change name to game over?
@@ -71,6 +73,11 @@ public static class GameEvents
     public static void NPCPickedUp()
     {
         OnNPCPickedup?.Invoke();
+    }
+
+    public static void NewSceneLoaded()
+    {
+        OnNewSceneLoaded?.Invoke();
     }
 
     public static void TimerPause()

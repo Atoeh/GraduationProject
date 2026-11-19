@@ -198,11 +198,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'The Merchants merely greets you by rasing his grey bristly eyebrows.
+  m_text: 'The Merchants merely raises his grey bristly eyebrows.
 
-    He
-    grabs the SCRAPS you collected and hands you a piece of equipment: The Green
-    Gauntlets.'
+    He grabs the
+    SCRAPS you collected and hands you a piece of equipment: The Green Gauntlets.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -619,7 +618,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The Merchant
+  m_text: The Inn
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -1055,7 +1054,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -19302457, guid: b362c869a8205fd4b97b3131b5ba51ef, type: 3}
+  m_Sprite: {fileID: 1903334711, guid: dba3234c3e517e648bc44e1776d96090, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1771,6 +1770,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 73502145906072487, guid: bf2190392a128ec41872c75ea3d2d3ea, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -19302457, guid: b362c869a8205fd4b97b3131b5ba51ef, type: 3}
     - target: {fileID: 2175886500164265876, guid: bf2190392a128ec41872c75ea3d2d3ea, type: 3}
       propertyPath: m_text
       value: "You reached the Merchants Den. Your heart races thinking of the value
@@ -1887,7 +1890,8 @@ PrefabInstance:
       objectReference: {fileID: 4230430794358350668}
     - target: {fileID: 8164698092817162044, guid: bf2190392a128ec41872c75ea3d2d3ea, type: 3}
       propertyPath: m_text
-      value: 2. Outro level 1
+      value: "Yet none seem to notice you and your snazzy gauntlets. \nYou come to
+        the only conclusion that seems logical to you:\nYou need more ARMOR!"
       objectReference: {fileID: 0}
     - target: {fileID: 8473089135695659587, guid: bf2190392a128ec41872c75ea3d2d3ea, type: 3}
       propertyPath: m_text
