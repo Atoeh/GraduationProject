@@ -19,7 +19,7 @@ public class LootPickUpV3 : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.maroon;
+        Gizmos.color = itemData.color;
         Gizmos.DrawSphere(transform.position, .5f);
     }
 

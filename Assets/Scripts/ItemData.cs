@@ -7,6 +7,7 @@ public class ItemData : ScriptableObject
     public float value;
     public Sprite sprite;
     public string[] shapeRows; // e.g. ["11", "10"] for your 2x2 L shape
+    public Color color  = Color.white;
 
     public bool[,] GetShape()
     {

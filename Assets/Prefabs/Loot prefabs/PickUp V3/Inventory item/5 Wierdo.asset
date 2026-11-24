@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: 5 Wierdo
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: Wierdo
-  value: 900
+  value: 100
   sprite: {fileID: 1656589808, guid: 7d1f6f6dd89feca409f1ee6f70c2cf75, type: 3}
   shapeRows:
   - 010
   - 111
   - 100
+  color: {r: 0, g: 1, b: 0.7935257, a: 1}

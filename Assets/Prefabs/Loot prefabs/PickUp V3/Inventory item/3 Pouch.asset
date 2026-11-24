@@ -18,3 +18,4 @@ MonoBehaviour:
   shapeRows:
   - 10
   - 11
+  color: {r: 1, g: 0.58740884, b: 0, a: 1}

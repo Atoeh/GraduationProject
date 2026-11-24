@@ -17,3 +17,4 @@ MonoBehaviour:
   sprite: {fileID: 1306639780, guid: 7d1f6f6dd89feca409f1ee6f70c2cf75, type: 3}
   shapeRows:
   - 1
+  color: {r: 0.3018868, g: 0.19508722, b: 0.19508722, a: 1}
