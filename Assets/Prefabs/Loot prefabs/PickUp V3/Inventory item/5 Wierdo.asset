@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b02c40ff0c8de46418bbf7b79c530bc8, type: 3}
-  m_Name: 5 T thingy
+  m_Name: 5 Wierdo
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  itemName: 5
-  value: 60
-  sprite: {fileID: 2017456638, guid: f2e7e37f4650f724195dadbd64e1bde9, type: 3}
+  itemName: Wierdo
+  value: 900
+  sprite: {fileID: 1656589808, guid: 7d1f6f6dd89feca409f1ee6f70c2cf75, type: 3}
   shapeRows:
-  - 10
-  - 11
-  - 10
+  - 010
+  - 111
+  - 100

@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b02c40ff0c8de46418bbf7b79c530bc8, type: 3}
-  m_Name: Chest
+  m_Name: 6 Key
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  itemName: 6
-  value: 900
-  sprite: {fileID: -888673527, guid: f2e7e37f4650f724195dadbd64e1bde9, type: 3}
+  itemName: Key
+  value: 10
+  sprite: {fileID: 2105736465, guid: 7d1f6f6dd89feca409f1ee6f70c2cf75, type: 3}
   shapeRows:
-  - 111
-  - 111
-  - 111
+  - 1
+  - 1

@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: Coins
   value: 5
-  sprite: {fileID: 1371054966, guid: f2e7e37f4650f724195dadbd64e1bde9, type: 3}
+  sprite: {fileID: 1306639780, guid: 7d1f6f6dd89feca409f1ee6f70c2cf75, type: 3}
   shapeRows:
   - 1
