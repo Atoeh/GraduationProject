@@ -244,11 +244,11 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     public void Shake()
     {
-        if (shakeRoutine != null)
-            StopCoroutine(shakeRoutine);
+        //if (shakeRoutine != null)
+        //    StopCoroutine(shakeRoutine);
 
-        originalPosition = rectTransform.anchoredPosition;
-        shakeRoutine = StartCoroutine(ShakeCoroutine());
+        //originalPosition = rectTransform.anchoredPosition;
+        //shakeRoutine = StartCoroutine(ShakeCoroutine());
     }
 
     private IEnumerator ShakeCoroutine()
